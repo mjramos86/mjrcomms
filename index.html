@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MJR Communications — Spécialiste en communication, industrie du jeu vidéo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #080c14;
+  --bg2: #0d1220;
+  --bg3: #111827;
+  --teal: #00e5a0;
+  --teal-dim: rgba(0,229,160,0.12);
+  --teal-mid: rgba(0,229,160,0.35);
+  --amber: #f0a500;
+  --amber-dim: rgba(240,165,0,0.12);
+  --text: #e8edf5;
+  --text-muted: #7a8a9e;
+  --text-dim: #3d4d61;
+  --border: rgba(255,255,255,0.07);
+  --border-teal: rgba(0,229,160,0.25);
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+::selection { background: var(--teal); color: var(--bg); }
+
+/* ── SCANLINE OVERLAY ──────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── GRID BACKGROUND ───────────────────────────────────── */
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,229,160,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,160,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* ── NAV ───────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 64px;
+  background: rgba(8,12,20,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+.nav-logo span { color: var(--teal); }
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--teal); }
+.nav-cta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--teal);
+  text-decoration: none;
+  border: 1px solid var(--border-teal);
+  padding: 8px 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--teal-dim); }
+
+/* ── HERO ──────────────────────────────────────────────── */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 2.5rem 5rem;
+  overflow: hidden;
+}
+.hero-glow {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0,229,160,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-glow-2 {
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(240,165,0,0.04) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.2s;
+}
+.hero-tag::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--teal);
+}
+.blink { animation: blink 1s step-end infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.4s;
+}
+h1 em {
+  font-style: normal;
+  color: var(--teal);
+  position: relative;
+}
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 560px;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.6s;
+}
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.8s;
+}
+.btn-primary {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--teal);
+  border: none;
+  padding: 14px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+.btn-primary:hover { background: #00ffb3; transform: translateY(-1px); }
+.btn-secondary {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 14px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-secondary:hover { border-color: var(--border-teal); color: var(--teal); }
+
+/* hero stats strip */
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 1.0s;
+}
+.hero-stat-val {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+.hero-stat-val span { color: var(--teal); }
+.hero-stat-lbl {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SECTION SHARED ────────────────────────────────────── */
+section { padding: 6rem 2.5rem; position: relative; }
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-tag::before {
+  content: '//';
+  opacity: 0.4;
+}
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+.section-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 540px;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+.max-w { max-width: 1100px; margin: 0 auto; }
+
+/* bracket corners decoration */
+.bracket {
+  position: relative;
+  display: inline-block;
+}
+.bracket::before, .bracket::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: var(--teal);
+  border-style: solid;
+  opacity: 0.5;
+}
+.bracket::before { top: -6px; left: -10px; border-width: 2px 0 0 2px; }
+.bracket::after  { bottom: -6px; right: -10px; border-width: 0 2px 2px 0; }
+
+/* ── ABOUT ─────────────────────────────────────────────── */
+#about { background: var(--bg2); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.about-text p {
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+.about-text p strong { color: var(--text); font-weight: 500; }
+
+.skills-list { margin-top: 2rem; }
+.skill-row {
+  margin-bottom: 1.25rem;
+}
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.skill-name {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+.skill-lvl {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--teal);
+}
+.skill-bar-bg {
+  height: 3px;
+  background: var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--teal), #00ffcc);
+  animation: barFill 1.2s ease forwards;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+@keyframes barFill { to { transform: scaleX(1); } }
+
+.award-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.award-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.award-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--teal);
+}
+.award-card:hover { border-color: var(--border-teal); }
+.award-card-icon {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--amber);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.award-card-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.award-card-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ── SERVICES / FORFAITS ───────────────────────────────── */
+#services { background: var(--bg); }
+.forfaits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+.forfait-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.forfait-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.forfait-card:hover { border-color: var(--border-teal); transform: translateY(-4px); }
+.forfait-card:hover::after { opacity: 1; }
+.forfait-card.featured {
+  border-color: var(--border-teal);
+  background: var(--bg3);
+}
+.forfait-card.featured::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+}
+.forfait-corner {
+  position: absolute;
+  top: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 36px 36px 0;
+  border-color: transparent var(--teal-mid) transparent transparent;
+}
+.forfait-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: var(--teal-dim);
+  border: 1px solid var(--border-teal);
+  padding: 4px 10px;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+.forfait-badge.amber { color: var(--amber); background: var(--amber-dim); border-color: rgba(240,165,0,0.25); }
+.forfait-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+.forfait-price {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+.forfait-price span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+}
+.forfait-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+.forfait-divider {
+  height: 1px;
+  background: var(--border);
+  margin-bottom: 1.5rem;
+}
+.forfait-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.forfait-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.forfait-list li::before {
+  content: '▸';
+  color: var(--teal);
+  font-size: 10px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* ── CARTE ─────────────────────────────────────────────── */
+#carte { background: var(--bg2); }
+.carte-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.carte-block {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 1.75rem;
+  transition: border-color 0.3s;
+}
+.carte-block:hover { border-color: var(--border-teal); }
+.carte-block-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.carte-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+}
+.carte-row:last-child { border-bottom: none; }
+.carte-row-name { font-size: 13.5px; color: var(--text-muted); flex: 1; }
+.carte-row-price {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+/* ── TIMELINE / EXPÉRIENCE ─────────────────────────────── */
+#experience { background: var(--bg); }
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, var(--teal), transparent);
+}
+.timeline-item {
+  position: relative;
+  padding: 0 0 2.5rem 1.5rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.5s;
+}
+.timeline-item.visible { opacity: 1; transform: translateX(0); }
+.timeline-dot {
+  position: absolute;
+  left: -2.3rem;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--teal);
+  background: var(--bg);
+  transform: rotate(45deg);
+}
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.timeline-role {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.timeline-company {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.timeline-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+/* ── CTA ───────────────────────────────────────────────── */
+#contact {
+  background: var(--bg2);
+  text-align: center;
+  padding: 7rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+#contact .grid-bg { opacity: 0.5; }
+.cta-glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 400px;
+  background: radial-gradient(ellipse, rgba(0,229,160,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+#contact h2 { margin-bottom: 1rem; }
+.cta-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.8;
+}
+.contact-options {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.contact-link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+.contact-link:hover { color: var(--teal); }
+.contact-link::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border: 1px solid currentColor;
+  transform: rotate(45deg);
+}
+
+/* ── FOOTER ────────────────────────────────────────────── */
+footer {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: gap;
+  gap: 1rem;
+}
+.footer-left {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+.footer-right {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+.footer-right span { color: var(--teal); }
+
+/* ── SCROLL REVEAL ─────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── MOBILE ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  section { padding: 4rem 1.25rem; }
+  #hero { padding: 7rem 1.25rem 4rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-stats { gap: 1.5rem; }
+  footer { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">MJR<span>.</span>COMMS</a>
+  <ul class="nav-links">
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#services">Forfaits</a></li>
+    <li><a href="#carte">À la carte</a></li>
+    <li><a href="#experience">Parcours</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Contactez-moi</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="max-w">
+    <div class="hero-tag">
+      Spécialiste en communication gaming&nbsp;<span class="blink">_</span>
+    </div>
+    <h1>Vos jeux méritent<br>d'être <em>vus</em>.</h1>
+    <p class="hero-sub">
+      15 ans d'expérience dans l'industrie du jeu vidéo québécois. Je gère les communications de votre studio — du plan de lancement aux relations de presse — sans que vous ayez à embaucher une personne à temps plein.
+    </p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#services">Voir les forfaits</a>
+      <a class="btn-secondary" href="#contact">Discutons de votre projet</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-val">15<span>+</span></div>
+        <div class="hero-stat-lbl">Années d'expérience</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">2<span>×</span></div>
+        <div class="hero-stat-lbl">Lauréat Prix Gémeaux</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">5<span> ans</span></div>
+        <div class="hero-stat-lbl">Bell Média / RDS</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">3<span> langues</span></div>
+        <div class="hero-stat-lbl">FR · EN · PT</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="max-w">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="section-tag">À propos</div>
+        <h2 class="bracket">Mario Jorge Ramos</h2>
+        <p>Je suis un <strong>professionnel des médias numériques et de la communication</strong> avec une connaissance approfondie de l'industrie du jeu vidéo québécoise — de l'intérieur. J'ai couvert, promu et lancé des jeux. J'ai géré des marques, construit des communautés, et obtenu des couvertures dans les médias qui comptent.</p>
+        <p>Mon avantage, c'est un <strong>réseau humain</strong> bâti sur 15 ans dans cet écosystème : journalistes, développeurs, éditeurs, organisateurs d'événements. Quand je vous représente, je parle la même langue que vos interlocuteurs.</p>
+        <p>Vous avez besoin d'un département comm pour votre lancement. <strong>Vous n'avez pas besoin d'en embaucher un.</strong></p>
+        <div class="skills-list">
+          <div class="skill-row">
+            <div class="skill-header"><span class="skill-name">Relations de presse</span><span class="skill-lvl">LVL MAX</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="animation-delay:0.1s"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-header"><span class="skill-name">Stratégie réseaux sociaux</span><span class="skill-lvl">LVL MAX</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="animation-delay:0.25s"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-header"><span class="skill-name">Rédaction / création de contenu</span><span class="skill-lvl">LVL MAX</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="animation-delay:0.4s"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-header"><span class="skill-name">Connaissance industrie JV QC</span><span class="skill-lvl">LVL MAX</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="animation-delay:0.55s"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="award-cards reveal" style="transition-delay:0.15s">
+        <div class="award-card">
+          <div class="award-card-icon">🏆 Prix Gémeaux ×2</div>
+          <div class="award-card-title">Scénariste — Temps Mort & Projet-M</div>
+          <div class="award-card-desc">Deux prix pour des séries numériques originales. La créativité, c'est aussi une compétence en communication.</div>
+        </div>
+        <div class="award-card">
+          <div class="award-card-icon">🎮 Hell is Us — Rogue Factor</div>
+          <div class="award-card-title">Responsable des communications</div>
+          <div class="award-card-desc">Lancement AAA, relations de presse internationales, gestion des réseaux sociaux et communautés.</div>
+        </div>
+        <div class="award-card">
+          <div class="award-card-icon">📺 Bell Média / RDS Jeux vidéo</div>
+          <div class="award-card-title">Fondateur et gestionnaire de marque</div>
+          <div class="award-card-desc">J'ai lancé et géré la marque RDS Jeux vidéo pendant 5 ans. Couverture, contenu, partenariats commerciaux.</div>
+        </div>
+        <div class="award-card">
+          <div class="award-card-icon">🎙️ Médias — Radio-Canada, Ztélé…</div>
+          <div class="award-card-title">Chroniqueur depuis 2013</div>
+          <div class="award-card-desc">Loto-Québec, RDS, Balle Courbe, Ztélé, Radio-Canada. Un réseau médias que peu de consultants possèdent.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="grid-bg"></div>
+  <div class="max-w">
+    <div class="section-tag reveal">Forfaits</div>
+    <h2 class="reveal">Choisissez votre niveau<br>d'engagement</h2>
+    <p class="section-desc reveal">Trois formules conçues pour s'adapter à vos besoins et votre budget. Pas de contrat d'un an obligatoire. Pas de frais cachés.</p>
+    <div class="forfaits-grid">
+      <div class="forfait-card reveal" style="transition-delay:0.05s">
+        <div class="forfait-badge">Ponctuel</div>
+        <div class="forfait-title">Conseil Express</div>
+        <div class="forfait-price">150 $<span> / heure</span></div>
+        <div class="forfait-desc">Vous avez une question stratégique précise. On règle ça ensemble en 1 ou 2 heures.</div>
+        <div class="forfait-divider"></div>
+        <ul class="forfait-list">
+          <li>Consultation stratégique 1h ou 2h</li>
+          <li>Audit de votre présence actuelle</li>
+          <li>Recommandations actionnables immédiates</li>
+          <li>Idéal pour un studio en début de parcours</li>
+          <li>1re heure de découverte à 75 $</li>
+        </ul>
+      </div>
+      <div class="forfait-card featured reveal" style="transition-delay:0.15s">
+        <div class="forfait-corner"></div>
+        <div class="forfait-badge">⭐ Recommandé</div>
+        <div class="forfait-title">Pack Lancement</div>
+        <div class="forfait-price">3 500 $<span> – 7 000 $</span></div>
+        <div class="forfait-desc">Le forfait complet pour un lancement réussi. 8 semaines d'accompagnement du plan à la couverture presse.</div>
+        <div class="forfait-divider"></div>
+        <ul class="forfait-list">
+          <li>Plan de communication complet (8 semaines)</li>
+          <li>Kit de presse — communiqué + assets</li>
+          <li>Envoi aux médias ciblés QC / Canada</li>
+          <li>Stratégie réseaux sociaux + calendrier éditorial</li>
+          <li>Relances et gestion des demandes presse</li>
+          <li>Rapport et bilan post-lancement</li>
+          <li>1 séance de révision incluse</li>
+        </ul>
+      </div>
+      <div class="forfait-card reveal" style="transition-delay:0.25s">
+        <div class="forfait-badge amber">Récurrent</div>
+        <div class="forfait-title">Retainer Mensuel</div>
+        <div class="forfait-price">1 800 $<span> / mois</span></div>
+        <div class="forfait-desc">Votre spécialiste comm dédié chaque mois — disponible, réactif, intégré à votre rythme de développement.</div>
+        <div class="forfait-divider"></div>
+        <ul class="forfait-list">
+          <li>~2 jours / mois de disponibilité dédiée</li>
+          <li>Gestion réseaux sociaux — 2 à 3 posts / semaine</li>
+          <li>Veille médiatique gaming Québec</li>
+          <li>1 communiqué de presse par mois</li>
+          <li>Accès prioritaire en période de lancement</li>
+          <li>Engagement minimum 3 mois</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-family:'DM Mono',monospace; font-size:12px; color:var(--text-dim); margin-top:1.5rem; letter-spacing:0.05em;">
+      // Les forfaits sont des points de départ — chaque projet est unique. Contactez-moi pour une proposition personnalisée.
+    </p>
+  </div>
+</section>
+
+<!-- À LA CARTE -->
+<section id="carte">
+  <div class="max-w">
+    <div class="section-tag reveal">Services</div>
+    <h2 class="reveal">À la carte</h2>
+    <p class="section-desc reveal">Besoin d'un service précis, sans forfait complet ? Choisissez exactement ce dont vous avez besoin.</p>
+    <div class="carte-grid">
+      <div class="carte-block reveal" style="transition-delay:0.05s">
+        <div class="carte-block-title">Relations de presse</div>
+        <div class="carte-row"><span class="carte-row-name">Rédaction d'un communiqué de presse</span><span class="carte-row-price">350 – 500 $</span></div>
+        <div class="carte-row"><span class="carte-row-name">Liste médias ciblée + envoi (QC)</span><span class="carte-row-price">500 – 750 $</span></div>
+        <div class="carte-row"><span class="carte-row-name">Relances et gestion des demandes</span><span class="carte-row-price">200 $ / j</span></div>
+        <div class="carte-row"><span class="carte-row-name">Traduction FR ↔ EN</span><span class="carte-row-price">150 – 250 $</span></div>
+      </div>
+      <div class="carte-block reveal" style="transition-delay:0.15s">
+        <div class="carte-block-title">Stratégie & planning</div>
+        <div class="carte-row"><span class="carte-row-name">Audit de communication (état des lieux)</span><span class="carte-row-price">600 – 900 $</span></div>
+        <div class="carte-row"><span class="carte-row-name">Plan de communication lancement</span><span class="carte-row-price">1 200 – 2 000 $</span></div>
+        <div class="carte-row"><span class="carte-row-name">Stratégie réseaux sociaux (document)</span><span class="carte-row-price">800 – 1 200 $</span></div>
+      </div>
+      <div class="carte-block reveal" style="transition-delay:0.25s">
+        <div class="carte-block-title">Contenu & réseaux sociaux</div>
+        <div class="carte-row"><span class="carte-row-name">Calendrier éditorial mensuel (30 idées)</span><span class="carte-row-price">400 – 600 $</span></div>
+        <div class="carte-row"><span class="carte-row-name">Rédaction + mise en page posts (×10)</span><span class="carte-row-price">350 – 500 $</span></div>
+        <div class="carte-row"><span class="carte-row-name">Prise en charge complète réseaux (4 sem.)</span><span class="carte-row-price">1 200 – 1 800 $</span></div>
+        <div class="carte-row"><span class="carte-row-name">Couverture événement (journée)</span><span class="carte-row-price">800 $ / j</span></div>
+      </div>
+    </div>
+    <p style="font-family:'DM Mono',monospace; font-size:12px; color:var(--text-dim); margin-top:1.25rem; letter-spacing:0.05em;">
+      // Tous les prix en CAD, avant taxes. Ajustables selon la taille du studio et la complexité du projet.
+    </p>
+  </div>
+</section>
+
+<!-- EXPÉRIENCE -->
+<section id="experience">
+  <div class="grid-bg"></div>
+  <div class="max-w" style="display:grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items:start;">
+    <div>
+      <div class="section-tag reveal">Parcours</div>
+      <h2 class="reveal">Le bon joueur<br>pour votre équipe</h2>
+      <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-top:1rem;" class="reveal">
+        J'ai évolué dans les deux solitudes de l'industrie médias-gaming : la grande diffusion (Bell Média) et le terrain indie (La Guilde, Rogue Factor). Cette dualité me permet de positionner votre studio auprès du grand public autant que des audiences spécialisées.
+      </p>
+      <div style="margin-top:2rem; padding:1.5rem; background:var(--bg2); border:1px solid var(--border-teal); border-left: 3px solid var(--teal);" class="reveal">
+        <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--teal); letter-spacing:0.1em; margin-bottom:8px;">INDUSTRIES COUVERTES</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:0.5rem;">
+          <span class="tag">Jeux vidéo AAA</span>
+          <span class="tag">Studios indépendants</span>
+          <span class="tag">Médias numériques</span>
+          <span class="tag">Télévision</span>
+          <span class="tag">Événementiel</span>
+          <span class="tag">OSBL culturel</span>
+        </div>
+      </div>
+    </div>
+    <div class="timeline reveal" style="transition-delay:0.2s">
+      <div class="timeline-item visible">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2025 – 2026</div>
+        <div class="timeline-role">Responsable des communications</div>
+        <div class="timeline-company">Rogue Factor · Lancement de Hell is Us</div>
+        <div class="timeline-tags"><span class="tag">PR</span><span class="tag">Réseaux sociaux</span><span class="tag">AAA</span></div>
+      </div>
+      <div class="timeline-item visible">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2023 – 2025</div>
+        <div class="timeline-role">Directeur des communications</div>
+        <div class="timeline-company">Fondation des Gardiens virtuels</div>
+        <div class="timeline-tags"><span class="tag">Stratégie numérique</span><span class="tag">Balado</span><span class="tag">OSBL</span></div>
+      </div>
+      <div class="timeline-item visible">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2024 – 2025</div>
+        <div class="timeline-role">Consultant aux communications</div>
+        <div class="timeline-company">La Guilde du jeu vidéo du Québec</div>
+        <div class="timeline-tags"><span class="tag">Comiccon</span><span class="tag">DemoNights</span></div>
+      </div>
+      <div class="timeline-item visible">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2018 – 2023</div>
+        <div class="timeline-role">Coordonnateur au contenu web</div>
+        <div class="timeline-company">Bell Média · RDS Jeux vidéo</div>
+        <div class="timeline-tags"><span class="tag">Brand building</span><span class="tag">Communauté</span><span class="tag">5 ans</span></div>
+      </div>
+      <div class="timeline-item visible">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">depuis 2013</div>
+        <div class="timeline-role">Chroniqueur</div>
+        <div class="timeline-company">Radio-Canada, RDS, Ztélé, Balle Courbe…</div>
+        <div class="timeline-tags"><span class="tag">JV</span><span class="tag">Techno</span><span class="tag">Pop culture</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section id="contact">
+  <div class="grid-bg"></div>
+  <div class="cta-glow"></div>
+  <div class="max-w" style="position:relative; z-index:1;">
+    <div class="section-tag reveal" style="justify-content:center">Contact</div>
+    <h2 class="reveal">Votre prochain lancement<br>commence <em style="color:var(--teal); font-style:normal;">ici</em>.</h2>
+    <p class="cta-sub reveal">Une première conversation sans engagement pour parler de votre projet, votre budget, et voir si on est le bon match. Première heure de consultation à 75 $.</p>
+    <div class="reveal">
+      <a class="btn-primary" href="mailto:info@mariojramos.com" style="font-size:14px; padding:16px 36px;">
+        Écrivez-moi maintenant
+      </a>
+    </div>
+    <div class="contact-options reveal" style="transition-delay:0.2s">
+      <a class="contact-link" href="mailto:info@mariojramos.com">info@mariojramos.com</a>
+      <a class="contact-link" href="tel:4383218825">438-321-8825</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
+  <div class="footer-right">MJR<span>.</span>COMMS — INSERT COIN TO <span>LAUNCH</span>_</div>
+</footer>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal, .timeline-item').forEach(el => observer.observe(el));
+
+// Navbar scroll style
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  nav.style.borderBottomColor = window.scrollY > 40 ? 'rgba(0,229,160,0.15)' : 'rgba(255,255,255,0.07)';
+});
+</script>
+</body>
+</html>
