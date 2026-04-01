@@ -258,6 +258,13 @@ h2 {
   line-height: 1.2;
   margin-bottom: 6px;
 }
+.pc-client {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
 .pc-role {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -456,6 +463,12 @@ window.addEventListener('scroll', () => {
 
     overlay.appendChild(catLabel);
     overlay.appendChild(title);
+    if (project.client) {
+      const client = document.createElement('div');
+      client.className = 'pc-client';
+      client.textContent = project.client;
+      overlay.appendChild(client);
+    }
     overlay.appendChild(role);
     overlay.appendChild(medium);
 
@@ -466,6 +479,12 @@ window.addEventListener('scroll', () => {
     card.appendChild(year);
     card.appendChild(overlay);
     card.appendChild(strip);
+
+    if (project.link) {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => window.open(project.link, '_blank', 'noopener'));
+    }
+
     return card;
   }
 
