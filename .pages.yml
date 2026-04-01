@@ -3,6 +3,25 @@ media:
   output: /images/portfolio
 
 content:
+  - name: categories
+    label: Catégories
+    path: categories.json
+    type: file
+    fields:
+      - name: items
+        label: Catégories
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: "ID (slug)"
+            type: string
+            required: true
+          - name: label
+            label: Nom affiché
+            type: string
+            required: true
+
   - name: portfolio
     label: Portfolio
     path: portfolio.json
@@ -26,14 +45,8 @@ content:
             required: true
           - name: category
             label: Catégorie
-            type: select
-            options:
-              - value: jeux-video
-                label: Jeux vidéo
-              - value: cinema-tv
-                label: "Cinéma / TV"
-              - value: bande-dessinee
-                label: Bande dessinée
+            type: string
+            hint: "Utiliser l'ID d'une catégorie (ex : jeux-video, cinema-tv, bande-dessinee)"
           - name: medium
             label: Médium
             type: string
