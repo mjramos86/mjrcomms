@@ -1,0 +1,52 @@
+backend:
+  name: github
+  repo: mjramos86/mjrcomms
+  branch: main
+
+media_folder: "images/portfolio"
+public_folder: "/images/portfolio"
+
+locale: "fr"
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio"
+    files:
+      - name: "portfolio"
+        label: "Projets du portfolio"
+        file: "portfolio.json"
+        fields:
+          - label: "Projets"
+            name: "items"
+            widget: "list"
+            label_singular: "Projet"
+            summary: "{{fields.title}} ({{fields.year}})"
+            fields:
+              - { label: "ID",    name: "id",    widget: "string",
+                  hint: "Identifiant unique sans espaces (ex: hell-is-us)" }
+              - { label: "Titre", name: "title", widget: "string", required: true }
+              - { label: "Rôle",  name: "role",  widget: "string", required: true,
+                  hint: "Ex : Responsable des communications" }
+              - label: "Catégorie"
+                name: "category"
+                widget: "select"
+                required: true
+                options:
+                  - { label: "Jeux vidéo",    value: "jeux-video" }
+                  - { label: "Cinéma / TV",   value: "cinema-tv" }
+                  - { label: "Bande dessinée", value: "bande-dessinee" }
+              - { label: "Médium", name: "medium", widget: "string",
+                  hint: "Ex : Jeu vidéo AA, PlayStation 5 / PC" }
+              - { label: "Année",  name: "year",   widget: "number", value_type: "int",
+                  min: 2000, max: 2099 }
+              - { label: "Image de couverture", name: "cover", widget: "image",
+                  required: false, hint: "Ratio recommandé 3:2 (ex : 900×600 px)" }
+              - { label: "Description", name: "description", widget: "markdown",
+                  required: false }
+              - { label: "Vidéo (URL embed)", name: "video", widget: "string",
+                  required: false, hint: "URL d'intégration YouTube ou Vimeo (facultatif)" }
+              - label: "Galerie d'images"
+                name: "gallery"
+                widget: "list"
+                required: false
+                field: { label: "Image", name: "image", widget: "image" }
