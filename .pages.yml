@@ -1,0 +1,61 @@
+media:
+  input: images/portfolio
+  output: /images/portfolio
+
+content:
+  - name: portfolio
+    label: Portfolio
+    path: portfolio.json
+    type: file
+    fields:
+      - name: items
+        label: Projets
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Titre
+            type: string
+            required: true
+          - name: client
+            label: Client / Studio
+            type: string
+          - name: role
+            label: Rôle
+            type: string
+            required: true
+          - name: category
+            label: Catégorie
+            type: select
+            options:
+              - value: jeux-video
+                label: Jeux vidéo
+              - value: cinema-tv
+                label: "Cinéma / TV"
+              - value: bande-dessinee
+                label: Bande dessinée
+          - name: medium
+            label: Médium
+            type: string
+          - name: year
+            label: Année
+            type: number
+          - name: cover
+            label: Image de couverture
+            type: image
+          - name: description
+            label: Description
+            type: rich-text
+          - name: video
+            label: "Vidéo (URL embed)"
+            type: string
+          - name: gallery
+            label: Galerie d'images
+            type: image
+            list: true
+          - name: link
+            label: Lien externe
+            type: string
+          - name: id
+            label: "ID (slug)"
+            type: string
