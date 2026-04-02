@@ -309,6 +309,32 @@ nav {
 }
 .project-gallery-img:hover { border-color: var(--border-teal); }
 
+/* Accolades */
+.project-accolades { margin-top: 3rem; }
+.project-accolades-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.project-accolades-label::before { content: '//'; opacity: 0.4; }
+.project-accolade {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.project-accolade:last-child { border-bottom: none; }
+.project-accolade-title { font-size: 14px; color: var(--text); flex: 1; }
+.project-accolade-event { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); }
+.project-accolade-year { font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); white-space: nowrap; }
+
 /* Not found */
 .project-not-found {
   text-align: center;
@@ -412,6 +438,15 @@ window.addEventListener('scroll', function () {
     document.title = 'MJR Communications — Projet introuvable';
   }
 
+  function toEmbedUrl(url) {
+    if (!url) return null;
+    var yt = url.match(/(?:youtube\.com\/watch\?(?:.*&)?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+    if (yt) return 'https://www.youtube.com/embed/' + yt[1];
+    var vimeo = url.match(/vimeo\.com\/(\d+)/);
+    if (vimeo) return 'https://player.vimeo.com/video/' + vimeo[1];
+    return url;
+  }
+
   function renderProject(project, categoryLabels) {
     document.title = 'MJR Communications — ' + project.title;
 
@@ -441,16 +476,29 @@ window.addEventListener('scroll', function () {
 
     // Video embed
     var videoHTML = '';
-    if (project.video) {
+    var embedUrl = toEmbedUrl(project.video);
+    if (embedUrl) {
       videoHTML = '<div class="project-video">' +
         '<div class="project-video-label">Vidéo</div>' +
         '<div class="project-video-wrap">' +
-          '<iframe src="' + esc(project.video) + '" allowfullscreen loading="lazy"></iframe>' +
+          '<iframe src="' + esc(embedUrl) + '" allowfullscreen loading="lazy"></iframe>' +
         '</div>' +
       '</div>';
     }
 
     // Gallery
+    var accoladesHTML = '';
+    if (project.accolades && project.accolades.length) {
+      var acItems = project.accolades.map(function (a) {
+        return '<div class="project-accolade">' +
+          (a.title ? '<span class="project-accolade-title">' + esc(a.title) + '</span>' : '') +
+          (a.event ? '<span class="project-accolade-event">' + esc(a.event) + '</span>' : '') +
+          (a.year  ? '<span class="project-accolade-year">'  + esc(String(a.year)) + '</span>' : '') +
+        '</div>';
+      }).join('');
+      accoladesHTML = '<div class="project-accolades"><div class="project-accolades-label">Accolades</div>' + acItems + '</div>';
+    }
+
     var galleryHTML = '';
     if (project.gallery && project.gallery.length) {
       var imgs = project.gallery.map(function (src) {
@@ -480,10 +528,20 @@ window.addEventListener('scroll', function () {
             ? '<div class="project-description">' + project.description + '</div>'
             : '') +
           videoHTML +
+          accoladesHTML +
           galleryHTML +
         '</div>' +
         '<aside class="project-meta">' + metaHTML + '</aside>' +
       '</div>';
+
+    if (project.cover) {
+      var heroEl = root.querySelector('.project-hero-img');
+      var loader = new Image();
+      loader.onerror = function () {
+        if (heroEl) { heroEl.className = 'project-hero-img no-image'; heroEl.style.backgroundImage = ''; }
+      };
+      loader.src = project.cover;
+    }
   }
 
   function esc(str) {
