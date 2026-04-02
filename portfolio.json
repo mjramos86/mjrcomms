@@ -33,6 +33,39 @@
         }
       ],
       "id": "projet-m"
+    },
+    {
+      "title": "Temps Mort",
+      "client": "Babel Films",
+      "role": "Scénariste",
+      "category": "cinema-tv",
+      "medium": "Cinéma / TV",
+      "year": 2012,
+      "cover": "images/portfolio/maxresdefault (3).jpg",
+      "description": "**Saison 2 et 3**  \nSérie numérique de science-fiction post-apocalyptique. Suite à un cataclysme d’origine inconnue, une communauté tente de survivre dans un un hiver est sans fin où toute technologie a cessé de fonctionner.",
+      "video": "https://www.youtube.com/watch?v=yeX5mthw2ZY",
+      "accolades": [
+        {
+          "title": "Nomination meilleure série numérique",
+          "event": "International Digital Emmy Awards",
+          "year": 2013
+        },
+        {
+          "title": "Meilleure série numérique",
+          "event": "Prix Gémeaux",
+          "year": 2012
+        },
+        {
+          "title": "Best Online Program",
+          "event": "Banff World Media Festival",
+          "year": 2011
+        },
+        {
+          "title": "Special presentation",
+          "event": "Fantasia International Film Festival",
+          "year": 2010
+        }
+      ]
     }
   ]
 }
