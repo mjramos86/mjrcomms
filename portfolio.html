@@ -179,13 +179,13 @@ h2 {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
 }
 
 .portfolio-card {
   position: relative;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg3);
@@ -425,7 +425,7 @@ window.addEventListener('scroll', () => {
 
     const cover = document.createElement('div');
     cover.className = 'portfolio-card-cover' + (project.cover ? '' : ' no-image');
-    if (project.cover) { cover.style.backgroundImage = 'url(' + project.cover + ')'; }
+    if (project.cover) { cover.style.backgroundImage = 'url("' + project.cover + '")'; }
 
     const year = document.createElement('div');
     year.className = 'pc-year';
@@ -469,9 +469,11 @@ window.addEventListener('scroll', () => {
     card.appendChild(overlay);
     card.appendChild(strip);
 
-    if (project.link) {
+    if (project.id) {
       card.style.cursor = 'pointer';
-      card.addEventListener('click', () => window.open(project.link, '_blank', 'noopener'));
+      card.addEventListener('click', function () {
+        window.location.href = 'project.html?id=' + encodeURIComponent(project.id);
+      });
     }
 
     return card;
