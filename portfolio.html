@@ -425,7 +425,12 @@ window.addEventListener('scroll', () => {
 
     const cover = document.createElement('div');
     cover.className = 'portfolio-card-cover' + (project.cover ? '' : ' no-image');
-    if (project.cover) { cover.style.backgroundImage = 'url("' + project.cover + '")'; }
+    if (project.cover) {
+      cover.style.backgroundImage = 'url("' + project.cover + '")';
+      var img = new Image();
+      img.onerror = function () { cover.className = 'portfolio-card-cover no-image'; cover.style.backgroundImage = ''; };
+      img.src = project.cover;
+    }
 
     const year = document.createElement('div');
     year.className = 'pc-year';

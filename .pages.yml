@@ -11,7 +11,8 @@ content:
       - name: items
         label: Catégories
         type: object
-        list: true
+        list:
+          label: "{{fields.label}}"
         fields:
           - name: id
             label: "ID (slug)"
@@ -30,7 +31,8 @@ content:
       - name: items
         label: Projets
         type: object
-        list: true
+        list:
+          label: "{{fields.title}}"
         fields:
           - name: title
             label: Titre
@@ -60,8 +62,25 @@ content:
             label: Description
             type: rich-text
           - name: video
-            label: "Vidéo (URL embed)"
+            label: "Vidéo (URL YouTube ou Vimeo)"
             type: string
+            hint: "Coller l'URL normale — ex : https://www.youtube.com/watch?v=xxx"
+          - name: accolades
+            label: Accolades
+            type: object
+            list:
+              label: "{{fields.title}}"
+            fields:
+              - name: title
+                label: Titre de l'accolade
+                type: string
+                required: true
+              - name: event
+                label: "Événement / Festival"
+                type: string
+              - name: year
+                label: Année
+                type: number
           - name: gallery
             label: Galerie d'images
             type: image
@@ -69,6 +88,8 @@ content:
           - name: link
             label: Lien externe
             type: string
+            hint: "URL officielle du projet (site du jeu, IMDb, etc.)"
           - name: id
             label: "ID (slug)"
             type: string
+            hint: "Identifiant unique sans espaces (ex: projet-m)"
