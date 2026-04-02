@@ -8,7 +8,7 @@
       "medium": "Cinéma / TV",
       "year": 2014,
       "cover": "/images/portfolio/projetm_image.jpg",
-      "description": "Dans un futur proche où le climat change rapidement et dans lequel les ressources se font de plus en plus rares, l’Agence Spatiale du Québec recrute des astronautes pour la mission Projet-M. Le but est de prouver la faisabilité d’un voyage de longue durée vers Europe, une lune de Jupiter. Afin de reproduire les conditions, quatre personnes sont envoyées à bord d’une station spatiale pendant 1000 jours.\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ujHSXALAV28?si=idL3a6VQKeHxIuTu\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "description": "Dans un futur proche où le climat change rapidement et dans lequel les ressources se font de plus en plus rares, l’Agence Spatiale du Québec recrute des astronautes pour la mission Projet-M. Le but est de prouver la faisabilité d’un voyage de longue durée vers Europe, une lune de Jupiter. Afin de reproduire les conditions, quatre personnes sont envoyées à bord d’une station spatiale pendant 1000 jours.\n\n",
       "video": "https://www.youtube.com/watch?v=ujHSXALAV28",
       "id": "projet-m"
     }
