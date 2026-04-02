@@ -418,18 +418,21 @@ window.addEventListener('scroll', () => {
 
 // ── PORTFOLIO ──────────────────────────────────────────────
 (function () {
+  function rel(path) { return path ? path.replace(/^\//, '') : path; }
+
   function buildCard(project, categoryLabels) {
     const card = document.createElement('div');
     card.className = 'portfolio-card reveal';
     card.dataset.category = project.category;
 
+    const coverSrc = rel(project.cover);
     const cover = document.createElement('div');
-    cover.className = 'portfolio-card-cover' + (project.cover ? '' : ' no-image');
-    if (project.cover) {
-      cover.style.backgroundImage = 'url("' + project.cover + '")';
+    cover.className = 'portfolio-card-cover' + (coverSrc ? '' : ' no-image');
+    if (coverSrc) {
+      cover.style.backgroundImage = 'url("' + coverSrc + '")';
       var img = new Image();
       img.onerror = function () { cover.className = 'portfolio-card-cover no-image'; cover.style.backgroundImage = ''; };
-      img.src = project.cover;
+      img.src = coverSrc;
     }
 
     const year = document.createElement('div');

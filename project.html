@@ -438,6 +438,8 @@ window.addEventListener('scroll', function () {
     document.title = 'MJR Communications — Projet introuvable';
   }
 
+  function rel(path) { return path ? path.replace(/^\//, '') : path; }
+
   function toEmbedUrl(url) {
     if (!url) return null;
     var yt = url.match(/(?:youtube\.com\/watch\?(?:.*&)?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
@@ -453,8 +455,9 @@ window.addEventListener('scroll', function () {
     var categoryLabel = categoryLabels[project.category] || project.category || '';
 
     // Hero
-    var heroImgClass = project.cover ? 'project-hero-img' : 'project-hero-img no-image';
-    var heroImgStyle = project.cover ? ' style="background-image:url(\'' + project.cover + '\')"' : '';
+    var coverSrc = rel(project.cover);
+    var heroImgClass = coverSrc ? 'project-hero-img' : 'project-hero-img no-image';
+    var heroImgStyle = coverSrc ? ' style="background-image:url(\'' + coverSrc + '\')"' : '';
 
     // Meta items
     var metaHTML = '';
@@ -502,7 +505,7 @@ window.addEventListener('scroll', function () {
     var galleryHTML = '';
     if (project.gallery && project.gallery.length) {
       var imgs = project.gallery.map(function (src) {
-        return '<img class="project-gallery-img" src="' + esc(src) + '" alt="" loading="lazy">';
+        return '<img class="project-gallery-img" src="' + esc(rel(src)) + '" alt="" loading="lazy">';
       }).join('');
       galleryHTML = '<div class="project-gallery">' +
         '<div class="project-gallery-label">Galerie</div>' +
@@ -534,13 +537,13 @@ window.addEventListener('scroll', function () {
         '<aside class="project-meta">' + metaHTML + '</aside>' +
       '</div>';
 
-    if (project.cover) {
+    if (coverSrc) {
       var heroEl = root.querySelector('.project-hero-img');
       var loader = new Image();
       loader.onerror = function () {
         if (heroEl) { heroEl.className = 'project-hero-img no-image'; heroEl.style.backgroundImage = ''; }
       };
-      loader.src = project.cover;
+      loader.src = coverSrc;
     }
   }
 
