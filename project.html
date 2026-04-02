@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MJR Communications — Projet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #080c14;
+  --bg2: #0d1220;
+  --bg3: #111827;
+  --teal: #00e5a0;
+  --teal-dim: rgba(0,229,160,0.12);
+  --teal-mid: rgba(0,229,160,0.35);
+  --amber: #f0a500;
+  --text: #e8edf5;
+  --text-muted: #a8b8cc;
+  --text-dim: #7a8fa8;
+  --border: rgba(255,255,255,0.07);
+  --border-teal: rgba(0,229,160,0.25);
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+::selection { background: var(--teal); color: var(--bg); }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── NAV ───────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 64px;
+  background: rgba(8,12,20,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+.nav-logo span { color: var(--teal); }
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--teal); }
+.nav-links a.active { color: var(--teal); }
+.nav-cta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--teal);
+  text-decoration: none;
+  border: 1px solid var(--border-teal);
+  padding: 8px 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--teal-dim); }
+
+/* ── PROJECT HERO ──────────────────────────────────────── */
+.project-hero {
+  position: relative;
+  margin-top: 64px;
+  height: 55vh;
+  min-height: 320px;
+  overflow: hidden;
+  background: var(--bg3);
+}
+.project-hero-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.project-hero-img.no-image {
+  background-image:
+    linear-gradient(rgba(0,229,160,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,160,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.project-hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8,12,20,0.95) 0%, rgba(8,12,20,0.3) 60%, transparent 100%);
+}
+.project-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  padding: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.project-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+}
+.project-back::before { content: '←'; }
+.project-back:hover { color: var(--teal); }
+.project-category {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.5rem;
+}
+.project-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+.project-client {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+
+/* ── PROJECT BODY ──────────────────────────────────────── */
+.project-body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Meta sidebar */
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 88px;
+}
+.project-meta-item {}
+.project-meta-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+.project-meta-value {
+  font-size: 14px;
+  color: var(--text);
+}
+.project-meta-divider {
+  height: 1px;
+  background: var(--border);
+}
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  text-decoration: none;
+  border: 1px solid var(--border-teal);
+  padding: 10px 16px;
+  transition: all 0.2s;
+}
+.project-link-btn::after { content: '↗'; }
+.project-link-btn:hover { background: var(--teal-dim); }
+
+/* Main content */
+.project-content {}
+.project-description {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+}
+.project-description h1,
+.project-description h2,
+.project-description h3 {
+  font-family: var(--font-display);
+  color: var(--text);
+  margin: 2rem 0 0.75rem;
+}
+.project-description h2 { font-size: 1.4rem; }
+.project-description h3 { font-size: 1.1rem; }
+.project-description p { margin-bottom: 1.2rem; }
+.project-description ul,
+.project-description ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+.project-description a { color: var(--teal); text-decoration: underline; }
+.project-description strong { color: var(--text); }
+
+/* Video embed */
+.project-video {
+  margin-top: 3rem;
+}
+.project-video-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.project-video-label::before { content: '//'; opacity: 0.4; }
+.project-video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.project-video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Gallery */
+.project-gallery {
+  margin-top: 3rem;
+}
+.project-gallery-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.project-gallery-label::before { content: '//'; opacity: 0.4; }
+.project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+.project-gallery-img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+  border: 1px solid var(--border);
+  display: block;
+  transition: border-color 0.2s;
+}
+.project-gallery-img:hover { border-color: var(--border-teal); }
+
+/* Not found */
+.project-not-found {
+  text-align: center;
+  padding: 8rem 2rem;
+}
+.project-not-found h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.project-not-found p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* ── FOOTER ────────────────────────────────────────────── */
+footer {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-left {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+.footer-right {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+.footer-right span { color: var(--teal); }
+
+/* ── MOBILE ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .project-hero-content { padding: 1.5rem; }
+  .project-body {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.25rem;
+    gap: 2.5rem;
+  }
+  .project-meta { position: static; }
+  footer { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="./">MJR<span>.</span>COMMS</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">À propos</a></li>
+    <li><a href="index.html#services">Forfaits</a></li>
+    <li><a href="index.html#carte">À la carte</a></li>
+    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="index.html#experience">Parcours</a></li>
+  </ul>
+  <a class="nav-cta" href="index.html#contact">Contactez-moi</a>
+</nav>
+
+<!-- PROJECT CONTENT (injected by JS) -->
+<div id="project-root"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
+  <div class="footer-right">MJR<span>.</span>COMMS — INSERT COIN TO <span>LAUNCH</span>_</div>
+</footer>
+
+<script>
+// ── NAVBAR SCROLL STYLE ────────────────────────────────────
+window.addEventListener('scroll', function () {
+  var nav = document.querySelector('nav');
+  nav.style.borderBottomColor = window.scrollY > 40
+    ? 'rgba(0,229,160,0.15)'
+    : 'rgba(255,255,255,0.07)';
+});
+
+// ── PROJECT PAGE ───────────────────────────────────────────
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var projectId = params.get('id');
+
+  function renderNotFound() {
+    var root = document.getElementById('project-root');
+    root.innerHTML =
+      '<div class="project-not-found">' +
+        '<h2>Projet introuvable</h2>' +
+        '<p>Ce projet n\'existe pas ou a été supprimé.</p>' +
+        '<a href="portfolio.html" class="project-back" style="display:inline-flex;margin:0 auto;">Retour au portfolio</a>' +
+      '</div>';
+    document.title = 'MJR Communications — Projet introuvable';
+  }
+
+  function renderProject(project, categoryLabels) {
+    document.title = 'MJR Communications — ' + project.title;
+
+    var categoryLabel = categoryLabels[project.category] || project.category || '';
+
+    // Hero
+    var heroImgClass = project.cover ? 'project-hero-img' : 'project-hero-img no-image';
+    var heroImgStyle = project.cover ? ' style="background-image:url(\'' + project.cover + '\')"' : '';
+
+    // Meta items
+    var metaHTML = '';
+    if (categoryLabel) {
+      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">Catégorie</div><div class="project-meta-value">' + esc(categoryLabel) + '</div></div>';
+    }
+    if (project.role) {
+      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">Rôle</div><div class="project-meta-value">' + esc(project.role) + '</div></div>';
+    }
+    if (project.medium) {
+      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">Médium</div><div class="project-meta-value">' + esc(project.medium) + '</div></div>';
+    }
+    if (project.year) {
+      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">Année</div><div class="project-meta-value">' + esc(String(project.year)) + '</div></div>';
+    }
+    if (project.link) {
+      metaHTML += '<div class="project-meta-divider"></div><a href="' + esc(project.link) + '" target="_blank" rel="noopener" class="project-link-btn">Voir le projet</a>';
+    }
+
+    // Video embed
+    var videoHTML = '';
+    if (project.video) {
+      videoHTML = '<div class="project-video">' +
+        '<div class="project-video-label">Vidéo</div>' +
+        '<div class="project-video-wrap">' +
+          '<iframe src="' + esc(project.video) + '" allowfullscreen loading="lazy"></iframe>' +
+        '</div>' +
+      '</div>';
+    }
+
+    // Gallery
+    var galleryHTML = '';
+    if (project.gallery && project.gallery.length) {
+      var imgs = project.gallery.map(function (src) {
+        return '<img class="project-gallery-img" src="' + esc(src) + '" alt="" loading="lazy">';
+      }).join('');
+      galleryHTML = '<div class="project-gallery">' +
+        '<div class="project-gallery-label">Galerie</div>' +
+        '<div class="project-gallery-grid">' + imgs + '</div>' +
+      '</div>';
+    }
+
+    var root = document.getElementById('project-root');
+    root.innerHTML =
+      '<div class="project-hero">' +
+        '<div class="' + heroImgClass + '"' + heroImgStyle + '></div>' +
+        '<div class="project-hero-gradient"></div>' +
+        '<div class="project-hero-content">' +
+          '<a href="portfolio.html" class="project-back">Portfolio</a>' +
+          (categoryLabel ? '<div class="project-category">' + esc(categoryLabel) + '</div>' : '') +
+          '<h1 class="project-title">' + esc(project.title) + '</h1>' +
+          (project.client ? '<div class="project-client">' + esc(project.client) + '</div>' : '') +
+        '</div>' +
+      '</div>' +
+      '<div class="project-body">' +
+        '<div class="project-content">' +
+          (project.description
+            ? '<div class="project-description">' + project.description + '</div>'
+            : '') +
+          videoHTML +
+          galleryHTML +
+        '</div>' +
+        '<aside class="project-meta">' + metaHTML + '</aside>' +
+      '</div>';
+  }
+
+  function esc(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  if (!projectId) { renderNotFound(); return; }
+
+  Promise.all([
+    fetch('categories.json').then(function (r) { return r.ok ? r.json() : { items: [] }; }),
+    fetch('portfolio.json').then(function (r) { return r.ok ? r.json() : { items: [] }; })
+  ]).then(function (results) {
+    var categoryLabels = {};
+    (results[0].items || []).forEach(function (c) { categoryLabels[c.id] = c.label; });
+
+    var projects = results[1].items || results[1];
+    var project = projects.find(function (p) { return p.id === projectId; });
+
+    if (!project) { renderNotFound(); return; }
+    renderProject(project, categoryLabels);
+  }).catch(function () { renderNotFound(); });
+}());
+</script>
+</body>
+</html>
