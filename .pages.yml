@@ -1,6 +1,6 @@
 media:
   input: images/portfolio
-  output: /images/portfolio
+  output: images/portfolio
 
 content:
   - name: categories
