@@ -386,12 +386,7 @@ footer {
     <h2 class="reveal">Projets &amp; réalisations</h2>
     <p class="section-desc reveal">Une sélection de mandats en communication à travers les jeux vidéo, le cinéma, la télévision et la bande dessinée.</p>
 
-    <div class="portfolio-filters reveal" style="transition-delay:0.1s">
-      <button class="pf-btn active" data-filter="all">Tous</button>
-      <button class="pf-btn" data-filter="jeux-video">Jeux vidéo</button>
-      <button class="pf-btn" data-filter="cinema-tv">Cinéma / TV</button>
-      <button class="pf-btn" data-filter="bande-dessinee">Bande dessinée</button>
-    </div>
+    <div class="portfolio-filters reveal" id="portfolio-filters" style="transition-delay:0.1s"></div>
 
     <div class="portfolio-grid" id="portfolio-grid"></div>
     <p class="portfolio-empty" id="portfolio-empty" style="display:none;">Aucun projet dans cette catégorie pour l'instant.</p>
@@ -423,13 +418,7 @@ window.addEventListener('scroll', () => {
 
 // ── PORTFOLIO ──────────────────────────────────────────────
 (function () {
-  const CATEGORY_LABELS = {
-    'jeux-video':     'Jeux vidéo',
-    'cinema-tv':      'Cinéma / TV',
-    'bande-dessinee': 'Bande dessinée',
-  };
-
-  function buildCard(project) {
+  function buildCard(project, categoryLabels) {
     const card = document.createElement('div');
     card.className = 'portfolio-card reveal';
     card.dataset.category = project.category;
@@ -447,7 +436,7 @@ window.addEventListener('scroll', () => {
 
     const catLabel = document.createElement('div');
     catLabel.className = 'pc-category';
-    catLabel.textContent = CATEGORY_LABELS[project.category] || project.category;
+    catLabel.textContent = categoryLabels[project.category] || project.category;
 
     const title = document.createElement('div');
     title.className = 'pc-title';
@@ -499,10 +488,27 @@ window.addEventListener('scroll', () => {
     if (empty) empty.style.display = visibleCount === 0 ? 'block' : 'none';
   }
 
-  function initFilters(cards) {
-    document.querySelectorAll('.pf-btn').forEach(btn => {
+  function buildFilters(categories, cards) {
+    const container = document.getElementById('portfolio-filters');
+    if (!container) return;
+
+    const allBtn = document.createElement('button');
+    allBtn.className = 'pf-btn active';
+    allBtn.dataset.filter = 'all';
+    allBtn.textContent = 'Tous';
+    container.appendChild(allBtn);
+
+    categories.forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className = 'pf-btn';
+      btn.dataset.filter = cat.id;
+      btn.textContent = cat.label;
+      container.appendChild(btn);
+    });
+
+    container.querySelectorAll('.pf-btn').forEach(btn => {
       btn.addEventListener('click', function () {
-        document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('active'));
+        container.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('active'));
         this.classList.add('active');
         applyFilter(cards, this.dataset.filter);
       });
@@ -510,17 +516,26 @@ window.addEventListener('scroll', () => {
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    fetch('portfolio.json')
-      .then(res => { if (!res.ok) throw new Error('portfolio.json not found'); return res.json(); })
-      .then(data => {
-        const projects = data.items || data;
-        const grid = document.getElementById('portfolio-grid');
-        if (!grid) return;
-        const cards = projects.map(buildCard);
-        cards.forEach(card => { grid.appendChild(card); observer.observe(card); });
-        initFilters(cards);
-      })
-      .catch(err => console.warn('Portfolio:', err.message));
+    Promise.all([
+      fetch('categories.json').then(r => r.ok ? r.json() : { items: [] }),
+      fetch('portfolio.json').then(r => { if (!r.ok) throw new Error('portfolio.json not found'); return r.json(); })
+    ])
+    .then(function (results) {
+      const categories = results[0].items || [];
+      const projects = results[1].items || results[1];
+
+      const categoryLabels = {};
+      categories.forEach(function (c) { categoryLabels[c.id] = c.label; });
+
+      const grid = document.getElementById('portfolio-grid');
+      if (!grid) return;
+
+      const cards = projects.map(function (p) { return buildCard(p, categoryLabels); });
+      cards.forEach(function (card) { grid.appendChild(card); observer.observe(card); });
+
+      buildFilters(categories, cards);
+    })
+    .catch(function (err) { console.warn('Portfolio:', err.message); });
   });
 }());
 </script>
