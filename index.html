@@ -110,6 +110,114 @@ nav {
 }
 .nav-cta:hover { background: var(--teal-dim); }
 
+/* ── SPLASH / PAGE DE GARDE ────────────────────────────── */
+#splash {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+#splash.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.splash-name {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.1s;
+}
+.splash-name span { color: var(--teal); }
+.splash-sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 4rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.25s;
+}
+.splash-choices {
+  display: flex;
+  gap: 0;
+  width: min(860px, 90vw);
+  height: min(340px, 50vh);
+  border: 1px solid var(--border);
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.4s;
+}
+.splash-choice {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+  padding: 2.5rem;
+}
+.splash-choice:first-child { border-right: 1px solid var(--border); }
+.splash-choice::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.splash-choice.services::before { background: radial-gradient(ellipse at center, rgba(0,229,160,0.07) 0%, transparent 70%); }
+.splash-choice.portfolio::before { background: radial-gradient(ellipse at center, rgba(240,165,0,0.07) 0%, transparent 70%); }
+.splash-choice:hover::before { opacity: 1; }
+.splash-choice-icon {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.splash-choice.services .splash-choice-icon { color: var(--teal); }
+.splash-choice.portfolio .splash-choice-icon { color: var(--amber); }
+.splash-choice-label {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  line-height: 1.2;
+  transition: color 0.3s;
+}
+.splash-choice.services:hover .splash-choice-label { color: var(--teal); }
+.splash-choice.portfolio:hover .splash-choice-label { color: var(--amber); }
+.splash-choice-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 220px;
+  line-height: 1.6;
+}
+.splash-choice-arrow {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  color: var(--border);
+  transition: color 0.3s, transform 0.3s;
+}
+.splash-choice.services:hover .splash-choice-arrow { color: var(--teal); transform: translateX(6px); }
+.splash-choice.portfolio:hover .splash-choice-arrow { color: var(--amber); transform: translateX(6px); }
+@media (max-width: 600px) {
+  .splash-choices { flex-direction: column; height: auto; width: 90vw; }
+  .splash-choice:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+}
+
 /* ── HERO ──────────────────────────────────────────────── */
 #hero {
   position: relative;
@@ -181,10 +289,20 @@ h1 em {
   color: var(--text-muted);
   max-width: 560px;
   line-height: 1.8;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.5rem;
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 0.6s;
 }
+.hero-slogan {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.75s;
+}
+.hero-slogan em { color: var(--teal); font-style: normal; }
 .hero-actions {
   display: flex;
   gap: 1rem;
@@ -702,6 +820,26 @@ footer {
 </head>
 <body>
 
+<!-- SPLASH / PAGE DE GARDE -->
+<div id="splash">
+  <div class="splash-name">Mario J<span>.</span> Ramos</div>
+  <div class="splash-sub">Spécialiste des communications&nbsp;<span class="blink">_</span></div>
+  <div class="splash-choices">
+    <a class="splash-choice services" href="#hero" id="splash-services">
+      <div class="splash-choice-icon">// 01</div>
+      <div class="splash-choice-label">Offre de<br>services</div>
+      <div class="splash-choice-desc">Communications, relations de presse et stratégie de lancement.</div>
+      <div class="splash-choice-arrow">→</div>
+    </a>
+    <a class="splash-choice portfolio" href="portfolio.html" id="splash-portfolio">
+      <div class="splash-choice-icon">// 02</div>
+      <div class="splash-choice-label">Portfolio</div>
+      <div class="splash-choice-desc">Projets, productions et réalisations.</div>
+      <div class="splash-choice-arrow">→</div>
+    </a>
+  </div>
+</div>
+
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">Mario J<span>.</span> Ramos</a>
@@ -728,6 +866,7 @@ footer {
     <p class="hero-sub">
       Spécialiste des communications
     </p>
+    <p class="hero-slogan">Vos jeux méritent<br>d'être <em>vus</em>.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="#services">Voir les forfaits</a>
       <a class="btn-secondary" href="#contact">Discutons de votre projet</a>
@@ -979,6 +1118,22 @@ footer {
 </footer>
 
 <script>
+// ── SPLASH ─────────────────────────────────────────────────
+(function () {
+  var splash = document.getElementById('splash');
+  function dismiss() {
+    splash.classList.add('hidden');
+  }
+  document.getElementById('splash-services').addEventListener('click', function (e) {
+    e.preventDefault();
+    dismiss();
+    setTimeout(function () { document.getElementById('hero').scrollIntoView({ behavior: 'smooth' }); }, 50);
+  });
+  document.getElementById('splash-portfolio').addEventListener('click', function () {
+    dismiss();
+  });
+})();
+
 // ── SCROLL REVEAL ──────────────────────────────────────────
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
