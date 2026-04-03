@@ -860,8 +860,8 @@ footer {
     <li><a href="#about">À propos</a></li>
     <li><a href="#services">Forfaits</a></li>
     <li><a href="#carte">À la carte</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
     <li><a href="#experience">Parcours</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
   </ul>
   <a class="nav-cta" href="#contact">Contactez-moi</a>
 </nav>
@@ -1134,8 +1134,14 @@ footer {
 // ── SPLASH ─────────────────────────────────────────────────
 (function () {
   var splash = document.getElementById('splash');
-  function dismiss() {
+  function dismiss(instant) {
+    if (instant) { splash.style.display = 'none'; return; }
     splash.classList.add('hidden');
+  }
+  // Bypass splash if arriving via a direct anchor link
+  if (window.location.hash && window.location.hash !== '#hero') {
+    dismiss(true);
+    return;
   }
   document.getElementById('splash-services').addEventListener('click', function (e) {
     e.preventDefault();
