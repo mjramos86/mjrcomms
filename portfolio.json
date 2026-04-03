@@ -192,6 +192,20 @@
         }
       ],
       "id": "22h20-heure-de-lest"
+    },
+    {
+      "title": "Le Jardin d'Évelyne",
+      "client": "Same Productions",
+      "role": "Co-réalisateur / co-scénariste",
+      "category": "cinema-tv",
+      "medium": "Cinéma / TV",
+      "year": 2016,
+      "cover": "images/portfolio/Capture d’écran 2026-04-03 015034.png",
+      "cover_alt": "capture d'écran du film le jardin d'évelyne avec charlotte aubin",
+      "seo_description": "court métrage le jardin d'évelyne mario j. ramos same ravenelle charlotte aubin",
+      "description": "Evelyne commence son deuxième quart au Jardin d’Éden, un salon de massage érotique…",
+      "video": "https://vimeo.com/157237676",
+      "id": "jardin-evelyne"
     }
   ]
 }
