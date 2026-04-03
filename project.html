@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mario J. Ramos — Projet</title>
+<meta name="description" content="">
+<meta name="author" content="Mario J. Ramos">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -449,14 +461,33 @@ window.addEventListener('scroll', function () {
     return url;
   }
 
+  function setMeta(name, val) {
+    var el = document.querySelector('meta[name="' + name + '"], meta[property="' + name + '"]');
+    if (el && val) el.setAttribute('content', val);
+  }
+
   function renderProject(project, categoryLabels) {
     document.title = 'Mario J. Ramos — ' + project.title;
+
+    var seoDesc = project.seo_description || (project.description
+      ? project.description.replace(/<[^>]+>/g, '').slice(0, 160).trim()
+      : '');
+    var coverSrc = rel(project.cover);
+    var coverAbs = coverSrc ? 'https://mjramos86.github.io/mjrcomms/' + coverSrc.replace(/^\//, '') : '';
+
+    setMeta('description', seoDesc);
+    setMeta('og:title', 'Mario J. Ramos — ' + project.title);
+    setMeta('og:description', seoDesc);
+    setMeta('og:url', window.location.href);
+    setMeta('og:image', coverAbs);
+    setMeta('twitter:title', 'Mario J. Ramos — ' + project.title);
+    setMeta('twitter:description', seoDesc);
 
     var categoryLabel = categoryLabels[project.category] || project.category || '';
 
     // Hero
-    var coverSrc = rel(project.cover);
     var heroImgClass = coverSrc ? 'project-hero-img' : 'project-hero-img no-image';
+    var coverAlt = esc(project.cover_alt || project.title);
     var heroImgStyle = coverSrc ? ' style="background-image:url(\'' + coverSrc + '\')"' : '';
 
     // Meta items
@@ -504,8 +535,10 @@ window.addEventListener('scroll', function () {
 
     var galleryHTML = '';
     if (project.gallery && project.gallery.length) {
-      var imgs = project.gallery.map(function (src) {
-        return '<img class="project-gallery-img" src="' + esc(rel(src)) + '" alt="" loading="lazy">';
+      var imgs = project.gallery.map(function (item) {
+        var src = (typeof item === 'string') ? item : item.src;
+        var alt = (typeof item === 'string') ? '' : (item.alt || '');
+        return '<img class="project-gallery-img" src="' + esc(rel(src)) + '" alt="' + esc(alt) + '" loading="lazy">';
       }).join('');
       galleryHTML = '<div class="project-gallery">' +
         '<div class="project-gallery-label">Galerie</div>' +
@@ -516,7 +549,7 @@ window.addEventListener('scroll', function () {
     var root = document.getElementById('project-root');
     root.innerHTML =
       '<div class="project-hero">' +
-        '<div class="' + heroImgClass + '"' + heroImgStyle + '></div>' +
+        '<div class="' + heroImgClass + '" role="img" aria-label="' + coverAlt + '"' + heroImgStyle + '></div>' +
         '<div class="project-hero-gradient"></div>' +
         '<div class="project-hero-content">' +
           '<a href="portfolio.html" class="project-back">Portfolio</a>' +

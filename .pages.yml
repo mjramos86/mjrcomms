@@ -58,6 +58,14 @@ content:
           - name: cover
             label: Image de couverture
             type: image
+          - name: cover_alt
+            label: "Texte alternatif (alt) de la couverture"
+            type: string
+            hint: "Décrit l'image pour les moteurs de recherche et les lecteurs d'écran (ex : « Affiche officielle du jeu Projet-M »)"
+          - name: seo_description
+            label: "Description SEO (meta description)"
+            type: string
+            hint: "Résumé court (max 160 caractères) affiché dans les résultats Google et les aperçus de liens."
           - name: description
             label: Description
             type: rich-text
@@ -83,8 +91,17 @@ content:
                 type: number
           - name: gallery
             label: Galerie d'images
-            type: image
-            list: true
+            type: object
+            list:
+              label: "{{fields.alt}}"
+            fields:
+              - name: src
+                label: Image
+                type: image
+              - name: alt
+                label: Texte alternatif (alt)
+                type: string
+                hint: "Décrit l'image (ex : « Capture d'écran du niveau 3 »)"
           - name: link
             label: Lien externe
             type: string
