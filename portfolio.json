@@ -221,7 +221,20 @@
       "video": "https://vimeo.com/151341788",
       "id": "insomnie"
     },
-    {},
+    {
+      "title": "The Solitaire Tower of Doom",
+      "client": "emjayhar",
+      "role": "Game design",
+      "category": "jeux-video",
+      "medium": "Jeux vidéo",
+      "year": 2026,
+      "cover": "images/portfolio/SolitaireDoom_Keyart.jpg",
+      "cover_alt": "key art the solitaire tower of doom",
+      "seo_description": "jeu vidéo horror roguelike solitaire The Solitaire Tower of Doom",
+      "description": "Un jeu vidéo de Solitaire avec un thème d'horreur et des mécaniques de roguelike.  \n  \n[Disponible gratuitement sur www.solitairedoom.com](https://solitairedoom.com/)",
+      "video": "https://www.youtube.com/watch?v=h81firMsGXU",
+      "id": "solitaire-doom"
+    },
     {
       "title": "La Chasse Galerie : Le jeu Pico-8",
       "client": "emjayhar",
@@ -232,7 +245,7 @@
       "cover": "images/portfolio/Capture d’écran 2026-04-03 023131.png",
       "cover_alt": "capture d'écran du jeu vidéo la chasse galerie le jeu pico-8",
       "seo_description": "jeu vidéo pico-8 arcade la chasse galerie québec",
-      "description": "Jeu vidéo à saveur rétro réalisé avec l’engin Pico-8. Le code de programmation du jeu a été généré avec l’aide d’un outil IA.\n\n*Un canot volant maudit par le yâble! Évite les démons pis les églises pendant que tu r’tournes au camp, pis ramasse du sirop pour pas perdre ton âme!*\n\nInspiré du classique de la littérature québécoise « La chasse-galerie » d’Honoré Beaugrand.  \n  \n[Disponible gratuitement sur Itch.io](https://emjayhar.itch.io/la-chasse-galerie-pico8)",
+      "description": "Jeu vidéo à saveur rétro réalisé avec l’engin Pico-8. Le code de programmation du jeu a été généré avec l’aide d’un outil IA.\n\n*Un canot volant maudit par le yâble! Évite les démons pis les églises pendant que tu r’tournes au camp, pis ramasse du sirop pour pas perdre ton âme!*\n\nInspiré du classique de la littérature québécoise « La chasse-galerie » d’Honoré Beaugrand.  \n\n[Disponible gratuitement sur Itch.io](https://emjayhar.itch.io/la-chasse-galerie-pico8)",
       "id": "chasse-galerie-pico8"
     }
   ]
