@@ -206,6 +206,20 @@
       "description": "Evelyne commence son deuxième quart au Jardin d’Éden, un salon de massage érotique…",
       "video": "https://vimeo.com/157237676",
       "id": "jardin-evelyne"
+    },
+    {
+      "title": "L'Insomnie",
+      "client": "Marc Gravel",
+      "role": "Réalisateur",
+      "category": "cinema-tv",
+      "medium": "Cinéma / TV",
+      "year": 2016,
+      "cover": "images/portfolio/Capture d’écran 2026-04-03 020346.png",
+      "cover_alt": "thumbnail vidéoclip l'insomnie par marc gravel",
+      "seo_description": "vidéoclip l'insomnie par marc gravel réalisé par mario j. ramos",
+      "description": "Vidéoclip de la chanson L'INSOMNIE par Marc Gravel.",
+      "video": "https://vimeo.com/151341788",
+      "id": "insomnie"
     }
   ]
 }
