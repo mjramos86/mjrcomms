@@ -79,6 +79,20 @@
       "description": "Découvrez un jeu d'action-aventure à la 3ème personne mêlant l’intensité de violents combats au corps à corps et l'excitation de l'exploration. Parcourez un pays déchiré par la guerre civile pour trouver des réponses aux questions qui vous hantent et affrontez de mystérieuses créatures tout au long de votre périple.",
       "video": "https://www.youtube.com/watch?v=rjr4vDOiBqw",
       "id": "hell-is-us"
+    },
+    {
+      "title": "Vie de Pro avec missharvey",
+      "client": "RDS / Bell Média",
+      "role": "Producteur / Développement",
+      "category": "cinema-tv",
+      "medium": "Cinéma / TV",
+      "year": 2020,
+      "cover": "images/portfolio/vie-de-pro.png",
+      "cover_alt": "affiche série web vie de pro avec missharvey / stéphanie harvey / rds jeux vidéo / esports",
+      "seo_description": "série web esports RDS vie de pro avec stéphanie harvey aka missharvey",
+      "description": "Stéphanie «missharvey» Harvey rencontre des joueurs professionnels de jeux vidéo et autres intervenants du monde du sport électronique. Stéphanie mène une entrevue où on découvre le joueur, mais également l’être humain. On démystifie les sports électroniques, communément appelés les esports, et on apprend à connaître ces joueurs qui sont des vedettes internationales dans leur milieu, mais méconnues du grand public québécois.",
+      "video": "https://www.youtube.com/watch?v=Tdi3OB-1xPQ&list=PLZksgcDwQNGIEZuugdjOiejieICtBGpn7",
+      "id": "vie-de-pro-missharvey"
     }
   ]
 }
