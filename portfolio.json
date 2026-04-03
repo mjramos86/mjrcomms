@@ -155,8 +155,12 @@
       "seo_description": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly versus magazine #2",
       "description": "Bande dessinée de une page intitulée Deux chats blancs, publiée dans les pages de Versus magazine #2",
       "gallery": [
-        {}
-      ]
+        {
+          "src": "images/portfolio/deux-chats-blanc_p1.jpg",
+          "alt": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly"
+        }
+      ],
+      "id": "deux-chats-blancs"
     }
   ]
 }
