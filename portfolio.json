@@ -95,6 +95,19 @@
       "description": "Stéphanie «missharvey» Harvey rencontre des joueurs professionnels de jeux vidéo et autres intervenants du monde du sport électronique. Stéphanie mène une entrevue où on découvre le joueur, mais également l’être humain. On démystifie les sports électroniques, communément appelés les esports, et on apprend à connaître ces joueurs qui sont des vedettes internationales dans leur milieu, mais méconnues du grand public québécois.",
       "video": "https://www.youtube.com/watch?v=Tdi3OB-1xPQ&list=PLZksgcDwQNGIEZuugdjOiejieICtBGpn7",
       "id": "vie-de-pro-missharvey"
+    },
+    {
+      "title": "Projet-M : Mission Europe",
+      "client": "Babel Films",
+      "role": "Scénariste",
+      "category": "bande-dessinee",
+      "medium": "Bande dessinée",
+      "year": 2015,
+      "cover": "images/portfolio/Capture d’écran 2026-04-03 004725-1.png",
+      "cover_alt": "couverture bande dessinée projet-m mission europe mario j. ramos esla charretier gabriel kelly",
+      "seo_description": "bande dessinée québécoise de science-fiction projet-m mission europe mario j. ramos elsa charretier gabriel kelly",
+      "description": "Plusieurs décennies avec une nouvelle Grande guerre qui a changé la face du monde, ce qui reste de l'humanité s'organise. L'espoir de reconstruire ce nouveau monde repose sur une équipe de scientifiques en route vers Europe, une lune de Jupiter contenant un secret pourrait l'histoire du monde et nos origines...  \n  \n**[Lisez la BD complète ici.](https://github.com/mjramos86/mjrcomms/blob/15d24a5756a44398f4cdc5e5bcded503ba289bd9/projet-m-mission-europe-compressed.pdf)**",
+      "id": "mission-europe"
     }
   ]
 }
