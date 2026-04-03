@@ -80,6 +80,40 @@
       "cover": "images/portfolio/hell-is-us-key-art-ice-blue-background.avif",
       "description": "Découvrez un jeu d'action-aventure à la 3ème personne mêlant l’intensité de violents combats au corps à corps et l'excitation de l'exploration. Parcourez un pays déchiré par la guerre civile pour trouver des réponses aux questions qui vous hantent et affrontez de mystérieuses créatures tout au long de votre périple.",
       "video": "https://www.youtube.com/watch?v=rjr4vDOiBqw",
+      "gallery": [
+        {
+          "src": "images/portfolio/hell is us salut bonjour.jpg",
+          "alt": "hell is us à Salut Bonjour"
+        },
+        {
+          "src": "images/portfolio/hell is us LCN téléjournal.jpg",
+          "alt": "hell is us à LCN téléjournal"
+        },
+        {
+          "src": "images/portfolio/hell is us le devoir.jpg",
+          "alt": "hell is us dans le journal le devoir"
+        },
+        {
+          "src": "images/portfolio/hell is us c'est encore mieux.jpg",
+          "alt": "hell is us à c'est encore mieux l'après-midi"
+        },
+        {
+          "src": "images/portfolio/hell is us radio energie phil branch.jpg",
+          "alt": "hell is us à la radio de bell média énergie avec phil branch"
+        },
+        {
+          "src": "images/portfolio/hell is us zone economie.jpg",
+          "alt": "hell is us à zone économie à radio-canada"
+        },
+        {
+          "src": "images/portfolio/hell is us journal de montreal.jpg",
+          "alt": "hell is us dans le journal de montréal"
+        },
+        {
+          "src": "images/portfolio/hell is us tva nouvelles.jpg",
+          "alt": "hell is us à tva nouvelles"
+        }
+      ],
       "id": "hell-is-us"
     },
     {
@@ -106,7 +140,7 @@
       "cover": "images/portfolio/Capture d’écran 2026-04-03 004725-1.png",
       "cover_alt": "couverture bande dessinée projet-m mission europe mario j. ramos esla charretier gabriel kelly",
       "seo_description": "bande dessinée québécoise de science-fiction projet-m mission europe mario j. ramos elsa charretier gabriel kelly",
-      "description": "Plusieurs décennies avec une nouvelle Grande guerre qui a changé la face du monde, ce qui reste de l'humanité s'organise. L'espoir de reconstruire ce nouveau monde repose sur une équipe de scientifiques en route vers Europe, une lune de Jupiter contenant un secret pourrait l'histoire du monde et nos origines...  \n  \n**[Lisez la BD complète ici.](https://github.com/mjramos86/mjrcomms/blob/15d24a5756a44398f4cdc5e5bcded503ba289bd9/projet-m-mission-europe-compressed.pdf)**",
+      "description": "Plusieurs décennies avec une nouvelle Grande guerre qui a changé la face du monde, ce qui reste de l'humanité s'organise. L'espoir de reconstruire ce nouveau monde repose sur une équipe de scientifiques en route vers Europe, une lune de Jupiter contenant un secret pourrait l'histoire du monde et nos origines...  \n\n**[Lisez la BD complète ici.](https://github.com/mjramos86/mjrcomms/blob/15d24a5756a44398f4cdc5e5bcded503ba289bd9/projet-m-mission-europe-compressed.pdf)**",
       "id": "mission-europe"
     }
   ]
