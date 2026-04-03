@@ -200,8 +200,8 @@
       "category": "cinema-tv",
       "medium": "Cinéma / TV",
       "year": 2016,
-      "cover": "images/portfolio/Capture d’écran 2026-04-03 015034.png",
-      "cover_alt": "capture d'écran du film le jardin d'évelyne avec charlotte aubin",
+      "cover": "images/portfolio/12976924_1182561895110399_3710613017109154919_o.jpg",
+      "cover_alt": "affiche du film le jardin d'évelyne avec charlotte aubin",
       "seo_description": "court métrage le jardin d'évelyne mario j. ramos same ravenelle charlotte aubin",
       "description": "Evelyne commence son deuxième quart au Jardin d’Éden, un salon de massage érotique…",
       "video": "https://vimeo.com/157237676",
@@ -220,6 +220,7 @@
       "description": "Vidéoclip de la chanson L'INSOMNIE par Marc Gravel.",
       "video": "https://vimeo.com/151341788",
       "id": "insomnie"
-    }
+    },
+    {}
   ]
 }
