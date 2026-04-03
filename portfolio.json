@@ -65,7 +65,20 @@
           "event": "Fantasia International Film Festival",
           "year": 2010
         }
-      ]
+      ],
+      "id": "temps-mort"
+    },
+    {
+      "title": "Hell is Us",
+      "client": "Rogue Factor",
+      "role": "Responsable des communications",
+      "category": "jeu-video",
+      "medium": "Jeu vidéo",
+      "year": 2025,
+      "cover": "images/portfolio/hell-is-us-key-art-ice-blue-background.avif",
+      "description": "Découvrez un jeu d'action-aventure à la 3ème personne mêlant l’intensité de violents combats au corps à corps et l'excitation de l'exploration. Parcourez un pays déchiré par la guerre civile pour trouver des réponses aux questions qui vous hantent et affrontez de mystérieuses créatures tout au long de votre périple.",
+      "video": "https://www.youtube.com/watch?v=rjr4vDOiBqw",
+      "id": "hell-is-us"
     }
   ]
 }
