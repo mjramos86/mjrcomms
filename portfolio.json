@@ -1,6 +1,52 @@
 {
   "items": [
     {
+      "title": "Hell is Us",
+      "client": "Rogue Factor",
+      "role": "Responsable des communications",
+      "category": "jeux-video",
+      "medium": "Jeux vidéo",
+      "year": 2025,
+      "cover": "images/portfolio/hell-is-us-key-art-ice-blue-background.avif",
+      "description": "Découvrez un jeu d'action-aventure à la 3ème personne mêlant l’intensité de violents combats au corps à corps et l'excitation de l'exploration. Parcourez un pays déchiré par la guerre civile pour trouver des réponses aux questions qui vous hantent et affrontez de mystérieuses créatures tout au long de votre périple.",
+      "video": "https://www.youtube.com/watch?v=rjr4vDOiBqw",
+      "gallery": [
+        {
+          "src": "images/portfolio/hell is us salut bonjour.jpg",
+          "alt": "hell is us à Salut Bonjour"
+        },
+        {
+          "src": "images/portfolio/hell is us LCN téléjournal.jpg",
+          "alt": "hell is us à LCN téléjournal"
+        },
+        {
+          "src": "images/portfolio/hell is us le devoir.jpg",
+          "alt": "hell is us dans le journal le devoir"
+        },
+        {
+          "src": "images/portfolio/hell is us c'est encore mieux.jpg",
+          "alt": "hell is us à c'est encore mieux l'après-midi"
+        },
+        {
+          "src": "images/portfolio/hell is us radio energie phil branch.jpg",
+          "alt": "hell is us à la radio de bell média énergie avec phil branch"
+        },
+        {
+          "src": "images/portfolio/hell is us zone economie.jpg",
+          "alt": "hell is us à zone économie à radio-canada"
+        },
+        {
+          "src": "images/portfolio/hell is us journal de montreal.jpg",
+          "alt": "hell is us dans le journal de montréal"
+        },
+        {
+          "src": "images/portfolio/hell is us tva nouvelles.jpg",
+          "alt": "hell is us à tva nouvelles"
+        }
+      ],
+      "id": "hell-is-us"
+    },
+    {
       "title": "Projet-M",
       "client": "Babel Films",
       "role": "Co-créateur / Scénariste / Producteur / Monteur",
@@ -69,52 +115,6 @@
         }
       ],
       "id": "temps-mort"
-    },
-    {
-      "title": "Hell is Us",
-      "client": "Rogue Factor",
-      "role": "Responsable des communications",
-      "category": "jeux-video",
-      "medium": "Jeux vidéo",
-      "year": 2025,
-      "cover": "images/portfolio/hell-is-us-key-art-ice-blue-background.avif",
-      "description": "Découvrez un jeu d'action-aventure à la 3ème personne mêlant l’intensité de violents combats au corps à corps et l'excitation de l'exploration. Parcourez un pays déchiré par la guerre civile pour trouver des réponses aux questions qui vous hantent et affrontez de mystérieuses créatures tout au long de votre périple.",
-      "video": "https://www.youtube.com/watch?v=rjr4vDOiBqw",
-      "gallery": [
-        {
-          "src": "images/portfolio/hell is us salut bonjour.jpg",
-          "alt": "hell is us à Salut Bonjour"
-        },
-        {
-          "src": "images/portfolio/hell is us LCN téléjournal.jpg",
-          "alt": "hell is us à LCN téléjournal"
-        },
-        {
-          "src": "images/portfolio/hell is us le devoir.jpg",
-          "alt": "hell is us dans le journal le devoir"
-        },
-        {
-          "src": "images/portfolio/hell is us c'est encore mieux.jpg",
-          "alt": "hell is us à c'est encore mieux l'après-midi"
-        },
-        {
-          "src": "images/portfolio/hell is us radio energie phil branch.jpg",
-          "alt": "hell is us à la radio de bell média énergie avec phil branch"
-        },
-        {
-          "src": "images/portfolio/hell is us zone economie.jpg",
-          "alt": "hell is us à zone économie à radio-canada"
-        },
-        {
-          "src": "images/portfolio/hell is us journal de montreal.jpg",
-          "alt": "hell is us dans le journal de montréal"
-        },
-        {
-          "src": "images/portfolio/hell is us tva nouvelles.jpg",
-          "alt": "hell is us à tva nouvelles"
-        }
-      ],
-      "id": "hell-is-us"
     },
     {
       "title": "Vie de Pro avec missharvey",
@@ -231,7 +231,7 @@
       "cover": "images/portfolio/SolitaireDoom_Keyart.jpg",
       "cover_alt": "key art the solitaire tower of doom",
       "seo_description": "jeu vidéo horror roguelike solitaire The Solitaire Tower of Doom",
-      "description": "Un jeu vidéo de Solitaire avec un thème d'horreur et des mécaniques de roguelike.  \n  \n[Disponible gratuitement sur www.solitairedoom.com](https://solitairedoom.com/)",
+      "description": "Un jeu vidéo de Solitaire avec un thème d'horreur et des mécaniques de roguelike.  \n\n[Disponible gratuitement sur www.solitairedoom.com](https://solitairedoom.com/)",
       "video": "https://www.youtube.com/watch?v=h81firMsGXU",
       "id": "solitaire-doom"
     },
