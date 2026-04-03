@@ -18,6 +18,7 @@
 <meta name="twitter:description" content="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <style>
 /* ── RESET & BASE ──────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -561,7 +562,7 @@ window.addEventListener('scroll', function () {
       '<div class="project-body">' +
         '<div class="project-content">' +
           (project.description
-            ? '<div class="project-description">' + project.description + '</div>'
+            ? '<div class="project-description">' + (typeof marked !== 'undefined' ? marked.parse(project.description) : project.description) + '</div>'
             : '') +
           videoHTML +
           accoladesHTML +
