@@ -142,6 +142,21 @@
       "seo_description": "bande dessinée québécoise de science-fiction projet-m mission europe mario j. ramos elsa charretier gabriel kelly",
       "description": "Plusieurs décennies avec une nouvelle Grande guerre qui a changé la face du monde, ce qui reste de l'humanité s'organise. L'espoir de reconstruire ce nouveau monde repose sur une équipe de scientifiques en route vers Europe, une lune de Jupiter contenant un secret pourrait l'histoire du monde et nos origines...  \n\n**[Lisez la BD complète ici.](https://github.com/mjramos86/mjrcomms/blob/15d24a5756a44398f4cdc5e5bcded503ba289bd9/projet-m-mission-europe-compressed.pdf)**",
       "id": "mission-europe"
+    },
+    {
+      "title": "Deux chats blancs",
+      "client": "Versus magazine",
+      "role": "Scénariste",
+      "category": "bande-dessinee",
+      "medium": "Bande dessinée",
+      "year": 2017,
+      "cover": "images/portfolio/Capture d’écran 2026-04-03 011224-1.png",
+      "cover_alt": "extrait bande dessinée deux chats par mario j. ramos et gabriel kelly",
+      "seo_description": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly versus magazine #2",
+      "description": "Bande dessinée de une page intitulée Deux chats blancs, publiée dans les pages de Versus magazine #2",
+      "gallery": [
+        {}
+      ]
     }
   ]
 }
