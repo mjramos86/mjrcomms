@@ -161,6 +161,37 @@
         }
       ],
       "id": "deux-chats-blancs"
+    },
+    {
+      "title": "22h20, Heure de l'Est",
+      "client": "Babel Films",
+      "role": "Réalisateur / scénariste / monteur",
+      "category": "cinema-tv",
+      "medium": "Cinéma / TV",
+      "year": 2013,
+      "cover": "images/portfolio/maxresdefault (4).jpg",
+      "cover_alt": "affiche film 22h20 heure de l'est de Mario J. Ramos avec Marianne Verville",
+      "seo_description": "film court métrage 22h20 heure de l'est réalisateur mario j. ramos",
+      "description": "C’est un après-midi d’automne bien ordinaire pour Anne qui rentre de l’école. Une journée comme les autres pour l’adolescente. En fait, non, pas comme les autres, car c’est la veille de l’Halloween. Plus précisément, nous sommes le 30 octobre, 1995, jour de référendum.",
+      "video": "https://www.youtube.com/watch?v=lzYAhS7AKIs",
+      "accolades": [
+        {
+          "title": "Sélection officielle",
+          "event": "Rendez-vous du cinéma québécois",
+          "year": 2014
+        },
+        {
+          "title": "Sélection officielle",
+          "event": "Festival de cinéma de la ville de Québec",
+          "year": 2013
+        },
+        {
+          "title": "Sélection officielle",
+          "event": "Fantasia International film festival",
+          "year": 2013
+        }
+      ],
+      "id": "22h20-heure-de-lest"
     }
   ]
 }
