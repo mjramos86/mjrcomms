@@ -327,8 +327,22 @@
       "cover": "images/portfolio/472375711_10170842801390088_3223914620227921012_n.jpg",
       "cover_alt": "photo de tournage court métrage animal de mario j. ramos",
       "seo_description": "court métrage animal de mario j. ramos",
-      "description": "Un écrivain qui passe du temps seul dans son cottage pour écrire un roman n'arrive pas à trouver l'inspiration. Une nuit, il fait la rencontre inattendue d'une femme qui semble avoir littéralement régressé vers un état sauvage. En essayant d'atteindre son côté humain et de comprendre ce qui lui est arrivé, c'est finalement elle qui éveille quelque chose en lui.  \n  \nPost-production réalisée dans le cadre de mon projet de finissant pour l'obtention de mon Baccalauréat en Communication cinéma, profil post-production, à l'Université du Québec à Montréal.",
+      "description": "Un écrivain qui passe du temps seul dans son cottage pour écrire un roman n'arrive pas à trouver l'inspiration. Une nuit, il fait la rencontre inattendue d'une femme qui semble avoir littéralement régressé vers un état sauvage. En essayant d'atteindre son côté humain et de comprendre ce qui lui est arrivé, c'est finalement elle qui éveille quelque chose en lui.  \n\nPost-production réalisée dans le cadre de mon projet de finissant pour l'obtention de mon Baccalauréat en Communication cinéma, profil post-production, à l'Université du Québec à Montréal.",
       "id": "animal"
+    },
+    {
+      "title": "Référ-o-scope",
+      "client": "Babel Films",
+      "role": "Monteur vidéo",
+      "category": "cinema-tv",
+      "medium": "Cinéma / TV",
+      "year": 2013,
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 192511.png",
+      "cover_alt": "capture d'écran épisode 1 refer-o-scope",
+      "seo_description": "capsules sur la schizophrénie refer-o-scope",
+      "description": "Afin de démystifier la schizophrénie et d'offrir un outil de dépistage, la Société Québécoise de la Schizophérnie [SQS] offre une websérie de fiction en lien avec leur site web du refer-o-scope.com",
+      "video": "https://vimeo.com/62403172",
+      "id": "refer-o-scope"
     }
   ]
 }
