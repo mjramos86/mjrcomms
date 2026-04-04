@@ -125,6 +125,18 @@
       "description": "Fiche permanente de mon court métrage 22h20, Heure de l'Est sur le site de Québec Cinéma. [Sélection officielle du festival RCVQ 2014.](https://quebeccinema.ca/uploads/document/qc_rvcq2014_grillehoraire_final_corr_lr.pdf)",
       "link": "https://quebeccinema.ca/films/22h20-heure-de-lest",
       "id": "rvcq-2014-22h20"
+    },
+    {
+      "title": " Les jeux vidéos doivent être considérés comme produits culturels",
+      "publication": "QUB Radio",
+      "author": "Francis Gosselin",
+      "date": "2024-12-16",
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 184214.png",
+      "cover_alt": "capture d'écran entrevue francis gosselin et mario j. ramos",
+      "seo_description": "entrevue avec Mario J. Ramos  Les jeux vidéos doivent être considérés comme produits culturels",
+      "description": "J'ai été invité à l'émission de Francis Gosselin à QUB Radio pour discuter de ma lettre ouverte aux médias à propos de la place du jeu vidéo dans les médias traditionnels en tant que produit culturel plutôt que techno.",
+      "link": "https://www.youtube.com/watch?v=tK4QIRqgCs8",
+      "id": "qub-radio-jeux-video-culture"
     }
   ]
 }
