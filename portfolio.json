@@ -247,6 +247,20 @@
       "seo_description": "jeu vidéo pico-8 arcade la chasse galerie québec",
       "description": "Jeu vidéo à saveur rétro réalisé avec l’engin Pico-8. Le code de programmation du jeu a été généré avec l’aide d’un outil IA.\n\n*Un canot volant maudit par le yâble! Évite les démons pis les églises pendant que tu r’tournes au camp, pis ramasse du sirop pour pas perdre ton âme!*\n\nInspiré du classique de la littérature québécoise « La chasse-galerie » d’Honoré Beaugrand.  \n\n[Disponible gratuitement sur Itch.io](https://emjayhar.itch.io/la-chasse-galerie-pico8)",
       "id": "chasse-galerie-pico8"
+    },
+    {
+      "title": "Le Terrain de Jeux",
+      "client": "RDS / Bell Média",
+      "role": "Animateur / Producteur au contenu",
+      "category": "balado",
+      "medium": "Balado",
+      "year": 2019,
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 185231.png",
+      "cover_alt": "logo balado le terrain de jeux rds",
+      "seo_description": "balado gaming le terrain de jeux rds",
+      "description": "Émission en baladodifussion sur l'actualité jeux vidéo pour RDS / Bell Média, produite en 2019.",
+      "video": "https://www.youtube.com/watch?v=cAdYDSJ_oSs",
+      "id": "terrain-de-jeux-balado"
     }
   ]
 }
