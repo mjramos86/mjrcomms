@@ -75,9 +75,21 @@
       "cover": "images/portfolio/Capture d’écran 2026-04-04 140013.png",
       "cover_alt": "couverture catalogue rvcq 2013",
       "seo_description": "couverture catalogue rvcq 2013 - court métrage Animal de Mario J. Ramos",
-      "description": "Mon court métrage ***Animal*** dans le catalogue de la programmation officielle des Rendez-vous du cinéma Québécois 2013.  \n\n\n![](<images/portfolio/Capture d’écran 2026-04-04 135901.png>)\n\n",
+      "description": "Mon court métrage ***Animal*** dans le catalogue de la programmation officielle des Rendez-vous du cinéma Québécois 2013.  \n\n![](<images/portfolio/Capture d’écran 2026-04-04 135901.png>)\n\n",
       "link": "https://quebeccinema.ca/uploads/document/rvcq_2013_catalogue.pdf",
       "id": "rvcq-2013-animal"
+    },
+    {
+      "title": "Dominic Arsenault - À propos",
+      "publication": "dominicarsenault.com",
+      "author": "Dominic Arsenault",
+      "date": "2023-10-04",
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 140430.png",
+      "cover_alt": "dominic arsenault biographie",
+      "seo_description": "dominic arsenault blogue biographie",
+      "description": "Mention de mon blogue dans la « médiasphère » de Dominic Arsenault, professeur en cinéma et jeu vidéo à l'Université de Montréal\n\n![](<images/portfolio/Capture d’écran 2026-04-04 140412.png>)\n\n",
+      "link": "https://www.dominicarsenault.com/",
+      "id": "dominic-arsenault-blogue-mediasphere"
     }
   ]
 }
