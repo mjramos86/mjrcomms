@@ -56,6 +56,17 @@
       "description": "J'ai été invité à parler de mon parcours et projets au podcast Entre deux parties de Fred Gémus",
       "link": "https://www.youtube.com/watch?v=R1Ole_eamDE&t=253s",
       "id": "entre-deux-parties-mario-j-ramos"
+    },
+    {
+      "title": "Témoignages des anciens étudiants en cinéma",
+      "publication": "Collège Ahuntsic",
+      "date": "2021-10-28",
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 135142.png",
+      "cover_alt": "capture d'écran vidéo Le parcours de Mario J. Ramos Collège Ahuntsic",
+      "seo_description": "capture d'écran vidéo Le parcours de Mario J. Ramos Collège Ahuntsic",
+      "description": "J'ai été invité à témoigner sur mon parcours en tant que diplômé du programme Arts et Lettres Profil cinéma du Collège Ahuntsic",
+      "link": "https://www.collegeahuntsic.qc.ca/temoignages-des-anciens-etudiants-en-cinema",
+      "id": "college-ahuntsic-mario-j-ramos"
     }
   ]
 }
