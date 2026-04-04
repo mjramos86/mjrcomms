@@ -275,6 +275,20 @@
       "description": "Émission en baladodifussion animée par Pierre-Luc Racine qui invite des personnalités publiques à discuter de leur intérêt pour les jeux vidéo.",
       "video": "https://www.youtube.com/watch?v=w1gpPK44fOw",
       "id": "du-pain-et-des-jeux"
+    },
+    {
+      "title": "Équilibre Numérique",
+      "client": "La Fondation des Gardiens virtuels",
+      "role": "Producteur au contenu",
+      "category": "balado",
+      "medium": "Balado",
+      "year": 2024,
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 190401.png",
+      "cover_alt": "logo et titre balado équilibre numérique",
+      "seo_description": "balado équilibre numérique - santé mentale et techno",
+      "description": "Démystifier la santé mentale et sa relation avec le numérique avec SonOffOdin et LaCoiffeuseGeek. Le balado officiel de la Fondation des Gardiens virtuels.",
+      "video": "https://www.youtube.com/watch?v=xOZnDeK2PYU",
+      "id": "equilibre-numerique"
     }
   ]
 }
