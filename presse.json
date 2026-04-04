@@ -33,6 +33,17 @@
       "description": "Mon blogue [videoludique.ca](http://videoludique.ca) est cité en tant que « Liens pertinents » dans la section Réalisations et ressources du projet de recherche LUDOV sur l'histoire du jeu vidéo au Québec.",
       "link": "https://www.ludov.ca/fr/documentation/le-jeu-video-au-quebec/",
       "id": "ludov-videoludique"
+    },
+    {
+      "title": "Infolettre #1: Crédits d’impôts, licenses de jeux, Samsara",
+      "publication": "Parenthèse vidéoludique",
+      "author": "Simon Dor",
+      "date": "2024-09-01",
+      "cover_alt": "blogue simon dor mention de videoludique.ca",
+      "seo_description": "blogue simon dor mention de videoludique.ca",
+      "description": "Le blogue universitaire de Simon Dor, Parenthèse vidéoludique, cite mon blogue [videoludique.ca](http://videoludique.ca) dans sa revue de presse de l'industrie du jeu vidéo.",
+      "link": "https://www.simondor.com/blog/2024/09/infolettre-1.html",
+      "id": "simon-dor-videoludique"
     }
   ]
 }
