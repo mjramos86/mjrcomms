@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mario J. Ramos — Article de presse</title>
+<meta name="description" content="">
+<meta name="author" content="Mario J. Ramos">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+/* ── RESET & BASE ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #080c14;
+  --bg2: #0d1220;
+  --bg3: #111827;
+  --teal: #00e5a0;
+  --teal-dim: rgba(0,229,160,0.12);
+  --teal-mid: rgba(0,229,160,0.35);
+  --amber: #f0a500;
+  --text: #e8edf5;
+  --text-muted: #a8b8cc;
+  --text-dim: #7a8fa8;
+  --border: rgba(255,255,255,0.07);
+  --border-teal: rgba(0,229,160,0.25);
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+::selection { background: var(--teal); color: var(--bg); }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── NAV ───────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 64px;
+  background: rgba(8,12,20,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+.nav-logo span { color: var(--teal); }
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--teal); }
+.nav-links a.active { color: var(--teal); }
+.nav-cta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--teal);
+  text-decoration: none;
+  border: 1px solid var(--border-teal);
+  padding: 8px 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--teal-dim); }
+
+/* ── ARTICLE HERO ──────────────────────────────────────── */
+.article-hero {
+  position: relative;
+  margin-top: 64px;
+  height: 55vh;
+  min-height: 320px;
+  overflow: hidden;
+  background: var(--bg3);
+}
+.article-hero-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.article-hero-img.no-image {
+  background-image:
+    linear-gradient(rgba(0,229,160,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,160,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.article-hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8,12,20,0.95) 0%, rgba(8,12,20,0.3) 60%, transparent 100%);
+}
+.article-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  padding: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+}
+.article-back::before { content: '←'; }
+.article-back:hover { color: var(--teal); }
+.article-publication {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.5rem;
+}
+.article-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+.article-author {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+
+/* ── ARTICLE BODY ──────────────────────────────────────── */
+.article-body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Meta sidebar */
+.article-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 88px;
+}
+.article-meta-item {}
+.article-meta-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+.article-meta-value {
+  font-size: 14px;
+  color: var(--text);
+}
+.article-meta-divider {
+  height: 1px;
+  background: var(--border);
+}
+.article-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  text-decoration: none;
+  border: 1px solid var(--border-teal);
+  padding: 10px 16px;
+  transition: all 0.2s;
+}
+.article-link-btn::after { content: '↗'; }
+.article-link-btn:hover { background: var(--teal-dim); }
+
+/* Main content */
+.article-description {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+}
+.article-description h1,
+.article-description h2,
+.article-description h3 {
+  font-family: var(--font-display);
+  color: var(--text);
+  margin: 2rem 0 0.75rem;
+}
+.article-description h2 { font-size: 1.4rem; }
+.article-description h3 { font-size: 1.1rem; }
+.article-description p { margin-bottom: 1.2rem; }
+.article-description ul,
+.article-description ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+.article-description a { color: var(--teal); text-decoration: underline; }
+.article-description strong { color: var(--text); }
+
+/* Not found */
+.article-not-found {
+  text-align: center;
+  padding: 8rem 2rem;
+}
+.article-not-found h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.article-not-found p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* ── FOOTER ────────────────────────────────────────────── */
+footer {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-left {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+.footer-right {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+.footer-right span { color: var(--teal); }
+
+/* ── MOBILE ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .article-hero-content { padding: 1.5rem; }
+  .article-body {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.25rem;
+    gap: 2.5rem;
+  }
+  .article-meta { position: static; }
+  footer { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="./">Mario J<span>.</span> Ramos</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">À propos</a></li>
+    <li><a href="index.html#services">Forfaits</a></li>
+    <li><a href="index.html#carte">À la carte</a></li>
+    <li><a href="index.html#experience">Parcours</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="presse.html" class="active">Dans la presse</a></li>
+  </ul>
+  <a class="nav-cta" href="index.html#contact">Contactez-moi</a>
+</nav>
+
+<!-- ARTICLE CONTENT (injected by JS) -->
+<div id="article-root"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
+  <div class="footer-right">Mario J<span>.</span> Ramos — INSERT COIN TO <span>LAUNCH</span>_</div>
+</footer>
+
+<script>
+// ── NAVBAR SCROLL STYLE ────────────────────────────────────
+window.addEventListener('scroll', function () {
+  var nav = document.querySelector('nav');
+  nav.style.borderBottomColor = window.scrollY > 40
+    ? 'rgba(0,229,160,0.15)'
+    : 'rgba(255,255,255,0.07)';
+});
+
+// ── ARTICLE PAGE ───────────────────────────────────────────
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var articleId = params.get('id');
+
+  function renderNotFound() {
+    var root = document.getElementById('article-root');
+    root.innerHTML =
+      '<div class="article-not-found">' +
+        '<h2>Article introuvable</h2>' +
+        '<p>Cet article n\'existe pas ou a été supprimé.</p>' +
+        '<a href="presse.html" class="article-back" style="display:inline-flex;margin:0 auto;">Retour à la presse</a>' +
+      '</div>';
+    document.title = 'Mario J. Ramos — Article introuvable';
+  }
+
+  function rel(path) { return path ? path.replace(/^\//, '') : path; }
+
+  function setMeta(name, val) {
+    var el = document.querySelector('meta[name="' + name + '"], meta[property="' + name + '"]');
+    if (el && val) el.setAttribute('content', val);
+  }
+
+  function formatDate(dateStr) {
+    if (!dateStr) return '';
+    var d = new Date(dateStr);
+    if (isNaN(d.getTime())) return dateStr;
+    return d.toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
+  function esc(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function renderArticle(article) {
+    document.title = 'Mario J. Ramos — ' + article.title;
+
+    var seoDesc = article.seo_description || (article.description
+      ? article.description.replace(/<[^>]+>/g, '').slice(0, 160).trim()
+      : '');
+    var coverSrc = rel(article.cover);
+    var coverAbs = coverSrc ? 'https://mjramos86.github.io/mjrcomms/' + coverSrc.replace(/^\//, '') : '';
+
+    setMeta('description', seoDesc);
+    setMeta('og:title', 'Mario J. Ramos — ' + article.title);
+    setMeta('og:description', seoDesc);
+    setMeta('og:url', window.location.href);
+    setMeta('og:image', coverAbs);
+    setMeta('twitter:title', 'Mario J. Ramos — ' + article.title);
+    setMeta('twitter:description', seoDesc);
+
+    var heroImgClass = coverSrc ? 'article-hero-img' : 'article-hero-img no-image';
+    var coverAlt = esc(article.cover_alt || article.title);
+    var heroImgStyle = coverSrc ? ' style="background-image:url(\'' + coverSrc + '\')"' : '';
+
+    // Meta sidebar
+    var metaHTML = '';
+    if (article.publication) {
+      metaHTML += '<div class="article-meta-item"><div class="article-meta-label">Publication</div><div class="article-meta-value">' + esc(article.publication) + '</div></div>';
+    }
+    if (article.author) {
+      metaHTML += '<div class="article-meta-item"><div class="article-meta-label">Auteur</div><div class="article-meta-value">' + esc(article.author) + '</div></div>';
+    }
+    if (article.date) {
+      metaHTML += '<div class="article-meta-item"><div class="article-meta-label">Date de parution</div><div class="article-meta-value">' + esc(formatDate(article.date)) + '</div></div>';
+    }
+    if (article.link) {
+      metaHTML += '<div class="article-meta-divider"></div><a href="' + esc(article.link) + '" target="_blank" rel="noopener" class="article-link-btn">Lire l\'article</a>';
+    }
+
+    var root = document.getElementById('article-root');
+    root.innerHTML =
+      '<div class="article-hero">' +
+        '<div class="' + heroImgClass + '" role="img" aria-label="' + coverAlt + '"' + heroImgStyle + '></div>' +
+        '<div class="article-hero-gradient"></div>' +
+        '<div class="article-hero-content">' +
+          '<a href="presse.html" class="article-back">Dans la presse</a>' +
+          (article.publication ? '<div class="article-publication">' + esc(article.publication) + '</div>' : '') +
+          '<h1 class="article-title">' + esc(article.title) + '</h1>' +
+          (article.author ? '<div class="article-author">' + esc(article.author) + '</div>' : '') +
+        '</div>' +
+      '</div>' +
+      '<div class="article-body">' +
+        '<div class="article-content">' +
+          (article.description
+            ? '<div class="article-description">' + (typeof marked !== 'undefined' ? marked.parse(article.description) : article.description) + '</div>'
+            : '') +
+        '</div>' +
+        '<aside class="article-meta">' + metaHTML + '</aside>' +
+      '</div>';
+
+    if (coverSrc) {
+      var heroEl = root.querySelector('.article-hero-img');
+      var loader = new Image();
+      loader.onerror = function () {
+        if (heroEl) { heroEl.className = 'article-hero-img no-image'; heroEl.style.backgroundImage = ''; }
+      };
+      loader.src = coverSrc;
+    }
+  }
+
+  if (!articleId) { renderNotFound(); return; }
+
+  fetch('presse.json')
+    .then(function (r) { return r.ok ? r.json() : { items: [] }; })
+    .then(function (data) {
+      var articles = data.items || data;
+      var article = articles.find(function (a) { return a.id === articleId; });
+      if (!article) { renderNotFound(); return; }
+      renderArticle(article);
+    })
+    .catch(function () { renderNotFound(); });
+}());
+</script>
+</body>
+</html>

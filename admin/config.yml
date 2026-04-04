@@ -54,3 +54,36 @@ collections:
                   required: false, hint: "URL officielle du projet (site du jeu, IMDb, etc.)" }
               - { label: "ID (slug)", name: "id", widget: "string",
                   hint: "Identifiant unique sans espaces (ex: hell-is-us)" }
+
+  - name: "presse"
+    label: "Dans la presse"
+    files:
+      - name: "presse"
+        label: "Articles de presse"
+        file: "presse.json"
+        fields:
+          - label: "Articles"
+            name: "items"
+            widget: "list"
+            label_singular: "Article"
+            summary: "{{fields.title}} — {{fields.publication}}"
+            fields:
+              - { label: "Titre de l'article", name: "title", widget: "string", required: true }
+              - { label: "Nom du média", name: "publication", widget: "string", required: true,
+                  hint: "Ex : Le Devoir, Radio-Canada, IGN France" }
+              - { label: "Auteur / Journaliste", name: "author", widget: "string", required: false }
+              - { label: "Date de parution", name: "date", widget: "datetime", required: false,
+                  format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Image de couverture", name: "cover", widget: "image",
+                  required: false, hint: "Ratio recommandé 16:9 (ex : 1280×720 px)" }
+              - { label: "Texte alternatif (alt) de la couverture", name: "cover_alt",
+                  widget: "string", required: false }
+              - { label: "Description SEO (meta description)", name: "seo_description",
+                  widget: "string", required: false,
+                  hint: "Résumé court (max 160 caractères) affiché dans les résultats Google" }
+              - { label: "Extrait / Résumé", name: "description", widget: "markdown",
+                  required: false, hint: "Résumé de l'article ou extrait notable" }
+              - { label: "Lien vers l'article original", name: "link", widget: "string",
+                  required: false, hint: "URL complète de l'article en ligne" }
+              - { label: "ID (slug)", name: "id", widget: "string",
+                  hint: "Identifiant unique sans espaces (ex: le-devoir-2025-03)" }
