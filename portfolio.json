@@ -303,6 +303,19 @@
       "description": "Manuel, père célibataire, vient de quitter son pays d'origine, le Portugal, pour vivre à Montréal, au Québec. Seul avec son fils de 7 ans, il entreprend la difficile tâche de s'adapter à une nouvelle vie. Il ne s'attendait pas à devoir découvrir ce nouveau monde en tant qu'aveugle.",
       "video": "https://vimeo.com/18450926",
       "id": "clair-obscur"
+    },
+    {
+      "title": "The Shape of Things to Come",
+      "client": "Les Films Koniques",
+      "role": "Réalisateur / Scénariste / Monteur",
+      "category": "cinema-tv",
+      "medium": "Cinéma / TV",
+      "year": 2006,
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 191308.png",
+      "cover_alt": "capture d'écran court métrage the shape of things to come",
+      "seo_description": "court métrage mario j. ramos the shape of things to come",
+      "description": "l y a 400 000 ans, une civilisation interstellaire en quête de vie intelligente découvre la Terre. Un groupe de scientifiques est envoyé pour tester les êtres humains vivant sur Terre, afin de déterminer à quelle vitesse ils évolueront, sans interférer dans leur développement. Prométhée, un jeune soldat, et Athéna, une scientifique avisée, font partie de l'équipe. C'est l'histoire du dernier jour de leur mission sur Terre, un jour qui s'avère fatidique pour la race humaine.",
+      "id": "the-shape"
     }
   ]
 }
