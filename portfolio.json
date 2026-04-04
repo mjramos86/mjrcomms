@@ -289,6 +289,20 @@
       "description": "Démystifier la santé mentale et sa relation avec le numérique avec SonOffOdin et LaCoiffeuseGeek. Le balado officiel de la Fondation des Gardiens virtuels.",
       "video": "https://www.youtube.com/watch?v=xOZnDeK2PYU",
       "id": "equilibre-numerique"
+    },
+    {
+      "title": "Clair-Obscur",
+      "client": "Les Films Koniques",
+      "role": "Réalisateur / Scénariste / Monteur",
+      "category": "cinema-tv",
+      "medium": "Cinéma / TV",
+      "year": 2011,
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 190832.png",
+      "cover_alt": "capture d'écran du film Clair-Obscur de Mario J. Ramos avec Allan Carvalho",
+      "seo_description": "film Clair-Obscur de Mario J. Ramos",
+      "description": "Manuel, père célibataire, vient de quitter son pays d'origine, le Portugal, pour vivre à Montréal, au Québec. Seul avec son fils de 7 ans, il entreprend la difficile tâche de s'adapter à une nouvelle vie. Il ne s'attendait pas à devoir découvrir ce nouveau monde en tant qu'aveugle.",
+      "video": "https://vimeo.com/18450926",
+      "id": "clair-obscur"
     }
   ]
 }
