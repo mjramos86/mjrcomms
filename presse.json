@@ -1,1 +1,15 @@
-{ "items": [] }
+{
+  "items": [
+    {
+      "title": "Membre du jury Jeu Indépendant",
+      "publication": "Prix Numix",
+      "date": "2024-05-01",
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 130607.png",
+      "cover_alt": "mario j. ramos membre du jury jeu indépendant prix numix 2024",
+      "seo_description": "mario j. ramos membre du jury jeu indépendant prix numix 2024",
+      "description": "J'ai été invité à faire partie du jury pour la catégorie « Jeu indépendant » des Prix Numix 2024",
+      "link": "https://numix.ca/membres-jury2024/mario-j-ramos/",
+      "id": "jury-numix-2024"
+    }
+  ]
+}
