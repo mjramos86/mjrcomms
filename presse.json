@@ -44,6 +44,18 @@
       "description": "Le blogue universitaire de Simon Dor, Parenthèse vidéoludique, cite mon blogue [videoludique.ca](http://videoludique.ca) dans sa revue de presse de l'industrie du jeu vidéo.",
       "link": "https://www.simondor.com/blog/2024/09/infolettre-1.html",
       "id": "simon-dor-videoludique"
+    },
+    {
+      "title": "Entre deux parties - Le podcast #5 - Rencontre avec Mario J. Ramos",
+      "publication": "Entre deux parties",
+      "author": "Fred Gémus",
+      "date": "2024-03-17",
+      "cover": "images/portfolio/maxresdefault (5).jpg",
+      "cover_alt": "thumbnail du podcast entre deux parties #5 avec Mario J. Ramos",
+      "seo_description": "Entrevue Mario J. Ramos au podcast Entre deux parties de Fred Gémus",
+      "description": "J'ai été invité à parler de mon parcours et projets au podcast Entre deux parties de Fred Gémus",
+      "link": "https://www.youtube.com/watch?v=R1Ole_eamDE&t=253s",
+      "id": "entre-deux-parties-mario-j-ramos"
     }
   ]
 }
