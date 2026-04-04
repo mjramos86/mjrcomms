@@ -67,6 +67,17 @@
       "description": "J'ai été invité à témoigner sur mon parcours en tant que diplômé du programme Arts et Lettres Profil cinéma du Collège Ahuntsic",
       "link": "https://www.collegeahuntsic.qc.ca/temoignages-des-anciens-etudiants-en-cinema",
       "id": "college-ahuntsic-mario-j-ramos"
+    },
+    {
+      "title": "RVCQ Catalogue 2013",
+      "publication": "Rendez-vous du cinéma québécois",
+      "date": "2013-02-21",
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 140013.png",
+      "cover_alt": "couverture catalogue rvcq 2013",
+      "seo_description": "couverture catalogue rvcq 2013 - court métrage Animal de Mario J. Ramos",
+      "description": "Mon court métrage ***Animal*** dans le catalogue de la programmation officielle des Rendez-vous du cinéma Québécois 2013.  \n\n\n![](<images/portfolio/Capture d’écran 2026-04-04 135901.png>)\n\n",
+      "link": "https://quebeccinema.ca/uploads/document/rvcq_2013_catalogue.pdf",
+      "id": "rvcq-2013-animal"
     }
   ]
 }
