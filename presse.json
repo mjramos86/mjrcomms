@@ -22,6 +22,17 @@
       "description": "Rétrospective écrite par moi-même sur la marque RDS Jeux vidéo que j'ai dirigiée de 2018 à 2023.",
       "link": "https://videoludique.ca/2024/03/03/rds-jeux-video-une-retrospective/",
       "id": "retrospective-rds-jeux-video"
+    },
+    {
+      "title": "LUDOV - Ressources",
+      "publication": "LUDOV",
+      "date": "2026-04-01",
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 132314.png",
+      "cover_alt": "ludov liens pertinents videoludique.ca mario j. ramos",
+      "seo_description": "ludov liens pertinents videoludique.ca mario j. ramos",
+      "description": "Mon blogue [videoludique.ca](http://videoludique.ca) est cité en tant que « Liens pertinents » dans la section Réalisations et ressources du projet de recherche LUDOV sur l'histoire du jeu vidéo au Québec.",
+      "link": "https://www.ludov.ca/fr/documentation/le-jeu-video-au-quebec/",
+      "id": "ludov-videoludique"
     }
   ]
 }
