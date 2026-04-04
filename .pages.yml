@@ -110,3 +110,55 @@ content:
             label: "ID (slug)"
             type: string
             hint: "Identifiant unique sans espaces (ex: projet-m)"
+
+  - name: presse
+    label: Dans la presse
+    path: presse.json
+    type: file
+    fields:
+      - name: items
+        label: Articles de presse
+        type: object
+        list:
+          label: "{{fields.title}} — {{fields.publication}}"
+        fields:
+          - name: title
+            label: Titre de l'article
+            type: string
+            required: true
+          - name: publication
+            label: Nom du média
+            type: string
+            required: true
+            hint: "Ex : Le Devoir, Radio-Canada, IGN France"
+          - name: author
+            label: Auteur / Journaliste
+            type: string
+          - name: date
+            label: Date de parution
+            type: date
+            hint: "Format AAAA-MM-JJ"
+          - name: cover
+            label: Image de couverture
+            type: image
+            hint: "Ratio recommandé 16:9 (ex : 1280×720 px)"
+          - name: cover_alt
+            label: "Texte alternatif (alt) de la couverture"
+            type: string
+            hint: "Décrit l'image pour les moteurs de recherche et les lecteurs d'écran"
+          - name: seo_description
+            label: "Description SEO (meta description)"
+            type: string
+            hint: "Résumé court (max 160 caractères) affiché dans les résultats Google"
+          - name: description
+            label: Extrait / Résumé
+            type: rich-text
+            hint: "Résumé de l'article ou extrait notable"
+          - name: link
+            label: Lien vers l'article original
+            type: string
+            hint: "URL complète de l'article en ligne"
+          - name: id
+            label: "ID (slug)"
+            type: string
+            hint: "Identifiant unique sans espaces (ex: le-devoir-2025-03)"
