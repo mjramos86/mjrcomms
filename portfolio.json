@@ -261,6 +261,20 @@
       "description": "Émission en baladodifussion sur l'actualité jeux vidéo pour RDS / Bell Média, produite en 2019.",
       "video": "https://www.youtube.com/watch?v=cAdYDSJ_oSs",
       "id": "terrain-de-jeux-balado"
+    },
+    {
+      "title": "Du pain et des jeux, mais surtout des jeux",
+      "client": "RDS / Bell Média",
+      "role": "Producteur au contenu",
+      "category": "balado",
+      "medium": "Balado",
+      "year": 2021,
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 190009.png",
+      "cover_alt": "affiche et logo balado du pain et des jeux, mais surtout des jeux",
+      "seo_description": "balado du pain et des jeux, mais surtout des jeux avec pierre-luc racine",
+      "description": "Émission en baladodifussion animée par Pierre-Luc Racine qui invite des personnalités publiques à discuter de leur intérêt pour les jeux vidéo.",
+      "video": "https://www.youtube.com/watch?v=w1gpPK44fOw",
+      "id": "du-pain-et-des-jeux"
     }
   ]
 }
