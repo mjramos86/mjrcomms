@@ -137,6 +137,18 @@
       "description": "J'ai été invité à l'émission de Francis Gosselin à QUB Radio pour discuter de ma lettre ouverte aux médias à propos de la place du jeu vidéo dans les médias traditionnels en tant que produit culturel plutôt que techno.",
       "link": "https://www.youtube.com/watch?v=tK4QIRqgCs8",
       "id": "qub-radio-jeux-video-culture"
+    },
+    {
+      "title": " Interview - Mario J Ramos (RDS Jeux Vidéo)",
+      "publication": "The Mythic Society",
+      "author": "Eduardo Sajgalik",
+      "date": "2019-09-30",
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 184640.png",
+      "cover_alt": "capture d'écran vidéo entrevue mario j. ramos arena super cup",
+      "seo_description": "ntrevue mario j. ramos arena super cup",
+      "description": "Entrevue à propos de mon travail chez RDS Jeux vidéo dans le cadre de la diffusion de l'Arena Super Cup, un tournoi sur Magic The Gathering Arena",
+      "link": "https://www.youtube.com/watch?v=XhN_Ysfh0Wc",
+      "id": "arena-super-cup-entrevue"
     }
   ]
 }
