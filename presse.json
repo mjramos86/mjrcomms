@@ -103,6 +103,17 @@
       "description": "Entrevue avec Qui fait quoi à propos de mon court métrage ***22h20, Heure de l'Est.***",
       "link": "https://qfq.com/spip.php?article38083&debut_dossier_10DerniersArticles=312",
       "id": "mariojramos-qui-fait-quoi-referendum-1995"
+    },
+    {
+      "title": "Membre du Jury",
+      "publication": "Canadian Game Awards",
+      "date": "2026-04-04",
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 174504.png",
+      "cover_alt": "membres du jury canadian game awards",
+      "seo_description": "membres du jury canadian game awards 2026",
+      "description": "J'ai été invité à faire partie du jury des Canadian Game Awards en 2023, 2025 et 2026.",
+      "link": "https://canadiangameawards.ca/en/jury",
+      "id": "canadian-game-awards-jury"
     }
   ]
 }
