@@ -10,6 +10,18 @@
       "description": "J'ai été invité à faire partie du jury pour la catégorie « Jeu indépendant » des Prix Numix 2024",
       "link": "https://numix.ca/membres-jury2024/mario-j-ramos/",
       "id": "jury-numix-2024"
+    },
+    {
+      "title": "RDS Jeux vidéo : Une rétrospective",
+      "publication": "videoludique.ca",
+      "author": "Mario J. Ramos",
+      "date": "2024-03-03",
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 131940.png",
+      "cover_alt": "article rétrospective rds jeux vidéo sur le site videoludique.ca",
+      "seo_description": "article rétrospective rds jeux vidéo sur le site videoludique.ca",
+      "description": "Rétrospective écrite par moi-même sur la marque RDS Jeux vidéo que j'ai dirigiée de 2018 à 2023.",
+      "link": "https://videoludique.ca/2024/03/03/rds-jeux-video-une-retrospective/",
+      "id": "retrospective-rds-jeux-video"
     }
   ]
 }
