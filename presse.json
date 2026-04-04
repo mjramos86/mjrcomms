@@ -149,6 +149,18 @@
       "description": "Entrevue à propos de mon travail chez RDS Jeux vidéo dans le cadre de la diffusion de l'Arena Super Cup, un tournoi sur Magic The Gathering Arena",
       "link": "https://www.youtube.com/watch?v=XhN_Ysfh0Wc",
       "id": "arena-super-cup-entrevue"
+    },
+    {
+      "title": "Apprendre le esport Québécois - Mario J. Ramos",
+      "publication": "Jonathan « Crohix » Lavoie",
+      "author": "Jonathan Lavoie",
+      "date": "2020-06-04",
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 194947.png",
+      "cover_alt": "capture d'écran entrevue jonathan lavoie mario j. ramos",
+      "seo_description": " entrevue jonathan lavoie mario j. ramos",
+      "description": "Entrevue sur mon travail à RDS Jeux vidéo sur la chaîne YouTube de Jonathan Lavoie",
+      "link": "https://www.youtube.com/watch?v=uGxvm0hiKr0",
+      "id": "entrevue-jonathan-lavoie"
     }
   ]
 }
