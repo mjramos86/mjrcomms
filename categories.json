@@ -1,7 +1,20 @@
 {
   "items": [
-    { "id": "jeux-video", "label": "Jeux vidéo" },
-    { "id": "cinema-tv", "label": "Cinéma / TV" },
-    { "id": "bande-dessinee", "label": "Bande dessinée" }
+    {
+      "id": "jeux-video",
+      "label": "Jeux vidéo"
+    },
+    {
+      "id": "cinema-tv",
+      "label": "Cinéma / TV"
+    },
+    {
+      "id": "bande-dessinee",
+      "label": "Bande dessinée"
+    },
+    {
+      "id": "balado",
+      "label": "Balado"
+    }
   ]
 }
