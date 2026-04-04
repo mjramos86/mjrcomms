@@ -114,6 +114,17 @@
       "description": "J'ai été invité à faire partie du jury des Canadian Game Awards en 2023, 2025 et 2026.",
       "link": "https://canadiangameawards.ca/en/jury",
       "id": "canadian-game-awards-jury"
+    },
+    {
+      "title": "Québec CInéma - 22h20, Heure de l'Est",
+      "publication": "Québec Cinéma",
+      "date": "2026-04-04",
+      "cover": "images/portfolio/RVCQ2014.png",
+      "cover_alt": "affiche rvcq 2014",
+      "seo_description": "affiche rvcq 2014 festival de films québécois",
+      "description": "Fiche permanente de mon court métrage 22h20, Heure de l'Est sur le site de Québec Cinéma. Sélection officielle du festival RCVQ 2014",
+      "link": "https://quebeccinema.ca/films/22h20-heure-de-lest",
+      "id": "rvcq-2014-22h20"
     }
   ]
 }
