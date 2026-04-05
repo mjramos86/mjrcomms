@@ -110,8 +110,65 @@ nav {
   transition: all 0.2s;
 }
 .nav-cta:hover { background: var(--teal-dim); }
+/* ── NAV BURGER / MOBILE MENU ───────────────────────────── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  z-index: 101;
+}
+.nav-burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-mobile {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0; right: 0;
+  background: rgba(8,12,20,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 99;
+  padding: 1rem 1.25rem 1.5rem;
+  flex-direction: column;
+}
+.nav-mobile.open { display: flex; }
+.nav-mobile a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+.nav-mobile a:last-child { border-bottom: none; }
+.nav-mobile a:hover, .nav-mobile a.active { color: var(--teal); }
+.nav-mobile .nav-mobile-cta {
+  margin-top: 1rem;
+  color: var(--teal);
+  border: 1px solid var(--border-teal) !important;
+  padding: 0.75rem 1rem !important;
+  text-align: center;
+  border-bottom: none !important;
+}
 
-/* ── PROJECT HERO ──────────────────────────────────────── */
+/* ──PROJECT HERO ──────────────────────────────────────── */
 .project-hero {
   position: relative;
   margin-top: 64px;
@@ -391,6 +448,8 @@ footer {
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
   .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .nav-burger { display: flex; }
   .project-hero-content { padding: 1.5rem; }
   .project-body {
     grid-template-columns: 1fr;
@@ -416,7 +475,21 @@ footer {
     <li><a href="presse.html">Dans la presse</a></li>
   </ul>
   <a class="nav-cta" href="index.html#contact">Contactez-moi</a>
+  <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-mobile">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- NAV MOBILE -->
+<div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Menu de navigation">
+  <a href="index.html#about">À propos</a>
+  <a href="index.html#services">Forfaits</a>
+  <a href="index.html#carte">À la carte</a>
+  <a href="portfolio.html" class="active">Portfolio</a>
+  <a href="index.html#experience">Parcours</a>
+  <a href="presse.html">Dans la presse</a>
+  <a class="nav-mobile-cta" href="index.html#contact">Contactez-moi</a>
+</div>
 
 <!-- PROJECT CONTENT (injected by JS) -->
 <div id="project-root"></div>
@@ -435,6 +508,25 @@ window.addEventListener('scroll', function () {
     ? 'rgba(0,229,160,0.15)'
     : 'rgba(255,255,255,0.07)';
 });
+
+// ── MOBILE MENU ────────────────────────────────────────────
+(function () {
+  var burger = document.getElementById('nav-burger');
+  var menu = document.getElementById('nav-mobile');
+  if (!burger || !menu) return;
+  burger.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      menu.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
 
 // ── PROJECT PAGE ───────────────────────────────────────────
 (function () {
