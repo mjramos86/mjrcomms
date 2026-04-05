@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "title": "Des fêtes 100 % locales : émission spéciale de Zone économie",
+      "publication": "Radio-Canada",
+      "author": "Gérald Fillion",
+      "date": "2025-11-28",
+      "cover": "images/portfolio/Capture d’écran 2026-04-05 114312.png",
+      "cover_alt": "capture d'écran Mario J. Ramos avec Gérald Fillion qui présente des jeux vidéo locaux à RDI Zone Économie",
+      "seo_description": "Mario J. Ramos avec Gérald Fillion qui présente des jeux vidéo locaux à RDI Zone Économie",
+      "description": "```\nJ'ai été invité en tant que chroniqueur à un épisode spéciale des fêtes « 100% locales » de Zone Économie à RDI (Radio-Canada).\n\nExtrait:\n<iframe src=\"https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F819933364348925%2F&show_text=false&width=560&t=0\" width=\"560\" height=\"314\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\" allowFullScreen=\"true\"></iframe>\n```\n\n",
+      "link": "https://ici.radio-canada.ca/nouvelle/2210467/zone-economie-emission-speciale-temps-fete",
+      "id": "zone-economie-fetes-locales-2025"
+    },
+    {
       "title": "Membre du jury Jeu Indépendant",
       "publication": "Prix Numix",
       "date": "2024-05-01",
@@ -161,18 +173,6 @@
       "description": "Entrevue sur mon travail à RDS Jeux vidéo sur la chaîne YouTube de Jonathan Lavoie",
       "link": "https://www.youtube.com/watch?v=uGxvm0hiKr0",
       "id": "entrevue-jonathan-lavoie"
-    },
-    {
-      "title": "Des fêtes 100 % locales : émission spéciale de Zone économie",
-      "publication": "Radio-Canada",
-      "author": "Gérald Fillion",
-      "date": "2025-11-28",
-      "cover": "images/portfolio/Capture d’écran 2026-04-05 114312.png",
-      "cover_alt": "capture d'écran Mario J. Ramos avec Gérald Fillion qui présente des jeux vidéo locaux à RDI Zone Économie",
-      "seo_description": "Mario J. Ramos avec Gérald Fillion qui présente des jeux vidéo locaux à RDI Zone Économie",
-      "description": "J'ai été invité en tant que chroniqueur à un épisode spéciale des fêtes « 100% locales » de Zone Économie à RDI (Radio-Canada).",
-      "link": "https://ici.radio-canada.ca/nouvelle/2210467/zone-economie-emission-speciale-temps-fete",
-      "id": "zone-economie-fetes-locales-2025"
     }
   ]
 }
