@@ -144,25 +144,6 @@
       "id": "mission-europe"
     },
     {
-      "title": "Deux chats blancs",
-      "client": "Versus magazine",
-      "role": "Scénariste",
-      "category": "bande-dessinee",
-      "medium": "Bande dessinée",
-      "year": 2017,
-      "cover": "images/portfolio/Capture d’écran 2026-04-03 011224-1.png",
-      "cover_alt": "extrait bande dessinée deux chats par mario j. ramos et gabriel kelly",
-      "seo_description": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly versus magazine #2",
-      "description": "Bande dessinée de une page intitulée Deux chats blancs, publiée dans les pages de Versus magazine #2",
-      "gallery": [
-        {
-          "src": "images/portfolio/deux-chats-blanc_p1.jpg",
-          "alt": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly"
-        }
-      ],
-      "id": "deux-chats-blancs"
-    },
-    {
       "title": "22h20, Heure de l'Est",
       "client": "Babel Films",
       "role": "Réalisateur / scénariste / monteur",
@@ -208,18 +189,37 @@
       "id": "jardin-evelyne"
     },
     {
-      "title": "L'Insomnie",
-      "client": "Marc Gravel",
-      "role": "Réalisateur",
-      "category": "cinema-tv",
-      "medium": "Cinéma / TV",
-      "year": 2016,
-      "cover": "images/portfolio/Capture d’écran 2026-04-03 020346.png",
-      "cover_alt": "thumbnail vidéoclip l'insomnie par marc gravel",
-      "seo_description": "vidéoclip l'insomnie par marc gravel réalisé par mario j. ramos",
-      "description": "Vidéoclip de la chanson L'INSOMNIE par Marc Gravel.",
-      "video": "https://vimeo.com/151341788",
-      "id": "insomnie"
+      "title": "Deux chats blancs",
+      "client": "Versus magazine",
+      "role": "Scénariste",
+      "category": "bande-dessinee",
+      "medium": "Bande dessinée",
+      "year": 2017,
+      "cover": "images/portfolio/Capture d’écran 2026-04-03 011224-1.png",
+      "cover_alt": "extrait bande dessinée deux chats par mario j. ramos et gabriel kelly",
+      "seo_description": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly versus magazine #2",
+      "description": "Bande dessinée de une page intitulée Deux chats blancs, publiée dans les pages de Versus magazine #2",
+      "gallery": [
+        {
+          "src": "images/portfolio/deux-chats-blanc_p1.jpg",
+          "alt": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly"
+        }
+      ],
+      "id": "deux-chats-blancs"
+    },
+    {
+      "title": "Du pain et des jeux, mais surtout des jeux",
+      "client": "RDS / Bell Média",
+      "role": "Producteur au contenu",
+      "category": "balado",
+      "medium": "Balado",
+      "year": 2021,
+      "cover": "images/portfolio/Capture d’écran 2026-04-04 190009.png",
+      "cover_alt": "affiche et logo balado du pain et des jeux, mais surtout des jeux",
+      "seo_description": "balado du pain et des jeux, mais surtout des jeux avec pierre-luc racine",
+      "description": "Émission en baladodifussion animée par Pierre-Luc Racine qui invite des personnalités publiques à discuter de leur intérêt pour les jeux vidéo.",
+      "video": "https://www.youtube.com/watch?v=w1gpPK44fOw",
+      "id": "du-pain-et-des-jeux"
     },
     {
       "title": "The Solitaire Tower of Doom",
@@ -249,6 +249,20 @@
       "id": "chasse-galerie-pico8"
     },
     {
+      "title": "L'Insomnie",
+      "client": "Marc Gravel",
+      "role": "Réalisateur",
+      "category": "cinema-tv",
+      "medium": "Cinéma / TV",
+      "year": 2016,
+      "cover": "images/portfolio/Capture d’écran 2026-04-03 020346.png",
+      "cover_alt": "thumbnail vidéoclip l'insomnie par marc gravel",
+      "seo_description": "vidéoclip l'insomnie par marc gravel réalisé par mario j. ramos",
+      "description": "Vidéoclip de la chanson L'INSOMNIE par Marc Gravel.",
+      "video": "https://vimeo.com/151341788",
+      "id": "insomnie"
+    },
+    {
       "title": "Le Terrain de Jeux",
       "client": "RDS / Bell Média",
       "role": "Animateur / Producteur au contenu",
@@ -261,20 +275,6 @@
       "description": "Émission en baladodifussion sur l'actualité jeux vidéo pour RDS / Bell Média, produite en 2019.",
       "video": "https://www.youtube.com/watch?v=cAdYDSJ_oSs",
       "id": "terrain-de-jeux-balado"
-    },
-    {
-      "title": "Du pain et des jeux, mais surtout des jeux",
-      "client": "RDS / Bell Média",
-      "role": "Producteur au contenu",
-      "category": "balado",
-      "medium": "Balado",
-      "year": 2021,
-      "cover": "images/portfolio/Capture d’écran 2026-04-04 190009.png",
-      "cover_alt": "affiche et logo balado du pain et des jeux, mais surtout des jeux",
-      "seo_description": "balado du pain et des jeux, mais surtout des jeux avec pierre-luc racine",
-      "description": "Émission en baladodifussion animée par Pierre-Luc Racine qui invite des personnalités publiques à discuter de leur intérêt pour les jeux vidéo.",
-      "video": "https://www.youtube.com/watch?v=w1gpPK44fOw",
-      "id": "du-pain-et-des-jeux"
     },
     {
       "title": "Équilibre Numérique",
@@ -328,7 +328,14 @@
       "cover": "images/portfolio/472375711_10170842801390088_3223914620227921012_n.jpg",
       "cover_alt": "photo de tournage court métrage animal de mario j. ramos",
       "seo_description": "court métrage animal de mario j. ramos",
-      "description": "Un écrivain qui passe du temps seul dans son cottage pour écrire un roman n'arrive pas à trouver l'inspiration. Une nuit, il fait la rencontre inattendue d'une femme qui semble avoir littéralement régressé vers un état sauvage. En essayant d'atteindre son côté humain et de comprendre ce qui lui est arrivé, c'est finalement elle qui éveille quelque chose en lui.  \n\nPost-production réalisée dans le cadre de mon projet de finissant pour l'obtention de mon Baccalauréat en Communication cinéma, profil post-production, à l'Université du Québec à Montréal.",
+      "description": "Un écrivain qui passe du temps seul dans son cottage pour écrire un roman n'arrive pas à trouver l'inspiration. Une nuit, il fait la rencontre inattendue d'une femme qui semble avoir littéralement régressé vers un état sauvage. En essayant d'atteindre son côté humain et de comprendre ce qui lui est arrivé, c'est finalement elle qui éveille quelque chose en lui.  \n\nPost-production réalisée dans le cadre de mon projet de finissant pour l'obtention de mon Baccalauréat en Communication cinéma, profil post-production, à l'Université du Québec à Montréal.  \n  \n[Sélection officielle au Fantasia International Film Festival en 2012.](https://fantasiafestival.com/uploads/Archives/Programmes-et-affiches/FT12-Programme.pdf)",
+      "accolades": [
+        {
+          "title": "Sélection officielle",
+          "event": "Fantasia International Film Festival",
+          "year": 2012
+        }
+      ],
       "id": "animal"
     },
     {
