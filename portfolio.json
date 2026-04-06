@@ -189,25 +189,6 @@
       "id": "jardin-evelyne"
     },
     {
-      "title": "Deux chats blancs",
-      "client": "Versus magazine",
-      "role": "Scénariste",
-      "category": "bande-dessinee",
-      "medium": "Bande dessinée",
-      "year": 2017,
-      "cover": "images/portfolio/Capture d’écran 2026-04-03 011224-1.png",
-      "cover_alt": "extrait bande dessinée deux chats par mario j. ramos et gabriel kelly",
-      "seo_description": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly versus magazine #2",
-      "description": "Bande dessinée de une page intitulée Deux chats blancs, publiée dans les pages de Versus magazine #2",
-      "gallery": [
-        {
-          "src": "images/portfolio/deux-chats-blanc_p1.jpg",
-          "alt": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly"
-        }
-      ],
-      "id": "deux-chats-blancs"
-    },
-    {
       "title": "Du pain et des jeux, mais surtout des jeux",
       "client": "RDS / Bell Média",
       "role": "Producteur au contenu",
@@ -305,6 +286,25 @@
       "id": "clair-obscur"
     },
     {
+      "title": "Deux chats blancs",
+      "client": "Versus magazine",
+      "role": "Scénariste",
+      "category": "bande-dessinee",
+      "medium": "Bande dessinée",
+      "year": 2017,
+      "cover": "images/portfolio/Capture d’écran 2026-04-03 011224-1.png",
+      "cover_alt": "extrait bande dessinée deux chats par mario j. ramos et gabriel kelly",
+      "seo_description": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly versus magazine #2",
+      "description": "Bande dessinée de une page intitulée Deux chats blancs, publiée dans les pages de Versus magazine #2",
+      "gallery": [
+        {
+          "src": "images/portfolio/deux-chats-blanc_p1.jpg",
+          "alt": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly"
+        }
+      ],
+      "id": "deux-chats-blancs"
+    },
+    {
       "title": "The Shape of Things to Come",
       "client": "Les Films Koniques",
       "role": "Réalisateur / Scénariste / Monteur",
@@ -328,7 +328,7 @@
       "cover": "images/portfolio/472375711_10170842801390088_3223914620227921012_n.jpg",
       "cover_alt": "photo de tournage court métrage animal de mario j. ramos",
       "seo_description": "court métrage animal de mario j. ramos",
-      "description": "Un écrivain qui passe du temps seul dans son cottage pour écrire un roman n'arrive pas à trouver l'inspiration. Une nuit, il fait la rencontre inattendue d'une femme qui semble avoir littéralement régressé vers un état sauvage. En essayant d'atteindre son côté humain et de comprendre ce qui lui est arrivé, c'est finalement elle qui éveille quelque chose en lui.  \n\nPost-production réalisée dans le cadre de mon projet de finissant pour l'obtention de mon Baccalauréat en Communication cinéma, profil post-production, à l'Université du Québec à Montréal.  \n  \n[Sélection officielle au Fantasia International Film Festival en 2012.](https://fantasiafestival.com/uploads/Archives/Programmes-et-affiches/FT12-Programme.pdf)",
+      "description": "Un écrivain qui passe du temps seul dans son cottage pour écrire un roman n'arrive pas à trouver l'inspiration. Une nuit, il fait la rencontre inattendue d'une femme qui semble avoir littéralement régressé vers un état sauvage. En essayant d'atteindre son côté humain et de comprendre ce qui lui est arrivé, c'est finalement elle qui éveille quelque chose en lui.  \n\nPost-production réalisée dans le cadre de mon projet de finissant pour l'obtention de mon Baccalauréat en Communication cinéma, profil post-production, à l'Université du Québec à Montréal.  \n\n[Sélection officielle au Fantasia International Film Festival en 2012.](https://fantasiafestival.com/uploads/Archives/Programmes-et-affiches/FT12-Programme.pdf)",
       "accolades": [
         {
           "title": "Sélection officielle",
