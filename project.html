@@ -16,6 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="">
 <meta name="twitter:description" content="">
+<link rel="icon" type="image/png" href="MJR.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -74,6 +75,9 @@ nav {
   border-bottom: 1px solid var(--border);
 }
 .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 15px;
@@ -81,6 +85,7 @@ nav {
   letter-spacing: 0.05em;
   text-decoration: none;
 }
+.nav-logo img { height: 36px; width: 36px; object-fit: contain; }
 .nav-logo span { color: var(--teal); }
 .nav-links {
   display: flex;
@@ -465,7 +470,7 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="./">Mario J<span>.</span> Ramos</a>
+  <a class="nav-logo" href="./"><img src="MJR.png" alt="Logo MJR">Mario J<span>.</span> Ramos</a>
   <ul class="nav-links">
     <li><a href="index.html#about">À propos</a></li>
     <li><a href="index.html#services">Forfaits</a></li>
