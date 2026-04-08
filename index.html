@@ -32,6 +32,8 @@
   --teal-mid: rgba(0,229,160,0.35);
   --amber: #f0a500;
   --amber-dim: rgba(240,165,0,0.12);
+  --violet: #c084fc;
+  --violet-dim: rgba(192,132,252,0.12);
   --text: #e8edf5;
   --text-muted: #a8b8cc;
   --text-dim: #7a8fa8;
@@ -223,7 +225,7 @@ nav {
 .splash-choices {
   display: flex;
   gap: 0;
-  width: min(860px, 90vw);
+  width: min(1100px, 90vw);
   height: min(340px, 50vh);
   border: 1px solid var(--border);
   opacity: 0;
@@ -243,7 +245,7 @@ nav {
   transition: background 0.3s ease;
   padding: 2.5rem;
 }
-.splash-choice:first-child { border-right: 1px solid var(--border); }
+.splash-choice:not(:last-child) { border-right: 1px solid var(--border); }
 .splash-choice::before {
   content: '';
   position: absolute;
@@ -253,6 +255,7 @@ nav {
 }
 .splash-choice.services::before { background: radial-gradient(ellipse at center, rgba(0,229,160,0.07) 0%, transparent 70%); }
 .splash-choice.portfolio::before { background: radial-gradient(ellipse at center, rgba(240,165,0,0.07) 0%, transparent 70%); }
+.splash-choice.blog::before { background: radial-gradient(ellipse at center, rgba(192,132,252,0.07) 0%, transparent 70%); }
 .splash-choice:hover::before { opacity: 1; }
 .splash-choice-icon {
   font-family: var(--font-mono);
@@ -262,6 +265,7 @@ nav {
 }
 .splash-choice.services .splash-choice-icon { color: var(--teal); }
 .splash-choice.portfolio .splash-choice-icon { color: var(--amber); }
+.splash-choice.blog .splash-choice-icon { color: var(--violet); }
 .splash-choice-label {
   font-family: 'Syne', sans-serif;
   font-size: clamp(1.3rem, 3vw, 2rem);
@@ -273,6 +277,7 @@ nav {
 }
 .splash-choice.services:hover .splash-choice-label { color: var(--teal); }
 .splash-choice.portfolio:hover .splash-choice-label { color: var(--amber); }
+.splash-choice.blog:hover .splash-choice-label { color: var(--violet); }
 .splash-choice-desc {
   font-size: 13px;
   color: var(--text-muted);
@@ -288,9 +293,10 @@ nav {
 }
 .splash-choice.services:hover .splash-choice-arrow { color: var(--teal); transform: translateX(6px); }
 .splash-choice.portfolio:hover .splash-choice-arrow { color: var(--amber); transform: translateX(6px); }
+.splash-choice.blog:hover .splash-choice-arrow { color: var(--violet); transform: translateX(6px); }
 @media (max-width: 600px) {
   .splash-choices { flex-direction: column; height: auto; width: 90vw; }
-  .splash-choice:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+  .splash-choice:not(:last-child) { border-right: none; border-bottom: 1px solid var(--border); }
 }
 
 /* ── HERO ──────────────────────────────────────────────── */
@@ -912,6 +918,12 @@ footer {
       <div class="splash-choice-icon">// 02</div>
       <div class="splash-choice-label">Portfolio</div>
       <div class="splash-choice-desc">Projets, productions et réalisations.</div>
+      <div class="splash-choice-arrow">→</div>
+    </a>
+    <a class="splash-choice blog" href="https://videoludique.ca/" target="_blank" rel="noopener">
+      <div class="splash-choice-icon">// 03</div>
+      <div class="splash-choice-label">Vidéo&shy;ludique<span style="color:var(--violet)">.</span>ca</div>
+      <div class="splash-choice-desc">Blogue sur l'industrie du jeu vidéo au Québec.</div>
       <div class="splash-choice-arrow">→</div>
     </a>
   </div>
