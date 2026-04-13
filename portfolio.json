@@ -351,6 +351,25 @@
       "description": "Afin de démystifier la schizophrénie et d'offrir un outil de dépistage, la Société Québécoise de la Schizophérnie [SQS] offre une websérie de fiction en lien avec leur site web du refer-o-scope.com",
       "video": "https://vimeo.com/62403172",
       "id": "refer-o-scope"
+    },
+    {
+      "title": "À des années-lumière",
+      "client": "Véganes Magazine",
+      "role": "Scénariste",
+      "category": "bd",
+      "medium": "BD",
+      "year": 2017,
+      "cover": "images/portfolio/Capture d’écran 2026-04-13 135653.png",
+      "cover_alt": "extrait BD à des années-lumières",
+      "seo_description": "extrait BD à des années-lumières magazine véganes #5",
+      "description": "Bande-dessinée de une page scénarisée pour Véganes Magazine #5  \nIllustrations par Pascaline Lefebvre",
+      "gallery": [
+        {
+          "src": "images/portfolio/Capture d’écran 2026-04-13 135716.png",
+          "alt": "planche bande-dessinée À des années-lumières, Mario J. Ramos, Pascaline Lefebvre"
+        }
+      ],
+      "id": "annees-lumiere"
     }
   ]
 }
