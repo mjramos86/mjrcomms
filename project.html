@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-page="project">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,7 @@
 <meta name="twitter:title" content="">
 <meta name="twitter:description" content="">
 <link rel="icon" type="image/png" href="MJR.png">
+<script src="i18n.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -115,6 +116,25 @@ nav {
   transition: all 0.2s;
 }
 .nav-cta:hover { background: var(--teal-dim); }
+/* ── LANG BUTTON ────────────────────────────────────────── */
+.lang-btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 5px 10px;
+  letter-spacing: 0.08em;
+  transition: border-color 0.2s;
+  white-space: nowrap;
+}
+.lang-btn:hover { border-color: var(--border-teal); }
+.lang-btn [data-lang] { color: var(--text-dim); transition: color 0.2s; }
+.lang-btn [data-lang].lang-active { color: var(--teal); }
+.lang-btn .lang-sep { color: var(--border); margin: 0 4px; }
 /* ── NAV BURGER / MOBILE MENU ───────────────────────────── */
 .nav-burger {
   display: none;
@@ -472,14 +492,17 @@ footer {
 <nav>
   <a class="nav-logo" href="./"><img src="MJR.png" alt="Logo MJR">Mario J<span>.</span> Ramos</a>
   <ul class="nav-links">
-    <li><a href="index.html#about">À propos</a></li>
-    <li><a href="index.html#services">Forfaits</a></li>
-    <li><a href="index.html#carte">À la carte</a></li>
-    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-    <li><a href="index.html#experience">Parcours</a></li>
-    <li><a href="presse.html">Dans la presse</a></li>
+    <li><a href="index.html#about" data-i18n="nav.about">À propos</a></li>
+    <li><a href="index.html#services" data-i18n="nav.services">Forfaits</a></li>
+    <li><a href="index.html#carte" data-i18n="nav.alacarte">À la carte</a></li>
+    <li><a href="portfolio.html" class="active" data-i18n="nav.portfolio">Portfolio</a></li>
+    <li><a href="index.html#experience" data-i18n="nav.parcours">Parcours</a></li>
+    <li><a href="presse.html" data-i18n="nav.presse">Dans la presse</a></li>
   </ul>
-  <a class="nav-cta" href="index.html#contact">Contactez-moi</a>
+  <a class="nav-cta" href="index.html#contact" data-i18n="nav.contact">Contactez-moi</a>
+  <button class="lang-btn" id="lang-btn" aria-label="Switch language / Changer de langue">
+    <span data-lang="fr">FR</span><span class="lang-sep">|</span><span data-lang="en">EN</span>
+  </button>
   <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-mobile">
     <span></span><span></span><span></span>
   </button>
@@ -487,13 +510,13 @@ footer {
 
 <!-- NAV MOBILE -->
 <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Menu de navigation">
-  <a href="index.html#about">À propos</a>
-  <a href="index.html#services">Forfaits</a>
-  <a href="index.html#carte">À la carte</a>
-  <a href="portfolio.html" class="active">Portfolio</a>
-  <a href="index.html#experience">Parcours</a>
-  <a href="presse.html">Dans la presse</a>
-  <a class="nav-mobile-cta" href="index.html#contact">Contactez-moi</a>
+  <a href="index.html#about" data-i18n="nav.about">À propos</a>
+  <a href="index.html#services" data-i18n="nav.services">Forfaits</a>
+  <a href="index.html#carte" data-i18n="nav.alacarte">À la carte</a>
+  <a href="portfolio.html" class="active" data-i18n="nav.portfolio">Portfolio</a>
+  <a href="index.html#experience" data-i18n="nav.parcours">Parcours</a>
+  <a href="presse.html" data-i18n="nav.presse">Dans la presse</a>
+  <a class="nav-mobile-cta" href="index.html#contact" data-i18n="nav.contact">Contactez-moi</a>
 </div>
 
 <!-- PROJECT CONTENT (injected by JS) -->
@@ -501,7 +524,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
+  <div class="footer-left" data-i18n="footer.copy">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
   <div class="footer-right">Mario J<span>.</span> Ramos — INSERT COIN TO <span>LAUNCH</span>_</div>
 </footer>
 
@@ -538,15 +561,17 @@ window.addEventListener('scroll', function () {
   var params = new URLSearchParams(window.location.search);
   var projectId = params.get('id');
 
+  function tr(key) { return window.I18n ? window.I18n.t(key) : key; }
+
   function renderNotFound() {
     var root = document.getElementById('project-root');
     root.innerHTML =
       '<div class="project-not-found">' +
-        '<h2>Projet introuvable</h2>' +
-        '<p>Ce projet n\'existe pas ou a été supprimé.</p>' +
-        '<a href="portfolio.html" class="project-back" style="display:inline-flex;margin:0 auto;">Retour au portfolio</a>' +
+        '<h2>' + esc(tr('project.notfound.h2')) + '</h2>' +
+        '<p>' + esc(tr('project.notfound.p')) + '</p>' +
+        '<a href="portfolio.html" class="project-back" style="display:inline-flex;margin:0 auto;">' + esc(tr('project.back')) + '</a>' +
       '</div>';
-    document.title = 'Mario J. Ramos — Projet introuvable';
+    document.title = 'Mario J. Ramos — ' + tr('project.notfound.h2');
   }
 
   function rel(path) { return path ? path.replace(/^\//, '') : path; }
@@ -592,19 +617,19 @@ window.addEventListener('scroll', function () {
     // Meta items
     var metaHTML = '';
     if (categoryLabel) {
-      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">Catégorie</div><div class="project-meta-value">' + esc(categoryLabel) + '</div></div>';
+      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">' + esc(tr('project.meta.category')) + '</div><div class="project-meta-value">' + esc(categoryLabel) + '</div></div>';
     }
     if (project.role) {
-      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">Rôle</div><div class="project-meta-value">' + esc(project.role) + '</div></div>';
+      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">' + esc(tr('project.meta.role')) + '</div><div class="project-meta-value">' + esc(project.role) + '</div></div>';
     }
     if (project.medium) {
-      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">Médium</div><div class="project-meta-value">' + esc(project.medium) + '</div></div>';
+      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">' + esc(tr('project.meta.medium')) + '</div><div class="project-meta-value">' + esc(project.medium) + '</div></div>';
     }
     if (project.year) {
-      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">Année</div><div class="project-meta-value">' + esc(String(project.year)) + '</div></div>';
+      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">' + esc(tr('project.meta.year')) + '</div><div class="project-meta-value">' + esc(String(project.year)) + '</div></div>';
     }
     if (project.link) {
-      metaHTML += '<div class="project-meta-divider"></div><a href="' + esc(project.link) + '" target="_blank" rel="noopener" class="project-link-btn">Voir le projet</a>';
+      metaHTML += '<div class="project-meta-divider"></div><a href="' + esc(project.link) + '" target="_blank" rel="noopener" class="project-link-btn">' + esc(tr('project.meta.link')) + '</a>';
     }
 
     // Video embed
@@ -612,7 +637,7 @@ window.addEventListener('scroll', function () {
     var embedUrl = toEmbedUrl(project.video);
     if (embedUrl) {
       videoHTML = '<div class="project-video">' +
-        '<div class="project-video-label">Vidéo</div>' +
+        '<div class="project-video-label">' + esc(tr('project.video.label')) + '</div>' +
         '<div class="project-video-wrap">' +
           '<iframe src="' + esc(embedUrl) + '" allowfullscreen loading="lazy"></iframe>' +
         '</div>' +
@@ -629,7 +654,7 @@ window.addEventListener('scroll', function () {
           (a.year  ? '<span class="project-accolade-year">'  + esc(String(a.year)) + '</span>' : '') +
         '</div>';
       }).join('');
-      accoladesHTML = '<div class="project-accolades"><div class="project-accolades-label">Accolades</div>' + acItems + '</div>';
+      accoladesHTML = '<div class="project-accolades"><div class="project-accolades-label">' + esc(tr('project.accolades.label')) + '</div>' + acItems + '</div>';
     }
 
     var galleryHTML = '';
@@ -640,7 +665,7 @@ window.addEventListener('scroll', function () {
         return '<img class="project-gallery-img" src="' + esc(rel(src)) + '" alt="' + esc(alt) + '" loading="lazy">';
       }).join('');
       galleryHTML = '<div class="project-gallery">' +
-        '<div class="project-gallery-label">Galerie</div>' +
+        '<div class="project-gallery-label">' + esc(tr('project.gallery.label')) + '</div>' +
         '<div class="project-gallery-grid">' + imgs + '</div>' +
       '</div>';
     }
@@ -651,7 +676,7 @@ window.addEventListener('scroll', function () {
         '<div class="' + heroImgClass + '" role="img" aria-label="' + coverAlt + '"' + heroImgStyle + '></div>' +
         '<div class="project-hero-gradient"></div>' +
         '<div class="project-hero-content">' +
-          '<a href="portfolio.html" class="project-back">Portfolio</a>' +
+          '<a href="portfolio.html" class="project-back">' + esc(tr('project.back')) + '</a>' +
           (categoryLabel ? '<div class="project-category">' + esc(categoryLabel) + '</div>' : '') +
           '<h1 class="project-title">' + esc(project.title) + '</h1>' +
           (project.client ? '<div class="project-client">' + esc(project.client) + '</div>' : '') +
@@ -697,6 +722,10 @@ window.addEventListener('scroll', function () {
 
     if (!project) { renderNotFound(); return; }
     renderProject(project, categoryLabels);
+
+    window.onLangChange = function () {
+      renderProject(project, categoryLabels);
+    };
   }).catch(function () { renderNotFound(); });
 }());
 </script>

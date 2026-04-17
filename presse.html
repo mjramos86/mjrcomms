@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-page="presse">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
 <meta name="twitter:title" content="Mario J. Ramos — Dans la presse">
 <meta name="twitter:description" content="Revue de presse de Mario J. Ramos — articles et mentions dans les médias.">
 <link rel="icon" type="image/png" href="MJR.png">
+<script src="i18n.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -128,6 +129,25 @@ nav {
   transition: all 0.2s;
 }
 .nav-cta:hover { background: var(--teal-dim); }
+/* ── LANG BUTTON ────────────────────────────────────────── */
+.lang-btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 5px 10px;
+  letter-spacing: 0.08em;
+  transition: border-color 0.2s;
+  white-space: nowrap;
+}
+.lang-btn:hover { border-color: var(--border-teal); }
+.lang-btn [data-lang] { color: var(--text-dim); transition: color 0.2s; }
+.lang-btn [data-lang].lang-active { color: var(--teal); }
+.lang-btn .lang-sep { color: var(--border); margin: 0 4px; }
 /* ── NAV BURGER / MOBILE MENU ───────────────────────────── */
 .nav-burger {
   display: none;
@@ -400,14 +420,17 @@ footer {
 <nav>
   <a class="nav-logo" href="./"><img src="MJR.png" alt="Logo MJR">Mario J<span>.</span> Ramos</a>
   <ul class="nav-links">
-    <li><a href="index.html#about">À propos</a></li>
-    <li><a href="index.html#services">Forfaits</a></li>
-    <li><a href="index.html#carte">À la carte</a></li>
-    <li><a href="index.html#experience">Parcours</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="presse.html" class="active">Dans la presse</a></li>
+    <li><a href="index.html#about" data-i18n="nav.about">À propos</a></li>
+    <li><a href="index.html#services" data-i18n="nav.services">Forfaits</a></li>
+    <li><a href="index.html#carte" data-i18n="nav.alacarte">À la carte</a></li>
+    <li><a href="index.html#experience" data-i18n="nav.parcours">Parcours</a></li>
+    <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+    <li><a href="presse.html" class="active" data-i18n="nav.presse">Dans la presse</a></li>
   </ul>
-  <a class="nav-cta" href="index.html#contact">Contactez-moi</a>
+  <a class="nav-cta" href="index.html#contact" data-i18n="nav.contact">Contactez-moi</a>
+  <button class="lang-btn" id="lang-btn" aria-label="Switch language / Changer de langue">
+    <span data-lang="fr">FR</span><span class="lang-sep">|</span><span data-lang="en">EN</span>
+  </button>
   <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-mobile">
     <span></span><span></span><span></span>
   </button>
@@ -415,31 +438,31 @@ footer {
 
 <!-- NAV MOBILE -->
 <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Menu de navigation">
-  <a href="index.html#about">À propos</a>
-  <a href="index.html#services">Forfaits</a>
-  <a href="index.html#carte">À la carte</a>
-  <a href="index.html#experience">Parcours</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="presse.html" class="active">Dans la presse</a>
-  <a class="nav-mobile-cta" href="index.html#contact">Contactez-moi</a>
+  <a href="index.html#about" data-i18n="nav.about">À propos</a>
+  <a href="index.html#services" data-i18n="nav.services">Forfaits</a>
+  <a href="index.html#carte" data-i18n="nav.alacarte">À la carte</a>
+  <a href="index.html#experience" data-i18n="nav.parcours">Parcours</a>
+  <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+  <a href="presse.html" class="active" data-i18n="nav.presse">Dans la presse</a>
+  <a class="nav-mobile-cta" href="index.html#contact" data-i18n="nav.contact">Contactez-moi</a>
 </div>
 
 <!-- PRESSE -->
 <section id="presse">
   <div class="grid-bg"></div>
   <div class="max-w">
-    <div class="section-tag reveal">Presse</div>
-    <h2 class="reveal">Dans la presse</h2>
-    <p class="section-desc reveal">Articles, entrevues et mentions dans les médias — une sélection de couvertures presse autour de mes projets et mandats en communications.</p>
+    <div class="section-tag reveal" data-i18n="presse.tag">Presse</div>
+    <h2 class="reveal" data-i18n="presse.h2">Dans la presse</h2>
+    <p class="section-desc reveal" data-i18n="presse.desc">Articles, entrevues et mentions dans les médias — une sélection de couvertures presse autour de mes projets et mandats en communications.</p>
 
     <div class="presse-grid" id="presse-grid"></div>
-    <p class="presse-empty" id="presse-empty" style="display:none;">Aucun article pour l'instant.</p>
+    <p class="presse-empty" id="presse-empty" data-i18n="presse.empty" style="display:none;">Aucun article pour l'instant.</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
+  <div class="footer-left" data-i18n="footer.copy">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
   <div class="footer-right">Mario J<span>.</span> Ramos — INSERT COIN TO <span>LAUNCH</span>_</div>
 </footer>
 
@@ -487,7 +510,8 @@ window.addEventListener('scroll', () => {
     if (!dateStr) return '';
     var d = new Date(dateStr);
     if (isNaN(d.getTime())) return dateStr;
-    return d.toLocaleDateString('fr-CA', { year: 'numeric', month: 'short', day: 'numeric' });
+    var locale = window.I18n ? window.I18n.t('date.locale') : 'fr-CA';
+    return d.toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' });
   }
 
   function buildCard(article) {
@@ -506,6 +530,7 @@ window.addEventListener('scroll', () => {
 
     var dateEl = document.createElement('div');
     dateEl.className = 'pc-date';
+    if (article.date) dateEl.setAttribute('data-raw-date', article.date);
     dateEl.textContent = formatDate(article.date);
 
     var overlay = document.createElement('div');
@@ -565,6 +590,12 @@ window.addEventListener('scroll', () => {
           grid.appendChild(card);
           observer.observe(card);
         });
+
+        window.onLangChange = function () {
+          document.querySelectorAll('.pc-date[data-raw-date]').forEach(function (el) {
+            el.textContent = formatDate(el.getAttribute('data-raw-date'));
+          });
+        };
       })
       .catch(function (err) { console.warn('Presse:', err.message); });
   });
