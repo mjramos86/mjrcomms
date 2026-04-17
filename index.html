@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-page="index">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
 <meta name="twitter:title" content="Mario J. Ramos — Spécialiste des communications">
 <meta name="twitter:description" content="Stratégie de lancement, relations de presse et communications pour studios de jeux vidéo, productions cinéma et bande dessinée.">
 <link rel="icon" type="image/png" href="MJR.png">
+<script src="i18n.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -129,6 +130,25 @@ nav {
   transition: all 0.2s;
 }
 .nav-cta:hover { background: var(--teal-dim); }
+/* ── LANG BUTTON ────────────────────────────────────────── */
+.lang-btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 5px 10px;
+  letter-spacing: 0.08em;
+  transition: border-color 0.2s;
+  white-space: nowrap;
+}
+.lang-btn:hover { border-color: var(--border-teal); }
+.lang-btn [data-lang] { color: var(--text-dim); transition: color 0.2s; }
+.lang-btn [data-lang].lang-active { color: var(--teal); }
+.lang-btn .lang-sep { color: var(--border); margin: 0 4px; }
 /* ── NAV BURGER / MOBILE MENU ───────────────────────────── */
 .nav-burger {
   display: none;
@@ -906,24 +926,24 @@ footer {
 <!-- SPLASH / PAGE DE GARDE -->
 <div id="splash">
   <div class="splash-name">Mario J<span>.</span> Ramos</div>
-  <div class="splash-sub">Spécialiste des communications&nbsp;<span class="blink">_</span></div>
+  <div class="splash-sub"><span data-i18n="splash.sub">Spécialiste des communications</span>&nbsp;<span class="blink">_</span></div>
   <div class="splash-choices">
     <a class="splash-choice services" href="#hero" id="splash-services">
       <div class="splash-choice-icon">// 01</div>
-      <div class="splash-choice-label">Offre de<br>services</div>
-      <div class="splash-choice-desc">Communications, relations de presse et stratégie de lancement.</div>
+      <div class="splash-choice-label" data-i18n-html="splash.services.label">Offre de<br>services</div>
+      <div class="splash-choice-desc" data-i18n="splash.services.desc">Communications, relations de presse et stratégie de lancement.</div>
       <div class="splash-choice-arrow">→</div>
     </a>
     <a class="splash-choice portfolio" href="portfolio.html" id="splash-portfolio">
       <div class="splash-choice-icon">// 02</div>
       <div class="splash-choice-label">Portfolio</div>
-      <div class="splash-choice-desc">Projets, productions et réalisations.</div>
+      <div class="splash-choice-desc" data-i18n="splash.portfolio.desc">Projets, productions et réalisations.</div>
       <div class="splash-choice-arrow">→</div>
     </a>
     <a class="splash-choice blog" href="https://videoludique.ca/" target="_blank" rel="noopener">
       <div class="splash-choice-icon">// 03</div>
       <div class="splash-choice-label">Vidéo&shy;ludique<span style="color:var(--violet)">.</span>ca</div>
-      <div class="splash-choice-desc">Blogue sur l'industrie du jeu vidéo au Québec.</div>
+      <div class="splash-choice-desc" data-i18n="splash.blog.desc">Blogue sur l'industrie du jeu vidéo au Québec.</div>
       <div class="splash-choice-arrow">→</div>
     </a>
   </div>
@@ -933,14 +953,17 @@ footer {
 <nav>
   <a class="nav-logo" href="#"><img src="MJR.png" alt="Logo MJR">Mario J<span>.</span> Ramos</a>
   <ul class="nav-links">
-    <li><a href="#about">À propos</a></li>
-    <li><a href="#services">Forfaits</a></li>
-    <li><a href="#carte">À la carte</a></li>
-    <li><a href="#experience">Parcours</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="presse.html">Dans la presse</a></li>
+    <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+    <li><a href="#services" data-i18n="nav.services">Forfaits</a></li>
+    <li><a href="#carte" data-i18n="nav.alacarte">À la carte</a></li>
+    <li><a href="#experience" data-i18n="nav.parcours">Parcours</a></li>
+    <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+    <li><a href="presse.html" data-i18n="nav.presse">Dans la presse</a></li>
   </ul>
-  <a class="nav-cta" href="#contact">Contactez-moi</a>
+  <a class="nav-cta" href="#contact" data-i18n="nav.contact">Contactez-moi</a>
+  <button class="lang-btn" id="lang-btn" aria-label="Switch language / Changer de langue">
+    <span data-lang="fr">FR</span><span class="lang-sep">|</span><span data-lang="en">EN</span>
+  </button>
   <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-mobile">
     <span></span><span></span><span></span>
   </button>
@@ -948,13 +971,13 @@ footer {
 
 <!-- NAV MOBILE -->
 <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Menu de navigation">
-  <a href="#about">À propos</a>
-  <a href="#services">Forfaits</a>
-  <a href="#carte">À la carte</a>
-  <a href="#experience">Parcours</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="presse.html">Dans la presse</a>
-  <a class="nav-mobile-cta" href="#contact">Contactez-moi</a>
+  <a href="#about" data-i18n="nav.about">À propos</a>
+  <a href="#services" data-i18n="nav.services">Forfaits</a>
+  <a href="#carte" data-i18n="nav.alacarte">À la carte</a>
+  <a href="#experience" data-i18n="nav.parcours">Parcours</a>
+  <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+  <a href="presse.html" data-i18n="nav.presse">Dans la presse</a>
+  <a class="nav-mobile-cta" href="#contact" data-i18n="nav.contact">Contactez-moi</a>
 </div>
 
 <!-- HERO -->
@@ -964,30 +987,30 @@ footer {
   <div class="hero-glow-2"></div>
   <div class="max-w">
     <div class="hero-tag">
-      Spécialiste des communications en jeu vidéo&nbsp;<span class="blink">_</span>
+      <span data-i18n="hero.tag">Spécialiste des communications en jeu vidéo</span>&nbsp;<span class="blink">_</span>
     </div>
     <h1>Mario J. Ramos</h1>
 
-    <p class="hero-slogan">Vos jeux méritent<br>d'être <em>vus</em> et <em>joués</em>.</p>
+    <p class="hero-slogan" data-i18n-html="hero.slogan">Vos jeux méritent<br>d'être <em>vus</em> et <em>joués</em>.</p>
     <div class="hero-actions">
-      <a class="btn-primary" href="#services">Voir les forfaits</a>
-      <a class="btn-secondary" href="#contact">Discutons de votre projet</a>
+      <a class="btn-primary" href="#services" data-i18n="hero.btn.services">Voir les forfaits</a>
+      <a class="btn-secondary" href="#contact" data-i18n="hero.btn.contact">Discutons de votre projet</a>
     </div>
     <div class="hero-stats">
       <div>
         <div class="hero-stat-val">8<span>+</span></div>
-        <div class="hero-stat-lbl">Années d'expérience</div>
+        <div class="hero-stat-lbl" data-i18n="hero.stat.exp">Années d'expérience</div>
       </div>
       <div>
         <div class="hero-stat-val">2<span>×</span></div>
-        <div class="hero-stat-lbl">Lauréat Prix Gémeaux</div>
+        <div class="hero-stat-lbl" data-i18n="hero.stat.gemaux">Lauréat Prix Gémeaux</div>
       </div>
       <div>
-        <div class="hero-stat-val">5<span> ans</span></div>
-        <div class="hero-stat-lbl">Bell Média / RDS Jeux vidéo</div>
+        <div class="hero-stat-val">5<span data-i18n="hero.stat.bell.unit"> ans</span></div>
+        <div class="hero-stat-lbl" data-i18n="hero.stat.bell">Bell Média / RDS Jeux vidéo</div>
       </div>
       <div>
-        <div class="hero-stat-val">3<span> langues</span></div>
+        <div class="hero-stat-val">3<span data-i18n="hero.stat.lang.unit"> langues</span></div>
         <div class="hero-stat-lbl">FR · EN · PT</div>
       </div>
     </div>
@@ -999,26 +1022,26 @@ footer {
   <div class="max-w">
     <div class="about-grid">
       <div class="about-text reveal">
-        <div class="section-tag">À propos</div>
+        <div class="section-tag" data-i18n="about.tag">À propos</div>
         <h2 class="bracket">Mario Jorge Ramos</h2>
-        <p>Je suis un <strong>professionnel des médias numériques et de la communication</strong> avec une connaissance approfondie de l'industrie du jeu vidéo québécoise — de l'intérieur. J'ai couvert, promu et lancé des jeux. J'ai géré des marques, construit des communautés, et obtenu des couvertures dans les médias qui comptent.</p>
-        <p>Mon avantage, c'est un <strong>réseau humain</strong> bâti sur 8 ans dans cet écosystème : journalistes, développeurs, éditeurs, organisateurs d'événements, mais aussi créateurs de contenu et influenceurs gaming. Quand je vous représente, je parle la même langue que vos interlocuteurs.</p>
-        <p>Étant moi-même journaliste en jeu vidéo, je comprends les médias de l'intérieur — <strong>comment ils pensent, ce qui retient leur attention</strong>, et ce qui finit à la corbeille. C'est un avantage que peu d'agences de communication peuvent offrir.</p>
+        <p data-i18n-html="about.p1">Je suis un <strong>professionnel des médias numériques et de la communication</strong> avec une connaissance approfondie de l'industrie du jeu vidéo québécoise — de l'intérieur. J'ai couvert, promu et lancé des jeux. J'ai géré des marques, construit des communautés, et obtenu des couvertures dans les médias qui comptent.</p>
+        <p data-i18n-html="about.p2">Mon avantage, c'est un <strong>réseau humain</strong> bâti sur 8 ans dans cet écosystème : journalistes, développeurs, éditeurs, organisateurs d'événements, mais aussi créateurs de contenu et influenceurs gaming. Quand je vous représente, je parle la même langue que vos interlocuteurs.</p>
+        <p data-i18n-html="about.p3">Étant moi-même journaliste en jeu vidéo, je comprends les médias de l'intérieur — <strong>comment ils pensent, ce qui retient leur attention</strong>, et ce qui finit à la corbeille. C'est un avantage que peu d'agences de communication peuvent offrir.</p>
         <div class="skills-list">
           <div class="skill-row">
-            <div class="skill-header"><span class="skill-name">Relations de presse</span><span class="skill-lvl">LVL MAX</span></div>
+            <div class="skill-header"><span class="skill-name" data-i18n="about.skill.pr">Relations de presse</span><span class="skill-lvl">LVL MAX</span></div>
             <div class="skill-bar-bg"><div class="skill-bar-fill" style="animation-delay:0.1s"></div></div>
           </div>
           <div class="skill-row">
-            <div class="skill-header"><span class="skill-name">Stratégie réseaux sociaux</span><span class="skill-lvl">LVL MAX</span></div>
+            <div class="skill-header"><span class="skill-name" data-i18n="about.skill.social">Stratégie réseaux sociaux</span><span class="skill-lvl">LVL MAX</span></div>
             <div class="skill-bar-bg"><div class="skill-bar-fill" style="animation-delay:0.25s"></div></div>
           </div>
           <div class="skill-row">
-            <div class="skill-header"><span class="skill-name">Rédaction / création de contenu</span><span class="skill-lvl">LVL MAX</span></div>
+            <div class="skill-header"><span class="skill-name" data-i18n="about.skill.content">Rédaction / création de contenu</span><span class="skill-lvl">LVL MAX</span></div>
             <div class="skill-bar-bg"><div class="skill-bar-fill" style="animation-delay:0.4s"></div></div>
           </div>
           <div class="skill-row">
-            <div class="skill-header"><span class="skill-name">Connaissance industrie JV QC</span><span class="skill-lvl">LVL MAX</span></div>
+            <div class="skill-header"><span class="skill-name" data-i18n="about.skill.gaming">Connaissance industrie JV QC</span><span class="skill-lvl">LVL MAX</span></div>
             <div class="skill-bar-bg"><div class="skill-bar-fill" style="animation-delay:0.55s"></div></div>
           </div>
         </div>
@@ -1026,23 +1049,23 @@ footer {
       <div class="award-cards reveal" style="transition-delay:0.15s">
         <div class="award-card">
           <div class="award-card-icon">🎮 Hell is Us — Rogue Factor</div>
-          <div class="award-card-title">Responsable des communications</div>
-          <div class="award-card-desc">Lancement AA, relations de presse internationales, gestion des réseaux sociaux et des communautés.</div>
+          <div class="award-card-title" data-i18n="about.card.hiu.title">Responsable des communications</div>
+          <div class="award-card-desc" data-i18n="about.card.hiu.desc">Lancement AA, relations de presse internationales, gestion des réseaux sociaux et des communautés.</div>
         </div>
         <div class="award-card">
           <div class="award-card-icon">📺 Bell Média / RDS Jeux vidéo</div>
-          <div class="award-card-title">Rédacteur en chef</div>
-          <div class="award-card-desc">J'ai fondé et dirigé la marque RDS Jeux vidéo pendant 5 ans — couverture éditoriale, partenariats commerciaux et développement d'audience.</div>
+          <div class="award-card-title" data-i18n="about.card.bell.title">Rédacteur en chef</div>
+          <div class="award-card-desc" data-i18n="about.card.bell.desc">J'ai fondé et dirigé la marque RDS Jeux vidéo pendant 5 ans — couverture éditoriale, partenariats commerciaux et développement d'audience.</div>
         </div>
         <div class="award-card">
           <div class="award-card-icon">🕹️ La Guilde du jeu vidéo du Québec</div>
-          <div class="award-card-title">Consultant aux communications</div>
-          <div class="award-card-desc">Soutien stratégique aux communications de l'association qui représente l'industrie du jeu vidéo québécoise, incluant les initatives comme la Zone Indie Loto-Québec, les DemoNights, le MIGS.</div>
+          <div class="award-card-title" data-i18n="about.card.guilde.title">Consultant aux communications</div>
+          <div class="award-card-desc" data-i18n="about.card.guilde.desc">Soutien stratégique aux communications de l'association qui représente l'industrie du jeu vidéo québécoise, incluant les initatives comme la Zone Indie Loto-Québec, les DemoNights, le MIGS.</div>
         </div>
         <div class="award-card">
           <div class="award-card-icon">🛡️ Fondation des Gardiens virtuels</div>
-          <div class="award-card-title">Directeur des communications</div>
-          <div class="award-card-desc">Direction des communications et stratégie numérique pour l'OBNL dédié au bien-être des joueurs, incluant la production balado et les campagnes de sensibilisation.</div>
+          <div class="award-card-title" data-i18n="about.card.gardiens.title">Directeur des communications</div>
+          <div class="award-card-desc" data-i18n="about.card.gardiens.desc">Direction des communications et stratégie numérique pour l'OBNL dédié au bien-être des joueurs, incluant la production balado et les campagnes de sensibilisation.</div>
         </div>
       </div>
     </div>
@@ -1053,58 +1076,58 @@ footer {
 <section id="services">
   <div class="grid-bg"></div>
   <div class="max-w">
-    <div class="section-tag reveal">Forfaits</div>
-    <h2 class="reveal">Choisissez votre niveau<br>d'engagement</h2>
-    <p class="section-desc reveal">Trois formules conçues pour s'adapter à vos besoins et votre budget. Pas de contrat d'un an obligatoire. Pas de frais cachés.</p>
+    <div class="section-tag reveal" data-i18n="services.tag">Forfaits</div>
+    <h2 class="reveal" data-i18n-html="services.h2">Choisissez votre niveau<br>d'engagement</h2>
+    <p class="section-desc reveal" data-i18n="services.desc">Trois formules conçues pour s'adapter à vos besoins et votre budget. Pas de contrat d'un an obligatoire. Pas de frais cachés.</p>
     <div class="forfaits-grid">
       <div class="forfait-card reveal" style="transition-delay:0.05s">
-        <div class="forfait-badge">Ponctuel</div>
-        <div class="forfait-title">Conseil Express</div>
-        <div class="forfait-price">150 $<span> / heure</span></div>
-        <div class="forfait-desc">Vous avez une question stratégique précise. On règle ça ensemble en 1 ou 2 heures.</div>
+        <div class="forfait-badge" data-i18n="services.card1.badge">Ponctuel</div>
+        <div class="forfait-title" data-i18n="services.card1.title">Conseil Express</div>
+        <div class="forfait-price">150 $<span data-i18n="services.card1.unit"> / heure</span></div>
+        <div class="forfait-desc" data-i18n="services.card1.desc">Vous avez une question stratégique précise. On règle ça ensemble en 1 ou 2 heures.</div>
         <div class="forfait-divider"></div>
         <ul class="forfait-list">
-          <li>Consultation stratégique 1h ou 2h</li>
-          <li>Audit de votre présence actuelle</li>
-          <li>Recommandations actionnables immédiates</li>
-          <li>Idéal pour un studio en début de parcours</li>
-          <li>1re heure de découverte à 75 $</li>
+          <li data-i18n="services.card1.li1">Consultation stratégique 1h ou 2h</li>
+          <li data-i18n="services.card1.li2">Audit de votre présence actuelle</li>
+          <li data-i18n="services.card1.li3">Recommandations actionnables immédiates</li>
+          <li data-i18n="services.card1.li4">Idéal pour un studio en début de parcours</li>
+          <li data-i18n="services.card1.li5">1re heure de découverte à 75 $</li>
         </ul>
       </div>
       <div class="forfait-card featured reveal" style="transition-delay:0.15s">
         <div class="forfait-corner"></div>
-        <div class="forfait-badge">⭐ Recommandé</div>
-        <div class="forfait-title">Pack Lancement</div>
+        <div class="forfait-badge" data-i18n="services.card2.badge">⭐ Recommandé</div>
+        <div class="forfait-title" data-i18n="services.card2.title">Pack Lancement</div>
         <div class="forfait-price">3 500 $<span> – 7 000 $</span></div>
-        <div class="forfait-desc">Le forfait complet pour un lancement réussi. 8 semaines d'accompagnement du plan à la couverture presse.</div>
+        <div class="forfait-desc" data-i18n="services.card2.desc">Le forfait complet pour un lancement réussi. 8 semaines d'accompagnement du plan à la couverture presse.</div>
         <div class="forfait-divider"></div>
         <ul class="forfait-list">
-          <li>Plan de communication complet (8 semaines)</li>
-          <li>Kit de presse — communiqué + assets</li>
-          <li>Envoi aux médias ciblés</li>
-          <li>Stratégie réseaux sociaux + calendrier éditorial</li>
-          <li>Relances et gestion des demandes presse</li>
-          <li>Rapport et bilan post-lancement</li>
-          <li>1 séance de révision incluse</li>
+          <li data-i18n="services.card2.li1">Plan de communication complet (8 semaines)</li>
+          <li data-i18n="services.card2.li2">Kit de presse — communiqué + assets</li>
+          <li data-i18n="services.card2.li3">Envoi aux médias ciblés</li>
+          <li data-i18n="services.card2.li4">Stratégie réseaux sociaux + calendrier éditorial</li>
+          <li data-i18n="services.card2.li5">Relances et gestion des demandes presse</li>
+          <li data-i18n="services.card2.li6">Rapport et bilan post-lancement</li>
+          <li data-i18n="services.card2.li7">1 séance de révision incluse</li>
         </ul>
       </div>
       <div class="forfait-card reveal" style="transition-delay:0.25s">
-        <div class="forfait-badge amber">Récurrent</div>
-        <div class="forfait-title">Retainer Mensuel</div>
-        <div class="forfait-price">1 800 $<span> / mois</span></div>
-        <div class="forfait-desc">Votre spécialiste comm dédié chaque mois — disponible, réactif, intégré à votre rythme de développement.</div>
+        <div class="forfait-badge amber" data-i18n="services.card3.badge">Récurrent</div>
+        <div class="forfait-title" data-i18n="services.card3.title">Retainer Mensuel</div>
+        <div class="forfait-price">1 800 $<span data-i18n="services.card3.unit"> / mois</span></div>
+        <div class="forfait-desc" data-i18n="services.card3.desc">Votre spécialiste comm dédié chaque mois — disponible, réactif, intégré à votre rythme de développement.</div>
         <div class="forfait-divider"></div>
         <ul class="forfait-list">
-          <li>~2 jours / mois de disponibilité dédiée</li>
-          <li>Gestion réseaux sociaux — 2 à 3 posts / semaine</li>
-          <li>Veille médiatique gaming Québec</li>
-          <li>1 communiqué de presse par mois</li>
-          <li>Accès prioritaire en période de lancement</li>
-          <li>Engagement minimum 3 mois</li>
+          <li data-i18n="services.card3.li1">~2 jours / mois de disponibilité dédiée</li>
+          <li data-i18n="services.card3.li2">Gestion réseaux sociaux — 2 à 3 posts / semaine</li>
+          <li data-i18n="services.card3.li3">Veille médiatique gaming Québec</li>
+          <li data-i18n="services.card3.li4">1 communiqué de presse par mois</li>
+          <li data-i18n="services.card3.li5">Accès prioritaire en période de lancement</li>
+          <li data-i18n="services.card3.li6">Engagement minimum 3 mois</li>
         </ul>
       </div>
     </div>
-    <p style="font-family:'DM Mono',monospace; font-size:12px; color:var(--text-dim); margin-top:1.5rem; letter-spacing:0.05em;">
+    <p style="font-family:'DM Mono',monospace; font-size:12px; color:var(--text-dim); margin-top:1.5rem; letter-spacing:0.05em;" data-i18n="services.note">
       // Les forfaits sont des points de départ — chaque projet est unique. Contactez-moi pour une proposition personnalisée.
     </p>
   </div>
@@ -1113,33 +1136,33 @@ footer {
 <!-- À LA CARTE -->
 <section id="carte">
   <div class="max-w">
-    <div class="section-tag reveal">Services</div>
-    <h2 class="reveal">À la carte</h2>
-    <p class="section-desc reveal">Besoin d'un service précis, sans forfait complet ? Choisissez exactement ce dont vous avez besoin.</p>
+    <div class="section-tag reveal" data-i18n="carte.tag">Services</div>
+    <h2 class="reveal" data-i18n="carte.h2">À la carte</h2>
+    <p class="section-desc reveal" data-i18n="carte.desc">Besoin d'un service précis, sans forfait complet ? Choisissez exactement ce dont vous avez besoin.</p>
     <div class="carte-grid">
       <div class="carte-block reveal" style="transition-delay:0.05s">
-        <div class="carte-block-title">Relations de presse</div>
-        <div class="carte-row"><span class="carte-row-name">Rédaction d'un communiqué de presse</span><span class="carte-row-price">350 – 500 $</span></div>
-        <div class="carte-row"><span class="carte-row-name">Liste médias ciblée + envoi (QC)</span><span class="carte-row-price">500 – 750 $</span></div>
-        <div class="carte-row"><span class="carte-row-name">Relances et gestion des demandes</span><span class="carte-row-price">200 $ / j</span></div>
-        <div class="carte-row"><span class="carte-row-name">Traduction FR ↔ EN</span><span class="carte-row-price">150 – 250 $</span></div>
+        <div class="carte-block-title" data-i18n="carte.cat1.title">Relations de presse</div>
+        <div class="carte-row"><span class="carte-row-name" data-i18n="carte.cat1.row1">Rédaction d'un communiqué de presse</span><span class="carte-row-price">350 – 500 $</span></div>
+        <div class="carte-row"><span class="carte-row-name" data-i18n="carte.cat1.row2">Liste médias ciblée + envoi (QC)</span><span class="carte-row-price">500 – 750 $</span></div>
+        <div class="carte-row"><span class="carte-row-name" data-i18n="carte.cat1.row3">Relances et gestion des demandes</span><span class="carte-row-price">200 $ / j</span></div>
+        <div class="carte-row"><span class="carte-row-name" data-i18n="carte.cat1.row4">Traduction FR ↔ EN</span><span class="carte-row-price">150 – 250 $</span></div>
       </div>
       <div class="carte-block reveal" style="transition-delay:0.15s">
-        <div class="carte-block-title">Stratégie & planning</div>
-        <div class="carte-row"><span class="carte-row-name">Audit de communication (état des lieux)</span><span class="carte-row-price">600 – 900 $</span></div>
-        <div class="carte-row"><span class="carte-row-name">Plan de communication lancement</span><span class="carte-row-price">1 200 – 2 000 $</span></div>
-        <div class="carte-row"><span class="carte-row-name">Stratégie réseaux sociaux (document)</span><span class="carte-row-price">800 – 1 200 $</span></div>
-        <div class="carte-row"><span class="carte-row-name">Simulation de critique professionnelle (mock review)</span><span class="carte-row-price">400 – 600 $</span></div>
+        <div class="carte-block-title" data-i18n="carte.cat2.title">Stratégie & planning</div>
+        <div class="carte-row"><span class="carte-row-name" data-i18n="carte.cat2.row1">Audit de communication (état des lieux)</span><span class="carte-row-price">600 – 900 $</span></div>
+        <div class="carte-row"><span class="carte-row-name" data-i18n="carte.cat2.row2">Plan de communication lancement</span><span class="carte-row-price">1 200 – 2 000 $</span></div>
+        <div class="carte-row"><span class="carte-row-name" data-i18n="carte.cat2.row3">Stratégie réseaux sociaux (document)</span><span class="carte-row-price">800 – 1 200 $</span></div>
+        <div class="carte-row"><span class="carte-row-name" data-i18n="carte.cat2.row4">Simulation de critique professionnelle (mock review)</span><span class="carte-row-price">400 – 600 $</span></div>
       </div>
       <div class="carte-block reveal" style="transition-delay:0.25s">
-        <div class="carte-block-title">Contenu & réseaux sociaux</div>
-        <div class="carte-row"><span class="carte-row-name">Calendrier éditorial mensuel (30 idées)</span><span class="carte-row-price">400 – 600 $</span></div>
-        <div class="carte-row"><span class="carte-row-name">Rédaction + mise en page posts (×10)</span><span class="carte-row-price">350 – 500 $</span></div>
-        <div class="carte-row"><span class="carte-row-name">Prise en charge complète réseaux (4 sem.)</span><span class="carte-row-price">1 200 – 1 800 $</span></div>
-        <div class="carte-row"><span class="carte-row-name">Couverture événement (journée)</span><span class="carte-row-price">800 $ / j</span></div>
+        <div class="carte-block-title" data-i18n="carte.cat3.title">Contenu & réseaux sociaux</div>
+        <div class="carte-row"><span class="carte-row-name" data-i18n="carte.cat3.row1">Calendrier éditorial mensuel (30 idées)</span><span class="carte-row-price">400 – 600 $</span></div>
+        <div class="carte-row"><span class="carte-row-name" data-i18n="carte.cat3.row2">Rédaction + mise en page posts (×10)</span><span class="carte-row-price">350 – 500 $</span></div>
+        <div class="carte-row"><span class="carte-row-name" data-i18n="carte.cat3.row3">Prise en charge complète réseaux (4 sem.)</span><span class="carte-row-price">1 200 – 1 800 $</span></div>
+        <div class="carte-row"><span class="carte-row-name" data-i18n="carte.cat3.row4">Couverture événement (journée)</span><span class="carte-row-price">800 $ / j</span></div>
       </div>
     </div>
-    <p style="font-family:'DM Mono',monospace; font-size:12px; color:var(--text-dim); margin-top:1.25rem; letter-spacing:0.05em;">
+    <p style="font-family:'DM Mono',monospace; font-size:12px; color:var(--text-dim); margin-top:1.25rem; letter-spacing:0.05em;" data-i18n="carte.note">
       // Tous les prix en CAD, avant taxes. Ajustables selon la taille du studio et la complexité du projet.
     </p>
   </div>
@@ -1150,20 +1173,20 @@ footer {
   <div class="grid-bg"></div>
   <div class="max-w" style="display:grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items:start;">
     <div>
-      <div class="section-tag reveal">Parcours</div>
-      <h2 class="reveal">Le bon joueur<br>pour votre équipe</h2>
-      <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-top:1rem;" class="reveal">
+      <div class="section-tag reveal" data-i18n="exp.tag">Parcours</div>
+      <h2 class="reveal" data-i18n-html="exp.h2">Le bon joueur<br>pour votre équipe</h2>
+      <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-top:1rem;" class="reveal" data-i18n="exp.desc">
         J'ai évolué dans les deux solitudes de l'industrie médias-gaming : la grande diffusion (Bell Média) et le terrain indie (La Guilde, Rogue Factor). Cette dualité me permet de positionner votre studio auprès du grand public autant que des audiences spécialisées.
       </p>
       <div style="margin-top:2rem; padding:1.5rem; background:var(--bg2); border:1px solid var(--border-teal); border-left: 3px solid var(--teal);" class="reveal">
-        <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--teal); letter-spacing:0.1em; margin-bottom:8px;">INDUSTRIES COUVERTES</div>
+        <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--teal); letter-spacing:0.1em; margin-bottom:8px;" data-i18n="exp.industries.title">INDUSTRIES COUVERTES</div>
         <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:0.5rem;">
-          <span class="tag">Jeux vidéo AA</span>
-          <span class="tag">Studios indépendants</span>
-          <span class="tag">Médias numériques</span>
-          <span class="tag">Télévision</span>
-          <span class="tag">Événementiel</span>
-          <span class="tag">OBNL culturel</span>
+          <span class="tag" data-i18n="exp.tag1">Jeux vidéo AA</span>
+          <span class="tag" data-i18n="exp.tag2">Studios indépendants</span>
+          <span class="tag" data-i18n="exp.tag3">Médias numériques</span>
+          <span class="tag" data-i18n="exp.tag4">Télévision</span>
+          <span class="tag" data-i18n="exp.tag5">Événementiel</span>
+          <span class="tag" data-i18n="exp.tag6">OBNL culturel</span>
         </div>
       </div>
     </div>
@@ -1171,30 +1194,30 @@ footer {
       <div class="timeline-item visible">
         <div class="timeline-dot"></div>
         <div class="timeline-date">2006 – 2014</div>
-        <div class="timeline-role">Scénariste, réalisateur, monteur vidéo</div>
-        <div class="timeline-company">Séries numériques originales sur TOU.TV et Ztélé Temps Mort et Projet-M</div>
-        <div class="timeline-tags"><span class="tag">🏆 Prix Gémeaux ×2</span><span class="tag">Temps Mort</span><span class="tag">Projet-M</span></div>
+        <div class="timeline-role" data-i18n="exp.tl1.role">Scénariste, réalisateur, monteur vidéo</div>
+        <div class="timeline-company" data-i18n="exp.tl1.company">Séries numériques originales sur TOU.TV et Ztélé Temps Mort et Projet-M</div>
+        <div class="timeline-tags"><span class="tag">🏆 Prix Gémeaux ×2</span><span class="tag" data-i18n="exp.tl1.tag2">Temps Mort</span><span class="tag" data-i18n="exp.tl1.tag3">Projet-M</span></div>
       </div>
       <div class="timeline-item visible">
         <div class="timeline-dot"></div>
         <div class="timeline-date">Depuis 2023</div>
-        <div class="timeline-role">Fondateur et rédacteur en chef — Vidéoludique.ca</div>
-        <div class="timeline-company">Blogue indépendant dédié à la critique et à l'actualité du jeu vidéo</div>
-        <div class="timeline-tags"><span class="tag">Journalisme</span><span class="tag">Critique de jeux</span><span class="tag">Blogue</span></div>
+        <div class="timeline-role" data-i18n="exp.tl2.role">Fondateur et rédacteur en chef — Vidéoludique.ca</div>
+        <div class="timeline-company" data-i18n="exp.tl2.company">Blogue indépendant dédié à la critique et à l'actualité du jeu vidéo</div>
+        <div class="timeline-tags"><span class="tag" data-i18n="exp.tl2.tag1">Journalisme</span><span class="tag" data-i18n="exp.tl2.tag2">Critique de jeux</span><span class="tag" data-i18n="exp.tl2.tag3">Blogue</span></div>
       </div>
       <div class="timeline-item visible">
         <div class="timeline-dot"></div>
         <div class="timeline-date">Depuis 2013</div>
-        <div class="timeline-role">Blogueur pop culture, jeux vidéo et techno</div>
-        <div class="timeline-company">Radio-Canada, RDS, Ztélé, Balle Courbe…</div>
-        <div class="timeline-tags"><span class="tag">Chroniques</span><span class="tag">Contenu</span><span class="tag">Médias</span></div>
+        <div class="timeline-role" data-i18n="exp.tl3.role">Blogueur pop culture, jeux vidéo et techno</div>
+        <div class="timeline-company" data-i18n="exp.tl3.company">Radio-Canada, RDS, Ztélé, Balle Courbe…</div>
+        <div class="timeline-tags"><span class="tag" data-i18n="exp.tl3.tag1">Chroniques</span><span class="tag" data-i18n="exp.tl3.tag2">Contenu</span><span class="tag" data-i18n="exp.tl3.tag3">Médias</span></div>
       </div>
       <div class="timeline-item visible">
         <div class="timeline-dot"></div>
         <div class="timeline-date">2018 – 2023</div>
-        <div class="timeline-role">Rédacteur en chef — Bell Média / RDS Jeux vidéo</div>
-        <div class="timeline-company">Directeur des communications — Fondation des Gardiens virtuels<br>Consultant aux communications — La Guilde du jeu vidéo du Québec &amp; XP Gaming<br>Responsable des communications — Rogue Factor (Hell is Us)</div>
-        <div class="timeline-tags"><span class="tag">Bell Média</span><span class="tag">La Guilde</span><span class="tag">Jeu vidéo AA</span><span class="tag">Influenceurs gaming</span></div>
+        <div class="timeline-role" data-i18n="exp.tl4.role">Rédacteur en chef — Bell Média / RDS Jeux vidéo</div>
+        <div class="timeline-company" data-i18n-html="exp.tl4.company">Directeur des communications — Fondation des Gardiens virtuels<br>Consultant aux communications — La Guilde du jeu vidéo du Québec &amp; XP Gaming<br>Responsable des communications — Rogue Factor (Hell is Us)</div>
+        <div class="timeline-tags"><span class="tag" data-i18n="exp.tl4.tag1">Bell Média</span><span class="tag" data-i18n="exp.tl4.tag2">La Guilde</span><span class="tag" data-i18n="exp.tl4.tag3">Jeu vidéo AA</span><span class="tag" data-i18n="exp.tl4.tag4">Influenceurs gaming</span></div>
       </div>
     </div>
   </div>
@@ -1205,11 +1228,11 @@ footer {
   <div class="grid-bg"></div>
   <div class="cta-glow"></div>
   <div class="max-w" style="position:relative; z-index:1;">
-    <div class="section-tag reveal" style="justify-content:center">Contact</div>
-    <h2 class="reveal">Votre prochain lancement<br>commence <em style="color:var(--teal); font-style:normal;">ici</em>.</h2>
-    <p class="cta-sub reveal">Une première conversation sans engagement pour parler de votre projet, votre budget, et voir si on est le bon match. Première heure de consultation à 75 $.</p>
+    <div class="section-tag reveal" style="justify-content:center" data-i18n="contact.tag">Contact</div>
+    <h2 class="reveal" data-i18n-html="contact.h2">Votre prochain lancement<br>commence <em style="color:var(--teal); font-style:normal;">ici</em>.</h2>
+    <p class="cta-sub reveal" data-i18n="contact.sub">Une première conversation sans engagement pour parler de votre projet, votre budget, et voir si on est le bon match. Première heure de consultation à 75 $.</p>
     <div class="reveal">
-      <a class="btn-primary" href="mailto:info@mariojramos.com" style="font-size:14px; padding:16px 36px;">
+      <a class="btn-primary" href="mailto:info@mariojramos.com" style="font-size:14px; padding:16px 36px;" data-i18n="contact.btn">
         Écrivez-moi maintenant
       </a>
     </div>
@@ -1223,7 +1246,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
+  <div class="footer-left" data-i18n="footer.copy">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
   <div class="footer-right">Mario J<span>.</span> Ramos — INSERT COIN TO <span>LAUNCH</span>_</div>
 </footer>
 

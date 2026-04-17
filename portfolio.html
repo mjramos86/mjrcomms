@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-page="portfolio">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
 <meta name="twitter:title" content="Mario J. Ramos — Portfolio">
 <meta name="twitter:description" content="Projets en communications pour jeux vidéo, cinéma/TV et bande dessinée.">
 <link rel="icon" type="image/png" href="MJR.png">
+<script src="i18n.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -128,6 +129,25 @@ nav {
   transition: all 0.2s;
 }
 .nav-cta:hover { background: var(--teal-dim); }
+/* ── LANG BUTTON ────────────────────────────────────────── */
+.lang-btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 5px 10px;
+  letter-spacing: 0.08em;
+  transition: border-color 0.2s;
+  white-space: nowrap;
+}
+.lang-btn:hover { border-color: var(--border-teal); }
+.lang-btn [data-lang] { color: var(--text-dim); transition: color 0.2s; }
+.lang-btn [data-lang].lang-active { color: var(--teal); }
+.lang-btn .lang-sep { color: var(--border); margin: 0 4px; }
 /* ── NAV BURGER / MOBILE MENU ───────────────────────────── */
 .nav-burger {
   display: none;
@@ -444,14 +464,17 @@ footer {
 <nav>
   <a class="nav-logo" href="./"><img src="MJR.png" alt="Logo MJR">Mario J<span>.</span> Ramos</a>
   <ul class="nav-links">
-    <li><a href="index.html#about">À propos</a></li>
-    <li><a href="index.html#services">Forfaits</a></li>
-    <li><a href="index.html#carte">À la carte</a></li>
-    <li><a href="index.html#experience">Parcours</a></li>
-    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-    <li><a href="presse.html">Dans la presse</a></li>
+    <li><a href="index.html#about" data-i18n="nav.about">À propos</a></li>
+    <li><a href="index.html#services" data-i18n="nav.services">Forfaits</a></li>
+    <li><a href="index.html#carte" data-i18n="nav.alacarte">À la carte</a></li>
+    <li><a href="index.html#experience" data-i18n="nav.parcours">Parcours</a></li>
+    <li><a href="portfolio.html" class="active" data-i18n="nav.portfolio">Portfolio</a></li>
+    <li><a href="presse.html" data-i18n="nav.presse">Dans la presse</a></li>
   </ul>
-  <a class="nav-cta" href="index.html#contact">Contactez-moi</a>
+  <a class="nav-cta" href="index.html#contact" data-i18n="nav.contact">Contactez-moi</a>
+  <button class="lang-btn" id="lang-btn" aria-label="Switch language / Changer de langue">
+    <span data-lang="fr">FR</span><span class="lang-sep">|</span><span data-lang="en">EN</span>
+  </button>
   <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-mobile">
     <span></span><span></span><span></span>
   </button>
@@ -459,33 +482,33 @@ footer {
 
 <!-- NAV MOBILE -->
 <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Menu de navigation">
-  <a href="index.html#about">À propos</a>
-  <a href="index.html#services">Forfaits</a>
-  <a href="index.html#carte">À la carte</a>
-  <a href="index.html#experience">Parcours</a>
-  <a href="portfolio.html" class="active">Portfolio</a>
-  <a href="presse.html">Dans la presse</a>
-  <a class="nav-mobile-cta" href="index.html#contact">Contactez-moi</a>
+  <a href="index.html#about" data-i18n="nav.about">À propos</a>
+  <a href="index.html#services" data-i18n="nav.services">Forfaits</a>
+  <a href="index.html#carte" data-i18n="nav.alacarte">À la carte</a>
+  <a href="index.html#experience" data-i18n="nav.parcours">Parcours</a>
+  <a href="portfolio.html" class="active" data-i18n="nav.portfolio">Portfolio</a>
+  <a href="presse.html" data-i18n="nav.presse">Dans la presse</a>
+  <a class="nav-mobile-cta" href="index.html#contact" data-i18n="nav.contact">Contactez-moi</a>
 </div>
 
 <!-- PORTFOLIO -->
 <section id="portfolio">
   <div class="grid-bg"></div>
   <div class="max-w">
-    <div class="section-tag reveal">Portfolio</div>
-    <h2 class="reveal">Projets &amp; réalisations</h2>
-    <p class="section-desc reveal">Une sélection de mandats en communication à travers les jeux vidéo, le cinéma, la télévision et la bande dessinée.</p>
+    <div class="section-tag reveal" data-i18n="portfolio.tag">Portfolio</div>
+    <h2 class="reveal" data-i18n-html="portfolio.h2">Projets &amp; réalisations</h2>
+    <p class="section-desc reveal" data-i18n="portfolio.desc">Une sélection de mandats en communication à travers les jeux vidéo, le cinéma, la télévision et la bande dessinée.</p>
 
     <div class="portfolio-filters reveal" id="portfolio-filters" style="transition-delay:0.1s"></div>
 
     <div class="portfolio-grid" id="portfolio-grid"></div>
-    <p class="portfolio-empty" id="portfolio-empty" style="display:none;">Aucun projet dans cette catégorie pour l'instant.</p>
+    <p class="portfolio-empty" id="portfolio-empty" data-i18n="portfolio.empty" style="display:none;">Aucun projet dans cette catégorie pour l'instant.</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
+  <div class="footer-left" data-i18n="footer.copy">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
   <div class="footer-right">Mario J<span>.</span> Ramos — INSERT COIN TO <span>LAUNCH</span>_</div>
 </footer>
 
@@ -553,7 +576,7 @@ window.addEventListener('scroll', () => {
 
     const catLabel = document.createElement('div');
     catLabel.className = 'pc-category';
-    catLabel.textContent = categoryLabels[project.category] || project.category;
+    catLabel.textContent = (window.I18n ? window.I18n.t('cat.' + project.category) : null) || categoryLabels[project.category] || project.category;
 
     const title = document.createElement('div');
     title.className = 'pc-title';
@@ -607,6 +630,11 @@ window.addEventListener('scroll', () => {
     if (empty) empty.style.display = visibleCount === 0 ? 'block' : 'none';
   }
 
+  function getCatLabel(cat) {
+    var key = 'cat.' + cat.id;
+    return (window.I18n ? window.I18n.t(key) : null) || cat.label;
+  }
+
   function buildFilters(categories, cards) {
     const container = document.getElementById('portfolio-filters');
     if (!container) return;
@@ -614,14 +642,16 @@ window.addEventListener('scroll', () => {
     const allBtn = document.createElement('button');
     allBtn.className = 'pf-btn active';
     allBtn.dataset.filter = 'all';
-    allBtn.textContent = 'Tous';
+    allBtn.setAttribute('data-i18n', 'portfolio.filter.all');
+    allBtn.textContent = window.I18n ? window.I18n.t('portfolio.filter.all') : 'Tous';
     container.appendChild(allBtn);
 
     categories.forEach(cat => {
       const btn = document.createElement('button');
       btn.className = 'pf-btn';
       btn.dataset.filter = cat.id;
-      btn.textContent = cat.label;
+      btn.dataset.catId = cat.id;
+      btn.textContent = getCatLabel(cat);
       container.appendChild(btn);
     });
 
@@ -633,6 +663,14 @@ window.addEventListener('scroll', () => {
       });
     });
   }
+
+  window.onLangChange = function () {
+    const container = document.getElementById('portfolio-filters');
+    if (!container) return;
+    container.querySelectorAll('.pf-btn[data-cat-id]').forEach(function (btn) {
+      btn.textContent = window.I18n ? window.I18n.t('cat.' + btn.dataset.catId) : btn.textContent;
+    });
+  };
 
   document.addEventListener('DOMContentLoaded', function () {
     Promise.all([
