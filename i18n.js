@@ -458,6 +458,8 @@
   global.I18n = { getLang: getLang, setLang: setLang, t: t, apply: applyTranslations };
 
   document.addEventListener('DOMContentLoaded', function () {
+    var urlLang = new URLSearchParams(window.location.search).get('lang');
+    if (urlLang === 'fr' || urlLang === 'en') setLang(urlLang);
     applyTranslations(getLang());
     initLangBtn();
   });
