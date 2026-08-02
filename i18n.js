@@ -620,12 +620,60 @@
 
   // ── CORE API ──────────────────────────────────────────────
 
+  var LANGS = ['fr', 'en', 'pt'];
+  var OG_LOCALES = { fr: 'fr_CA', en: 'en_CA', pt: 'pt_PT' };
+
   function getLang() {
+    try {
+      var p = new URLSearchParams(window.location.search).get('lang');
+      if (p && LANGS.indexOf(p) !== -1) {
+        localStorage.setItem('mjr_lang', p);
+        return p;
+      }
+    } catch (e) {}
     return localStorage.getItem('mjr_lang') || 'fr';
   }
 
   function setLang(lang) {
     localStorage.setItem('mjr_lang', lang);
+  }
+
+  // Build the canonical URL for a given language (fr = clean/default URL,
+  // en/pt carry a ?lang= parameter). Preserves other params such as ?id=.
+  function urlForLang(lang) {
+    var params = new URLSearchParams(window.location.search);
+    if (lang === 'fr') { params.delete('lang'); }
+    else { params.set('lang', lang); }
+    var qs = params.toString();
+    return window.location.origin + window.location.pathname + (qs ? '?' + qs : '');
+  }
+
+  // Keep <link rel=canonical>, og:url, og:locale and hreflang alternates in
+  // sync with the active language (client-side i18n SEO/GEO signalling).
+  function updateSeoLinks(lang) {
+    var canonical = urlForLang(lang);
+
+    var canon = document.querySelector('link[rel="canonical"]');
+    if (canon) canon.setAttribute('href', canonical);
+
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', canonical);
+
+    var ogLoc = document.querySelector('meta[property="og:locale"]');
+    if (ogLoc) ogLoc.setAttribute('content', OG_LOCALES[lang] || 'fr_CA');
+
+    // hreflang alternates — created on the fly so dynamic pages (project /
+    // article, which carry ?id=) are covered too.
+    ['fr', 'en', 'pt', 'x-default'].forEach(function (hl) {
+      var link = document.querySelector('link[rel="alternate"][hreflang="' + hl + '"]');
+      if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'alternate');
+        link.setAttribute('hreflang', hl);
+        document.head.appendChild(link);
+      }
+      link.setAttribute('href', urlForLang(hl === 'x-default' ? 'fr' : hl));
+    });
   }
 
   function t(key) {
@@ -649,6 +697,7 @@
     });
 
     document.documentElement.lang = lang;
+    updateSeoLinks(lang);
 
     // Update page title & meta tags
     var page = document.documentElement.getAttribute('data-page');
@@ -673,8 +722,6 @@
     updateLangButton(lang);
   }
 
-  var LANGS = ['fr', 'en', 'pt'];
-
   function updateLangButton(lang) {
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
       LANGS.forEach(function (code) {
@@ -691,6 +738,13 @@
         if (idx === -1) idx = 0;
         var next = LANGS[(idx + 1) % LANGS.length];
         setLang(next);
+        // Reflect the language in the URL (?lang=) without a reload so the
+        // page can be shared/bookmarked in the chosen language.
+        try {
+          if (window.history && window.history.replaceState) {
+            window.history.replaceState(null, '', urlForLang(next));
+          }
+        } catch (e) {}
         applyTranslations(next);
         if (typeof global.onLangChange === 'function') {
           global.onLangChange(next);

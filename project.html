@@ -7,6 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="Mario J. Ramos">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:title" content="">
@@ -16,6 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="">
 <meta name="twitter:description" content="">
+<meta name="twitter:image" content="">
 <link rel="icon" type="image/png" href="MJR.png">
 <script src="i18n.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -572,6 +574,30 @@ window.addEventListener('scroll', function () {
     return val;
   }
 
+  function curLang() { return window.I18n ? window.I18n.getLang() : 'fr'; }
+
+  // Strip HTML + Markdown down to plain text (for structured-data descriptions).
+  function plain(s) {
+    return String(s || '')
+      .replace(/<[^>]+>/g, '')
+      .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+      .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+      .replace(/[*_`#>]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function injectJsonLd(id, obj) {
+    var el = document.getElementById(id);
+    if (!el) {
+      el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.id = id;
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify(obj);
+  }
+
   function renderNotFound() {
     var root = document.getElementById('project-root');
     root.innerHTML =
@@ -607,7 +633,7 @@ window.addEventListener('scroll', function () {
       ? descText.replace(/<[^>]+>/g, '').slice(0, 160).trim()
       : '');
     var coverSrc = rel(project.cover);
-    var coverAbs = coverSrc ? 'https://mjramos86.github.io/mjrcomms/' + coverSrc.replace(/^\//, '') : '';
+    var coverAbs = coverSrc ? 'https://mariojramos.com/' + coverSrc.replace(/^\//, '') : '';
 
     setMeta('description', seoDesc);
     setMeta('og:title', 'Mario J. Ramos — ' + project.title);
@@ -616,6 +642,7 @@ window.addEventListener('scroll', function () {
     setMeta('og:image', coverAbs);
     setMeta('twitter:title', 'Mario J. Ramos — ' + project.title);
     setMeta('twitter:description', seoDesc);
+    setMeta('twitter:image', coverAbs);
 
     var categoryLabel = categoryLabels[project.category] || project.category || '';
 
@@ -703,6 +730,24 @@ window.addEventListener('scroll', function () {
         '</div>' +
         '<aside class="project-meta">' + metaHTML + '</aside>' +
       '</div>';
+
+    // Structured data (GEO/SEO) — describes this project as a CreativeWork
+    // authored by Mario J. Ramos, in the active language.
+    var ld = {
+      '@context': 'https://schema.org',
+      '@type': 'CreativeWork',
+      'name': project.title,
+      'inLanguage': curLang(),
+      'url': window.location.href,
+      'creator': { '@type': 'Person', 'name': 'Mario J. Ramos', 'url': 'https://mariojramos.com/#person' }
+    };
+    if (descText) ld.description = plain(descText);
+    if (coverAbs) ld.image = coverAbs;
+    if (categoryLabel) ld.genre = categoryLabel;
+    if (project.role) ld.creditText = loc(project.role);
+    if (project.year) ld.dateCreated = String(project.year);
+    if (project.client) ld.sourceOrganization = { '@type': 'Organization', 'name': project.client };
+    injectJsonLd('ld-project', ld);
 
     if (coverSrc) {
       var heroEl = root.querySelector('.project-hero-img');
