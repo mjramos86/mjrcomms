@@ -156,7 +156,7 @@
 
       // PORTFOLIO PAGE
       'portfolio.tag':        'Portfolio',
-      'portfolio.h2':         'Projets &amp; réalisations',
+      'portfolio.h2':         'Projets',
       'portfolio.desc':       'Une sélection de mandats en communication à travers les jeux vidéo, le cinéma, la télévision et la bande dessinée.',
       'portfolio.filter.all': 'Tous',
       'portfolio.empty':      'Aucun projet dans cette catégorie pour l\'instant.',
@@ -361,7 +361,7 @@
 
       // PORTFOLIO PAGE
       'portfolio.tag':        'Portfolio',
-      'portfolio.h2':         'Projects &amp; achievements',
+      'portfolio.h2':         'Projects',
       'portfolio.desc':       'A selection of communications mandates across video games, cinema, television and comics.',
       'portfolio.filter.all': 'All',
       'portfolio.empty':      'No projects in this category yet.',
@@ -566,7 +566,7 @@
 
       // PORTFOLIO PAGE
       'portfolio.tag':        'Portefólio',
-      'portfolio.h2':         'Projetos &amp; realizações',
+      'portfolio.h2':         'Projetos',
       'portfolio.desc':       'Uma seleção de mandatos de comunicação em videojogos, cinema, televisão e banda desenhada.',
       'portfolio.filter.all': 'Todos',
       'portfolio.empty':      'Ainda não há projetos nesta categoria.',
