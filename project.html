@@ -501,7 +501,7 @@ footer {
   </ul>
   <a class="nav-cta" href="index.html#contact" data-i18n="nav.contact">Contactez-moi</a>
   <button class="lang-btn" id="lang-btn" aria-label="Switch language / Changer de langue">
-    <span data-lang="fr">FR</span><span class="lang-sep">|</span><span data-lang="en">EN</span>
+    <span data-lang="fr">FR</span><span class="lang-sep">|</span><span data-lang="en">EN</span><span class="lang-sep">|</span><span data-lang="pt">PT</span>
   </button>
   <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-mobile">
     <span></span><span></span><span></span>
@@ -563,6 +563,15 @@ window.addEventListener('scroll', function () {
 
   function tr(key) { return window.I18n ? window.I18n.t(key) : key; }
 
+  // Resolve a possibly-localized value ({fr,en,pt}) for the current language.
+  function loc(val) {
+    if (val && typeof val === 'object' && !Array.isArray(val)) {
+      var lang = window.I18n ? window.I18n.getLang() : 'fr';
+      return val[lang] || val.fr || val.en || '';
+    }
+    return val;
+  }
+
   function renderNotFound() {
     var root = document.getElementById('project-root');
     root.innerHTML =
@@ -593,8 +602,9 @@ window.addEventListener('scroll', function () {
   function renderProject(project, categoryLabels) {
     document.title = 'Mario J. Ramos — ' + project.title;
 
-    var seoDesc = project.seo_description || (project.description
-      ? project.description.replace(/<[^>]+>/g, '').slice(0, 160).trim()
+    var descText = loc(project.description);
+    var seoDesc = project.seo_description || (descText
+      ? descText.replace(/<[^>]+>/g, '').slice(0, 160).trim()
       : '');
     var coverSrc = rel(project.cover);
     var coverAbs = coverSrc ? 'https://mjramos86.github.io/mjrcomms/' + coverSrc.replace(/^\//, '') : '';
@@ -611,7 +621,7 @@ window.addEventListener('scroll', function () {
 
     // Hero
     var heroImgClass = coverSrc ? 'project-hero-img' : 'project-hero-img no-image';
-    var coverAlt = esc(project.cover_alt || project.title);
+    var coverAlt = esc(loc(project.cover_alt) || project.title);
     var heroImgStyle = coverSrc ? ' style="background-image:url(\'' + coverSrc + '\')"' : '';
 
     // Meta items
@@ -620,10 +630,10 @@ window.addEventListener('scroll', function () {
       metaHTML += '<div class="project-meta-item"><div class="project-meta-label">' + esc(tr('project.meta.category')) + '</div><div class="project-meta-value">' + esc(categoryLabel) + '</div></div>';
     }
     if (project.role) {
-      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">' + esc(tr('project.meta.role')) + '</div><div class="project-meta-value">' + esc(project.role) + '</div></div>';
+      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">' + esc(tr('project.meta.role')) + '</div><div class="project-meta-value">' + esc(loc(project.role)) + '</div></div>';
     }
     if (project.medium) {
-      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">' + esc(tr('project.meta.medium')) + '</div><div class="project-meta-value">' + esc(project.medium) + '</div></div>';
+      metaHTML += '<div class="project-meta-item"><div class="project-meta-label">' + esc(tr('project.meta.medium')) + '</div><div class="project-meta-value">' + esc(loc(project.medium)) + '</div></div>';
     }
     if (project.year) {
       metaHTML += '<div class="project-meta-item"><div class="project-meta-label">' + esc(tr('project.meta.year')) + '</div><div class="project-meta-value">' + esc(String(project.year)) + '</div></div>';
@@ -649,7 +659,7 @@ window.addEventListener('scroll', function () {
     if (project.accolades && project.accolades.length) {
       var acItems = project.accolades.map(function (a) {
         return '<div class="project-accolade">' +
-          (a.title ? '<span class="project-accolade-title">' + esc(a.title) + '</span>' : '') +
+          (a.title ? '<span class="project-accolade-title">' + esc(loc(a.title)) + '</span>' : '') +
           (a.event ? '<span class="project-accolade-event">' + esc(a.event) + '</span>' : '') +
           (a.year  ? '<span class="project-accolade-year">'  + esc(String(a.year)) + '</span>' : '') +
         '</div>';
@@ -661,7 +671,7 @@ window.addEventListener('scroll', function () {
     if (project.gallery && project.gallery.length) {
       var imgs = project.gallery.map(function (item) {
         var src = (typeof item === 'string') ? item : item.src;
-        var alt = (typeof item === 'string') ? '' : (item.alt || '');
+        var alt = (typeof item === 'string') ? '' : (loc(item.alt) || '');
         return '<img class="project-gallery-img" src="' + esc(rel(src)) + '" alt="' + esc(alt) + '" loading="lazy">';
       }).join('');
       galleryHTML = '<div class="project-gallery">' +
@@ -684,8 +694,8 @@ window.addEventListener('scroll', function () {
       '</div>' +
       '<div class="project-body">' +
         '<div class="project-content">' +
-          (project.description
-            ? '<div class="project-description">' + (typeof marked !== 'undefined' ? marked.parse(project.description) : project.description) + '</div>'
+          (descText
+            ? '<div class="project-description">' + (typeof marked !== 'undefined' ? marked.parse(descText) : descText) + '</div>'
             : '') +
           videoHTML +
           accoladesHTML +
