@@ -533,7 +533,7 @@ window.addEventListener('scroll', function () {
     setMeta('twitter:description', seoDesc);
 
     var heroImgClass = coverSrc ? 'article-hero-img' : 'article-hero-img no-image';
-    var coverAlt = esc(article.cover_alt || article.title);
+    var coverAlt = esc(loc(article.cover_alt) || article.title);
     var heroImgStyle = coverSrc ? ' style="background-image:url(\'' + coverSrc + '\')"' : '';
 
     // Meta sidebar

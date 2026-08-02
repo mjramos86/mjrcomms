@@ -25,35 +25,67 @@
       "gallery": [
         {
           "src": "images/portfolio/hell is us salut bonjour.jpg",
-          "alt": "hell is us à Salut Bonjour"
+          "alt": {
+            "fr": "hell is us à Salut Bonjour",
+            "en": "hell is us on Salut Bonjour",
+            "pt": "hell is us no Salut Bonjour"
+          }
         },
         {
           "src": "images/portfolio/hell is us LCN téléjournal.jpg",
-          "alt": "hell is us à LCN téléjournal"
+          "alt": {
+            "fr": "hell is us à LCN téléjournal",
+            "en": "hell is us on the LCN newscast",
+            "pt": "hell is us no telejornal da LCN"
+          }
         },
         {
           "src": "images/portfolio/hell is us le devoir.jpg",
-          "alt": "hell is us dans le journal le devoir"
+          "alt": {
+            "fr": "hell is us dans le journal le devoir",
+            "en": "hell is us in the newspaper Le Devoir",
+            "pt": "hell is us no jornal Le Devoir"
+          }
         },
         {
           "src": "images/portfolio/hell is us c'est encore mieux.jpg",
-          "alt": "hell is us à c'est encore mieux l'après-midi"
+          "alt": {
+            "fr": "hell is us à c'est encore mieux l'après-midi",
+            "en": "hell is us on C'est encore mieux l'après-midi",
+            "pt": "hell is us no programa C'est encore mieux l'après-midi"
+          }
         },
         {
           "src": "images/portfolio/hell is us radio energie phil branch.jpg",
-          "alt": "hell is us à la radio de bell média énergie avec phil branch"
+          "alt": {
+            "fr": "hell is us à la radio de bell média énergie avec phil branch",
+            "en": "hell is us on Bell Media's Énergie radio with Phil Branch",
+            "pt": "hell is us na rádio Énergie da Bell Média com Phil Branch"
+          }
         },
         {
           "src": "images/portfolio/hell is us zone economie.jpg",
-          "alt": "hell is us à zone économie à radio-canada"
+          "alt": {
+            "fr": "hell is us à zone économie à radio-canada",
+            "en": "hell is us on Zone économie on Radio-Canada",
+            "pt": "hell is us na Zone économie da Radio-Canada"
+          }
         },
         {
           "src": "images/portfolio/hell is us journal de montreal.jpg",
-          "alt": "hell is us dans le journal de montréal"
+          "alt": {
+            "fr": "hell is us dans le journal de montréal",
+            "en": "hell is us in the Journal de Montréal",
+            "pt": "hell is us no Journal de Montréal"
+          }
         },
         {
           "src": "images/portfolio/hell is us tva nouvelles.jpg",
-          "alt": "hell is us à tva nouvelles"
+          "alt": {
+            "fr": "hell is us à tva nouvelles",
+            "en": "hell is us on TVA Nouvelles",
+            "pt": "hell is us na TVA Nouvelles"
+          }
         }
       ],
       "id": "hell-is-us"
@@ -74,7 +106,11 @@
       },
       "year": 2014,
       "cover": "/images/portfolio/projetm_image.jpg",
-      "cover_alt": "affiche série numérique projet-m babel films",
+      "cover_alt": {
+        "fr": "affiche série numérique projet-m babel films",
+        "en": "projet-m digital series poster, Babel Films",
+        "pt": "cartaz da série digital projet-m, Babel Films"
+      },
       "seo_description": "projet-m série numérique / film science-fiction québécoise",
       "description": {
         "fr": "Dans un futur proche où le climat change rapidement et dans lequel les ressources se font de plus en plus rares, l’Agence Spatiale du Québec recrute des astronautes pour la mission Projet-M. Le but est de prouver la faisabilité d’un voyage de longue durée vers Europe, une lune de Jupiter. Afin de reproduire les conditions, quatre personnes sont envoyées à bord d’une station spatiale pendant 1000 jours.\n\n",
@@ -120,7 +156,8 @@
           "year": 2015
         }
       ],
-      "id": "projet-m"
+      "id": "projet-m",
+      "hidden": true
     },
     {
       "title": "Temps Mort",
@@ -182,7 +219,8 @@
           "year": 2010
         }
       ],
-      "id": "temps-mort"
+      "id": "temps-mort",
+      "hidden": true
     },
     {
       "title": "Vie de Pro avec missharvey",
@@ -200,7 +238,11 @@
       },
       "year": 2020,
       "cover": "images/portfolio/vie-de-pro.png",
-      "cover_alt": "affiche série web vie de pro avec missharvey / stéphanie harvey / rds jeux vidéo / esports",
+      "cover_alt": {
+        "fr": "affiche série web vie de pro avec missharvey / stéphanie harvey / rds jeux vidéo / esports",
+        "en": "Vie de Pro web series poster with missharvey / Stéphanie Harvey / RDS Gaming / esports",
+        "pt": "cartaz da websérie Vie de Pro com missharvey / Stéphanie Harvey / RDS Videojogos / esports"
+      },
       "seo_description": "série web esports RDS vie de pro avec stéphanie harvey aka missharvey",
       "description": {
         "fr": "Stéphanie «missharvey» Harvey rencontre des joueurs professionnels de jeux vidéo et autres intervenants du monde du sport électronique. Stéphanie mène une entrevue où on découvre le joueur, mais également l’être humain. On démystifie les sports électroniques, communément appelés les esports, et on apprend à connaître ces joueurs qui sont des vedettes internationales dans leur milieu, mais méconnues du grand public québécois.",
@@ -226,14 +268,19 @@
       },
       "year": 2015,
       "cover": "images/portfolio/Capture d’écran 2026-04-03 004725-1.png",
-      "cover_alt": "couverture bande dessinée projet-m mission europe mario j. ramos esla charretier gabriel kelly",
+      "cover_alt": {
+        "fr": "couverture bande dessinée projet-m mission europe mario j. ramos esla charretier gabriel kelly",
+        "en": "projet-m mission europe comic book cover, Mario J. Ramos, Elsa Charretier, Gabriel Kelly",
+        "pt": "capa da banda desenhada projet-m mission europe, Mario J. Ramos, Elsa Charretier, Gabriel Kelly"
+      },
       "seo_description": "bande dessinée québécoise de science-fiction projet-m mission europe mario j. ramos elsa charretier gabriel kelly",
       "description": {
         "fr": "Plusieurs décennies avec une nouvelle Grande guerre qui a changé la face du monde, ce qui reste de l'humanité s'organise. L'espoir de reconstruire ce nouveau monde repose sur une équipe de scientifiques en route vers Europe, une lune de Jupiter contenant un secret pourrait l'histoire du monde et nos origines...  \n\n**[Téléchargez la BD complète ici.](https://raw.githubusercontent.com/mjramos86/mjrcomms/main/projet-m-mission-europe-compressed.pdf)**",
         "en": "Several decades after a new Great War that changed the face of the world, what remains of humanity is organizing itself. The hope of rebuilding this new world rests on a team of scientists on their way to Europa, a moon of Jupiter holding a secret that could reshape the history of the world and our origins...  \n\n**[Download the full comic here.](https://raw.githubusercontent.com/mjramos86/mjrcomms/main/projet-m-mission-europe-compressed.pdf)**",
         "pt": "Várias décadas após uma nova Grande Guerra que mudou a face do mundo, o que resta da humanidade organiza-se. A esperança de reconstruir este novo mundo assenta numa equipa de cientistas a caminho de Europa, uma lua de Júpiter que guarda um segredo capaz de reescrever a história do mundo e as nossas origens...  \n\n**[Descarregue a banda desenhada completa aqui.](https://raw.githubusercontent.com/mjramos86/mjrcomms/main/projet-m-mission-europe-compressed.pdf)**"
       },
-      "id": "mission-europe"
+      "id": "mission-europe",
+      "hidden": true
     },
     {
       "title": "22h20, Heure de l'Est",
@@ -251,7 +298,11 @@
       },
       "year": 2013,
       "cover": "images/portfolio/maxresdefault (4).jpg",
-      "cover_alt": "affiche film 22h20 heure de l'est de Mario J. Ramos avec Marianne Verville",
+      "cover_alt": {
+        "fr": "affiche film 22h20 heure de l'est de Mario J. Ramos avec Marianne Verville",
+        "en": "22h20 Heure de l'Est film poster by Mario J. Ramos, with Marianne Verville",
+        "pt": "cartaz do filme 22h20 Heure de l'Est de Mario J. Ramos, com Marianne Verville"
+      },
       "seo_description": "film court métrage 22h20 heure de l'est réalisateur mario j. ramos",
       "description": {
         "fr": "C’est un après-midi d’automne bien ordinaire pour Anne qui rentre de l’école. Une journée comme les autres pour l’adolescente. En fait, non, pas comme les autres, car c’est la veille de l’Halloween. Plus précisément, nous sommes le 30 octobre, 1995, jour de référendum.",
@@ -288,7 +339,8 @@
           "year": 2013
         }
       ],
-      "id": "22h20-heure-de-lest"
+      "id": "22h20-heure-de-lest",
+      "hidden": true
     },
     {
       "title": "Le Jardin d'Évelyne",
@@ -306,7 +358,11 @@
       },
       "year": 2016,
       "cover": "images/portfolio/12976924_1182561895110399_3710613017109154919_o.jpg",
-      "cover_alt": "affiche du film le jardin d'évelyne avec charlotte aubin",
+      "cover_alt": {
+        "fr": "affiche du film le jardin d'évelyne avec charlotte aubin",
+        "en": "Le Jardin d'Évelyne film poster with Charlotte Aubin",
+        "pt": "cartaz do filme Le Jardin d'Évelyne com Charlotte Aubin"
+      },
       "seo_description": "court métrage le jardin d'évelyne mario j. ramos same ravenelle charlotte aubin",
       "description": {
         "fr": "Evelyne commence son deuxième quart au Jardin d’Éden, un salon de massage érotique…",
@@ -314,7 +370,8 @@
         "pt": "A Evelyne começa o seu segundo turno no Jardim do Éden, um salão de massagens eróticas…"
       },
       "video": "https://vimeo.com/157237676",
-      "id": "jardin-evelyne"
+      "id": "jardin-evelyne",
+      "hidden": true
     },
     {
       "title": "Du pain et des jeux, mais surtout des jeux",
@@ -332,7 +389,11 @@
       },
       "year": 2021,
       "cover": "images/portfolio/Capture d’écran 2026-04-04 190009.png",
-      "cover_alt": "affiche et logo balado du pain et des jeux, mais surtout des jeux",
+      "cover_alt": {
+        "fr": "affiche et logo balado du pain et des jeux, mais surtout des jeux",
+        "en": "poster and logo of the podcast Du pain et des jeux, mais surtout des jeux",
+        "pt": "cartaz e logótipo do podcast Du pain et des jeux, mais surtout des jeux"
+      },
       "seo_description": "balado du pain et des jeux, mais surtout des jeux avec pierre-luc racine",
       "description": {
         "fr": "Émission en baladodifussion animée par Pierre-Luc Racine qui invite des personnalités publiques à discuter de leur intérêt pour les jeux vidéo.",
@@ -358,7 +419,11 @@
       },
       "year": 2017,
       "cover": "images/portfolio/Capture d’écran 2026-04-13 135653.png",
-      "cover_alt": "extrait BD à des années-lumières",
+      "cover_alt": {
+        "fr": "extrait BD à des années-lumières",
+        "en": "comic excerpt À des années-lumières",
+        "pt": "excerto de banda desenhada À des années-lumières"
+      },
       "seo_description": "extrait BD à des années-lumières magazine véganes #5",
       "description": {
         "fr": "Bande-dessinée de une page scénarisée pour Véganes Magazine #5  \nIllustrations par Pascaline Lefebvre",
@@ -368,10 +433,15 @@
       "gallery": [
         {
           "src": "images/portfolio/Capture d’écran 2026-04-13 135716.png",
-          "alt": "planche bande-dessinée À des années-lumières, Mario J. Ramos, Pascaline Lefebvre"
+          "alt": {
+            "fr": "planche bande-dessinée À des années-lumières, Mario J. Ramos, Pascaline Lefebvre",
+            "en": "comic page À des années-lumières, Mario J. Ramos, Pascaline Lefebvre",
+            "pt": "prancha de banda desenhada À des années-lumières, Mario J. Ramos, Pascaline Lefebvre"
+          }
         }
       ],
-      "id": "annees-lumiere"
+      "id": "annees-lumiere",
+      "hidden": true
     },
     {
       "title": "The Solitaire Tower of Doom",
@@ -389,7 +459,11 @@
       },
       "year": 2026,
       "cover": "images/portfolio/SolitaireDoom_Keyart.jpg",
-      "cover_alt": "key art the solitaire tower of doom",
+      "cover_alt": {
+        "fr": "key art the solitaire tower of doom",
+        "en": "key art for The Solitaire Tower of Doom",
+        "pt": "key art de The Solitaire Tower of Doom"
+      },
       "seo_description": "jeu vidéo horror roguelike solitaire The Solitaire Tower of Doom",
       "description": {
         "fr": "Un jeu vidéo de Solitaire avec un thème d'horreur et des mécaniques de roguelike.  \n\n[Disponible gratuitement sur www.solitairedoom.com](https://solitairedoom.com/)",
@@ -397,7 +471,8 @@
         "pt": "Um videojogo de Solitário com uma temática de terror e mecânicas de roguelike.  \n\n[Disponível gratuitamente em www.solitairedoom.com](https://solitairedoom.com/)"
       },
       "video": "https://www.youtube.com/watch?v=h81firMsGXU",
-      "id": "solitaire-doom"
+      "id": "solitaire-doom",
+      "hidden": true
     },
     {
       "title": "La Chasse Galerie : Le jeu Pico-8",
@@ -415,14 +490,19 @@
       },
       "year": 2025,
       "cover": "images/portfolio/Capture d’écran 2026-04-03 023131.png",
-      "cover_alt": "capture d'écran du jeu vidéo la chasse galerie le jeu pico-8",
+      "cover_alt": {
+        "fr": "capture d'écran du jeu vidéo la chasse galerie le jeu pico-8",
+        "en": "screenshot of the video game La Chasse Galerie, the Pico-8 game",
+        "pt": "captura de ecrã do videojogo La Chasse Galerie, o jogo Pico-8"
+      },
       "seo_description": "jeu vidéo pico-8 arcade la chasse galerie québec",
       "description": {
         "fr": "Jeu vidéo à saveur rétro réalisé avec l’engin Pico-8. Le code de programmation du jeu a été généré avec l’aide d’un outil IA.\n\n*Un canot volant maudit par le yâble! Évite les démons pis les églises pendant que tu r’tournes au camp, pis ramasse du sirop pour pas perdre ton âme!*\n\nInspiré du classique de la littérature québécoise « La chasse-galerie » d’Honoré Beaugrand.  \n\n[Disponible gratuitement sur Itch.io](https://emjayhar.itch.io/la-chasse-galerie-pico8)",
         "en": "A retro-flavoured video game made with the Pico-8 engine. The game's code was generated with the help of an AI tool.\n\n*A flying canoe cursed by the devil! Dodge the demons and the churches as you head back to camp, and gather syrup so you don't lose your soul!*\n\nInspired by the Quebec literary classic \"La chasse-galerie\" by Honoré Beaugrand.  \n\n[Available for free on Itch.io](https://emjayhar.itch.io/la-chasse-galerie-pico8)",
         "pt": "Videojogo com sabor retro criado com o motor Pico-8. O código do jogo foi gerado com a ajuda de uma ferramenta de IA.\n\n*Uma canoa voadora amaldiçoada pelo diabo! Desvia-te dos demónios e das igrejas enquanto voltas para o acampamento e apanha xarope para não perderes a alma!*\n\nInspirado no clássico da literatura quebequense «La chasse-galerie», de Honoré Beaugrand.  \n\n[Disponível gratuitamente no Itch.io](https://emjayhar.itch.io/la-chasse-galerie-pico8)"
       },
-      "id": "chasse-galerie-pico8"
+      "id": "chasse-galerie-pico8",
+      "hidden": true
     },
     {
       "title": "L'Insomnie",
@@ -440,7 +520,11 @@
       },
       "year": 2016,
       "cover": "images/portfolio/Capture d’écran 2026-04-03 020346.png",
-      "cover_alt": "thumbnail vidéoclip l'insomnie par marc gravel",
+      "cover_alt": {
+        "fr": "thumbnail vidéoclip l'insomnie par marc gravel",
+        "en": "thumbnail of the music video L'Insomnie by Marc Gravel",
+        "pt": "miniatura do videoclipe L'Insomnie de Marc Gravel"
+      },
       "seo_description": "vidéoclip l'insomnie par marc gravel réalisé par mario j. ramos",
       "description": {
         "fr": "Vidéoclip de la chanson L'INSOMNIE par Marc Gravel.",
@@ -448,7 +532,8 @@
         "pt": "Videoclipe da canção L'INSOMNIE de Marc Gravel."
       },
       "video": "https://vimeo.com/151341788",
-      "id": "insomnie"
+      "id": "insomnie",
+      "hidden": true
     },
     {
       "title": "Le Terrain de Jeux",
@@ -466,7 +551,11 @@
       },
       "year": 2019,
       "cover": "images/portfolio/Capture d’écran 2026-04-04 185231.png",
-      "cover_alt": "logo balado le terrain de jeux rds",
+      "cover_alt": {
+        "fr": "logo balado le terrain de jeux rds",
+        "en": "logo of the RDS podcast Le Terrain de Jeux",
+        "pt": "logótipo do podcast Le Terrain de Jeux da RDS"
+      },
       "seo_description": "balado gaming le terrain de jeux rds",
       "description": {
         "fr": "Émission en baladodifussion sur l'actualité jeux vidéo pour RDS / Bell Média, produite en 2019.",
@@ -492,7 +581,11 @@
       },
       "year": 2024,
       "cover": "images/portfolio/Capture d’écran 2026-04-04 190401.png",
-      "cover_alt": "logo et titre balado équilibre numérique",
+      "cover_alt": {
+        "fr": "logo et titre balado équilibre numérique",
+        "en": "logo and title of the podcast Équilibre numérique",
+        "pt": "logótipo e título do podcast Équilibre numérique"
+      },
       "seo_description": "balado équilibre numérique - santé mentale et techno",
       "description": {
         "fr": "Démystifier la santé mentale et sa relation avec le numérique avec SonOffOdin et LaCoiffeuseGeek. Le balado officiel de la Fondation des Gardiens virtuels.",
@@ -500,7 +593,8 @@
         "pt": "Desmistificar a saúde mental e a sua relação com o digital com SonOffOdin e LaCoiffeuseGeek. O podcast oficial da Fondation des Gardiens virtuels."
       },
       "video": "https://www.youtube.com/watch?v=xOZnDeK2PYU",
-      "id": "equilibre-numerique"
+      "id": "equilibre-numerique",
+      "hidden": true
     },
     {
       "title": "Clair-Obscur",
@@ -518,7 +612,11 @@
       },
       "year": 2011,
       "cover": "images/portfolio/Capture d’écran 2026-04-04 190832.png",
-      "cover_alt": "capture d'écran du film Clair-Obscur de Mario J. Ramos avec Allan Carvalho",
+      "cover_alt": {
+        "fr": "capture d'écran du film Clair-Obscur de Mario J. Ramos avec Allan Carvalho",
+        "en": "screenshot of the film Clair-Obscur by Mario J. Ramos, with Allan Carvalho",
+        "pt": "captura de ecrã do filme Clair-Obscur de Mario J. Ramos, com Allan Carvalho"
+      },
       "seo_description": "film Clair-Obscur de Mario J. Ramos",
       "description": {
         "fr": "Manuel, père célibataire, vient de quitter son pays d'origine, le Portugal, pour vivre à Montréal, au Québec. Seul avec son fils de 7 ans, il entreprend la difficile tâche de s'adapter à une nouvelle vie. Il ne s'attendait pas à devoir découvrir ce nouveau monde en tant qu'aveugle.",
@@ -526,7 +624,8 @@
         "pt": "Manuel, pai solteiro, acabou de deixar o seu país de origem, Portugal, para viver em Montreal, no Quebeque. Sozinho com o filho de 7 anos, enfrenta a difícil tarefa de se adaptar a uma nova vida. Não esperava ter de descobrir este novo mundo enquanto cego."
       },
       "video": "https://vimeo.com/18450926",
-      "id": "clair-obscur"
+      "id": "clair-obscur",
+      "hidden": true
     },
     {
       "title": "Deux chats blancs",
@@ -544,7 +643,11 @@
       },
       "year": 2017,
       "cover": "images/portfolio/Capture d’écran 2026-04-03 011224-1.png",
-      "cover_alt": "extrait bande dessinée deux chats par mario j. ramos et gabriel kelly",
+      "cover_alt": {
+        "fr": "extrait bande dessinée deux chats par mario j. ramos et gabriel kelly",
+        "en": "comic excerpt Deux chats by Mario J. Ramos and Gabriel Kelly",
+        "pt": "excerto de banda desenhada Deux chats de Mario J. Ramos e Gabriel Kelly"
+      },
       "seo_description": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly versus magazine #2",
       "description": {
         "fr": "Bande dessinée de une page intitulée Deux chats blancs, publiée dans les pages de Versus magazine #2",
@@ -554,10 +657,15 @@
       "gallery": [
         {
           "src": "images/portfolio/deux-chats-blanc_p1.jpg",
-          "alt": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly"
+          "alt": {
+            "fr": "bande dessinée deux chats blancs par mario j. ramos et gabriel kelly",
+            "en": "comic Deux chats blancs by Mario J. Ramos and Gabriel Kelly",
+            "pt": "banda desenhada Deux chats blancs de Mario J. Ramos e Gabriel Kelly"
+          }
         }
       ],
-      "id": "deux-chats-blancs"
+      "id": "deux-chats-blancs",
+      "hidden": true
     },
     {
       "title": "The Shape of Things to Come",
@@ -575,7 +683,11 @@
       },
       "year": 2006,
       "cover": "images/portfolio/Capture d’écran 2026-04-04 191308.png",
-      "cover_alt": "capture d'écran court métrage the shape of things to come",
+      "cover_alt": {
+        "fr": "capture d'écran court métrage the shape of things to come",
+        "en": "screenshot of the short film The Shape of Things to Come",
+        "pt": "captura de ecrã da curta-metragem The Shape of Things to Come"
+      },
       "seo_description": "court métrage mario j. ramos the shape of things to come",
       "description": {
         "fr": "l y a 400 000 ans, une civilisation interstellaire en quête de vie intelligente découvre la Terre. Un groupe de scientifiques est envoyé pour tester les êtres humains vivant sur Terre, afin de déterminer à quelle vitesse ils évolueront, sans interférer dans leur développement. Prométhée, un jeune soldat, et Athéna, une scientifique avisée, font partie de l'équipe. C'est l'histoire du dernier jour de leur mission sur Terre, un jour qui s'avère fatidique pour la race humaine.",
@@ -583,7 +695,8 @@
         "pt": "Há 400 000 anos, uma civilização interestelar em busca de vida inteligente descobre a Terra. Um grupo de cientistas é enviado para testar os seres humanos que vivem na Terra, a fim de determinar a que velocidade irão evoluir, sem interferir no seu desenvolvimento. Prometeu, um jovem soldado, e Atena, uma cientista astuta, fazem parte da equipa. Esta é a história do último dia da sua missão na Terra — um dia que se revela fatídico para a raça humana."
       },
       "video": "https://vimeo.com/18452020",
-      "id": "the-shape"
+      "id": "the-shape",
+      "hidden": true
     },
     {
       "title": "Animal",
@@ -601,7 +714,11 @@
       },
       "year": 2012,
       "cover": "images/portfolio/472375711_10170842801390088_3223914620227921012_n.jpg",
-      "cover_alt": "photo de tournage court métrage animal de mario j. ramos",
+      "cover_alt": {
+        "fr": "photo de tournage court métrage animal de mario j. ramos",
+        "en": "on-set photo of the short film Animal by Mario J. Ramos",
+        "pt": "fotografia de rodagem da curta-metragem Animal de Mario J. Ramos"
+      },
       "seo_description": "court métrage animal de mario j. ramos",
       "description": {
         "fr": "Un écrivain qui passe du temps seul dans son cottage pour écrire un roman n'arrive pas à trouver l'inspiration. Une nuit, il fait la rencontre inattendue d'une femme qui semble avoir littéralement régressé vers un état sauvage. En essayant d'atteindre son côté humain et de comprendre ce qui lui est arrivé, c'est finalement elle qui éveille quelque chose en lui.  \n\nPost-production réalisée dans le cadre de mon projet de finissant pour l'obtention de mon Baccalauréat en Communication cinéma, profil post-production, à l'Université du Québec à Montréal.  \n\n[Sélection officielle au Fantasia International Film Festival en 2012.](https://fantasiafestival.com/uploads/Archives/Programmes-et-affiches/FT12-Programme.pdf)",
@@ -619,7 +736,8 @@
           "year": 2012
         }
       ],
-      "id": "animal"
+      "id": "animal",
+      "hidden": true
     },
     {
       "title": "Référ-o-scope",
@@ -637,7 +755,11 @@
       },
       "year": 2013,
       "cover": "images/portfolio/Capture d’écran 2026-04-04 192511.png",
-      "cover_alt": "capture d'écran épisode 1 refer-o-scope",
+      "cover_alt": {
+        "fr": "capture d'écran épisode 1 refer-o-scope",
+        "en": "screenshot of episode 1 of Refer-o-scope",
+        "pt": "captura de ecrã do episódio 1 de Refer-o-scope"
+      },
       "seo_description": "capsules sur la schizophrénie refer-o-scope",
       "description": {
         "fr": "Afin de démystifier la schizophrénie et d'offrir un outil de dépistage, la Société Québécoise de la Schizophérnie [SQS] offre une websérie de fiction en lien avec leur site web du refer-o-scope.com",
@@ -645,7 +767,8 @@
         "pt": "Para desmistificar a esquizofrenia e oferecer uma ferramenta de rastreio, a Société Québécoise de la Schizophrénie [SQS] apresenta uma websérie de ficção associada ao seu site refer-o-scope.com."
       },
       "video": "https://vimeo.com/62403172",
-      "id": "refer-o-scope"
+      "id": "refer-o-scope",
+      "hidden": true
     }
   ]
 }

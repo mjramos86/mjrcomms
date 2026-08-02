@@ -621,7 +621,7 @@ window.addEventListener('scroll', function () {
 
     // Hero
     var heroImgClass = coverSrc ? 'project-hero-img' : 'project-hero-img no-image';
-    var coverAlt = esc(project.cover_alt || project.title);
+    var coverAlt = esc(loc(project.cover_alt) || project.title);
     var heroImgStyle = coverSrc ? ' style="background-image:url(\'' + coverSrc + '\')"' : '';
 
     // Meta items
@@ -671,7 +671,7 @@ window.addEventListener('scroll', function () {
     if (project.gallery && project.gallery.length) {
       var imgs = project.gallery.map(function (item) {
         var src = (typeof item === 'string') ? item : item.src;
-        var alt = (typeof item === 'string') ? '' : (item.alt || '');
+        var alt = (typeof item === 'string') ? '' : (loc(item.alt) || '');
         return '<img class="project-gallery-img" src="' + esc(rel(src)) + '" alt="' + esc(alt) + '" loading="lazy">';
       }).join('');
       galleryHTML = '<div class="project-gallery">' +

@@ -71,6 +71,9 @@ collections:
                 field: { label: "Image", name: "image", widget: "image" }
               - { label: "Lien externe", name: "link", widget: "string",
                   required: false, hint: "URL officielle du projet (site du jeu, IMDb, etc.)" }
+              - { label: "Masquer du portfolio", name: "hidden", widget: "boolean",
+                  required: false, default: false,
+                  hint: "Cochez pour retirer ce projet de la grille du portfolio" }
               - { label: "ID (slug)", name: "id", widget: "string",
                   hint: "Identifiant unique sans espaces (ex: hell-is-us)" }
 

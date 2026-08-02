@@ -247,34 +247,9 @@ h2 {
   padding-top: 8rem;
 }
 
-.portfolio-filters {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.5rem;
-}
-.pf-btn {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  background: transparent;
-  border: 1px solid var(--border);
-  padding: 7px 16px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.pf-btn:hover { border-color: var(--border-teal); color: var(--teal); }
-.pf-btn.active {
-  color: var(--teal);
-  border-color: var(--border-teal);
-  background: var(--teal-dim);
-}
-
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
 }
 
@@ -337,14 +312,6 @@ h2 {
 }
 .portfolio-card:hover .portfolio-card-overlay { opacity: 1; }
 
-.pc-category {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 6px;
-}
 .pc-title {
   font-family: var(--font-display);
   font-size: 1.1rem;
@@ -499,8 +466,6 @@ footer {
     <h2 class="reveal" data-i18n-html="portfolio.h2">Projets &amp; réalisations</h2>
     <p class="section-desc reveal" data-i18n="portfolio.desc">Une sélection de mandats en communication à travers les jeux vidéo, le cinéma, la télévision et la bande dessinée.</p>
 
-    <div class="portfolio-filters reveal" id="portfolio-filters" style="transition-delay:0.1s"></div>
-
     <div class="portfolio-grid" id="portfolio-grid"></div>
     <p class="portfolio-empty" id="portfolio-empty" data-i18n="portfolio.empty" style="display:none;">Aucun projet dans cette catégorie pour l'instant.</p>
   </div>
@@ -585,10 +550,6 @@ window.addEventListener('scroll', () => {
     const overlay = document.createElement('div');
     overlay.className = 'portfolio-card-overlay';
 
-    const catLabel = document.createElement('div');
-    catLabel.className = 'pc-category';
-    catLabel.textContent = (window.I18n ? window.I18n.t('cat.' + project.category) : null) || categoryLabels[project.category] || project.category;
-
     const title = document.createElement('div');
     title.className = 'pc-title';
     title.textContent = project.title;
@@ -603,12 +564,10 @@ window.addEventListener('scroll', () => {
 
     // Re-translate this card's localized text when the language changes.
     card.__i18n = function () {
-      catLabel.textContent = (window.I18n ? window.I18n.t('cat.' + project.category) : null) || categoryLabels[project.category] || project.category;
       role.textContent = loc(project.role);
       medium.textContent = loc(project.medium);
     };
 
-    overlay.appendChild(catLabel);
     overlay.appendChild(title);
     if (project.client) {
       const client = document.createElement('div');
@@ -637,82 +596,30 @@ window.addEventListener('scroll', () => {
     return card;
   }
 
-  function applyFilter(cards, activeFilter) {
-    let visibleCount = 0;
-    cards.forEach(card => {
-      const match = activeFilter === 'all' || card.dataset.category === activeFilter;
-      card.classList.toggle('hidden', !match);
-      if (match) visibleCount++;
-    });
-    const empty = document.getElementById('portfolio-empty');
-    if (empty) empty.style.display = visibleCount === 0 ? 'block' : 'none';
-  }
-
-  function getCatLabel(cat) {
-    var key = 'cat.' + cat.id;
-    return (window.I18n ? window.I18n.t(key) : null) || cat.label;
-  }
-
-  function buildFilters(categories, cards) {
-    const container = document.getElementById('portfolio-filters');
-    if (!container) return;
-
-    const allBtn = document.createElement('button');
-    allBtn.className = 'pf-btn active';
-    allBtn.dataset.filter = 'all';
-    allBtn.setAttribute('data-i18n', 'portfolio.filter.all');
-    allBtn.textContent = window.I18n ? window.I18n.t('portfolio.filter.all') : 'Tous';
-    container.appendChild(allBtn);
-
-    categories.forEach(cat => {
-      const btn = document.createElement('button');
-      btn.className = 'pf-btn';
-      btn.dataset.filter = cat.id;
-      btn.dataset.catId = cat.id;
-      btn.textContent = getCatLabel(cat);
-      container.appendChild(btn);
-    });
-
-    container.querySelectorAll('.pf-btn').forEach(btn => {
-      btn.addEventListener('click', function () {
-        container.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        applyFilter(cards, this.dataset.filter);
-      });
-    });
-  }
-
   window.onLangChange = function () {
     builtCards.forEach(function (c) { if (c.__i18n) c.__i18n(); });
-    const container = document.getElementById('portfolio-filters');
-    if (!container) return;
-    container.querySelectorAll('.pf-btn[data-cat-id]').forEach(function (btn) {
-      btn.textContent = window.I18n ? window.I18n.t('cat.' + btn.dataset.catId) : btn.textContent;
-    });
   };
 
   document.addEventListener('DOMContentLoaded', function () {
-    Promise.all([
-      fetch('categories.json').then(r => r.ok ? r.json() : { items: [] }),
-      fetch('portfolio.json').then(r => { if (!r.ok) throw new Error('portfolio.json not found'); return r.json(); })
-    ])
-    .then(function (results) {
-      const categories = results[0].items || [];
-      const projects = results[1].items || results[1];
+    fetch('portfolio.json')
+      .then(function (r) { if (!r.ok) throw new Error('portfolio.json not found'); return r.json(); })
+      .then(function (data) {
+        const projects = (data.items || data).filter(function (p) { return !p.hidden; });
 
-      const categoryLabels = {};
-      categories.forEach(function (c) { categoryLabels[c.id] = c.label; });
+        const grid = document.getElementById('portfolio-grid');
+        if (!grid) return;
 
-      const grid = document.getElementById('portfolio-grid');
-      if (!grid) return;
+        const empty = document.getElementById('portfolio-empty');
+        if (!projects.length) {
+          if (empty) empty.style.display = 'block';
+          return;
+        }
 
-      const cards = projects.map(function (p) { return buildCard(p, categoryLabels); });
-      builtCards = cards;
-      cards.forEach(function (card) { grid.appendChild(card); observer.observe(card); });
-
-      buildFilters(categories, cards);
-    })
-    .catch(function (err) { console.warn('Portfolio:', err.message); });
+        const cards = projects.map(function (p) { return buildCard(p, {}); });
+        builtCards = cards;
+        cards.forEach(function (card) { grid.appendChild(card); observer.observe(card); });
+      })
+      .catch(function (err) { console.warn('Portfolio:', err.message); });
   });
 }());
 </script>
