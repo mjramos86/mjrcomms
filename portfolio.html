@@ -7,13 +7,17 @@
 <meta name="description" content="Portfolio de Mario J. Ramos — projets en communications pour jeux vidéo, cinéma/TV et bande dessinée.">
 <meta name="author" content="Mario J. Ramos">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://mjramos86.github.io/mjrcomms/portfolio.html">
+<link rel="canonical" href="https://mariojramos.com/portfolio.html">
+<link rel="alternate" hreflang="fr" href="https://mariojramos.com/portfolio.html">
+<link rel="alternate" hreflang="en" href="https://mariojramos.com/portfolio.html?lang=en">
+<link rel="alternate" hreflang="pt" href="https://mariojramos.com/portfolio.html?lang=pt">
+<link rel="alternate" hreflang="x-default" href="https://mariojramos.com/portfolio.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:title" content="Mario J. Ramos — Portfolio">
 <meta property="og:description" content="Projets en communications pour jeux vidéo, cinéma/TV et bande dessinée.">
-<meta property="og:url" content="https://mjramos86.github.io/mjrcomms/portfolio.html">
-<meta property="og:image" content="https://mjramos86.github.io/mjrcomms/images/og-cover.jpg">
+<meta property="og:url" content="https://mariojramos.com/portfolio.html">
+<meta property="og:image" content="https://mariojramos.com/MJR_white.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mario J. Ramos — Portfolio">
 <meta name="twitter:description" content="Projets en communications pour jeux vidéo, cinéma/TV et bande dessinée.">
@@ -518,6 +522,39 @@ window.addEventListener('scroll', () => {
   function rel(path) { return path ? path.replace(/^\//, '') : path; }
 
   var builtCards = [];
+  var loadedProjects = [];
+
+  function injectJsonLd(id, obj) {
+    var el = document.getElementById(id);
+    if (!el) {
+      el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.id = id;
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify(obj);
+  }
+
+  // Structured data (GEO/SEO): list the visible projects as a CollectionPage.
+  function buildPortfolioLd() {
+    var items = loadedProjects.map(function (p, i) {
+      return {
+        '@type': 'ListItem',
+        'position': i + 1,
+        'url': 'https://mariojramos.com/project.html?id=' + encodeURIComponent(p.id),
+        'name': p.title
+      };
+    });
+    injectJsonLd('ld-portfolio', {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      'name': 'Portfolio — Mario J. Ramos',
+      'inLanguage': (window.I18n ? window.I18n.getLang() : 'fr'),
+      'url': 'https://mariojramos.com/portfolio.html',
+      'about': { '@type': 'Person', 'name': 'Mario J. Ramos', 'url': 'https://mariojramos.com/#person' },
+      'mainEntity': { '@type': 'ItemList', 'itemListElement': items }
+    });
+  }
 
   // Resolve a possibly-localized value ({fr,en,pt}) for the current language.
   function loc(val) {
@@ -598,6 +635,7 @@ window.addEventListener('scroll', () => {
 
   window.onLangChange = function () {
     builtCards.forEach(function (c) { if (c.__i18n) c.__i18n(); });
+    buildPortfolioLd();
   };
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -605,6 +643,7 @@ window.addEventListener('scroll', () => {
       .then(function (r) { if (!r.ok) throw new Error('portfolio.json not found'); return r.json(); })
       .then(function (data) {
         const projects = (data.items || data).filter(function (p) { return !p.hidden; });
+        loadedProjects = projects;
 
         const grid = document.getElementById('portfolio-grid');
         if (!grid) return;
@@ -618,6 +657,7 @@ window.addEventListener('scroll', () => {
         const cards = projects.map(function (p) { return buildCard(p, {}); });
         builtCards = cards;
         cards.forEach(function (card) { grid.appendChild(card); observer.observe(card); });
+        buildPortfolioLd();
       })
       .catch(function (err) { console.warn('Portfolio:', err.message); });
   });
