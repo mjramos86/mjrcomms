@@ -392,6 +392,202 @@
 
       // DATE LOCALE
       'date.locale': 'en-CA'
+    },
+
+    pt: {
+      // NAV
+      'nav.about':     'Sobre',
+      'nav.services':  'Pacotes',
+      'nav.alacarte':  'À la carte',
+      'nav.parcours':  'Percurso',
+      'nav.portfolio': 'Portefólio',
+      'nav.presse':    'Imprensa',
+      'nav.contact':   'Contacte-me',
+
+      // FOOTER
+      'footer.copy': '© 2026 Mario Jorge Ramos — Todos os direitos reservados — Montreal, QC',
+
+      // SPLASH
+      'splash.sub':              'Especialista em comunicação',
+      'splash.services.label':   'Oferta de<br>serviços',
+      'splash.services.desc':    'Comunicação, relações com a imprensa e estratégia de lançamento.',
+      'splash.portfolio.desc':   'Projetos, produções e realizações.',
+      'splash.blog.desc':        'Blogue sobre a indústria dos videojogos no Quebeque.',
+
+      // HERO
+      'hero.tag':              'Especialista em comunicação de videojogos',
+      'hero.slogan':           'Os seus jogos merecem<br>ser <em>vistos</em> e <em>jogados</em>.',
+      'hero.btn.services':     'Ver os pacotes',
+      'hero.btn.contact':      'Vamos falar do seu projeto',
+      'hero.stat.exp':         'Anos de experiência',
+      'hero.stat.gemaux':      'Vencedor do Prémio Gémeaux',
+      'hero.stat.bell':        'Bell Média / RDS Videojogos',
+      'hero.stat.bell.unit':   ' anos',
+      'hero.stat.lang.unit':   ' línguas',
+
+      // ABOUT
+      'about.tag': 'Sobre',
+      'about.p1':  'Sou um <strong>profissional de media digitais e comunicação</strong> com um conhecimento profundo da indústria dos videojogos do Quebeque — por dentro. Já cobri, promovi e lancei jogos. Geri marcas, criei comunidades e obtive cobertura nos media que contam.',
+      'about.p2':  'A minha vantagem é uma <strong>rede humana</strong> construída ao longo de 8 anos neste ecossistema: jornalistas, criadores, editoras, organizadores de eventos, bem como criadores de conteúdo e influenciadores de gaming. Quando o represento, falo a mesma língua que os seus interlocutores.',
+      'about.p3':  'Sendo eu próprio jornalista de videojogos, compreendo os media por dentro — <strong>como pensam, o que capta a sua atenção</strong> e o que acaba no lixo. É uma vantagem que poucas agências de comunicação podem oferecer.',
+      'about.skill.pr':      'Relações com a imprensa',
+      'about.skill.social':  'Estratégia de redes sociais',
+      'about.skill.content': 'Redação / criação de conteúdo',
+      'about.skill.gaming':  'Conhecimento da indústria de videojogos do QC',
+      'about.card.hiu.title':       'Responsável de comunicação',
+      'about.card.hiu.desc':        'Lançamento AA, relações com a imprensa internacional, gestão de redes sociais e de comunidades.',
+      'about.card.bell.title':      'Editor-chefe',
+      'about.card.bell.desc':       'Fundei e dirigi a marca RDS Videojogos durante 5 anos — cobertura editorial, parcerias comerciais e desenvolvimento de audiência.',
+      'about.card.guilde.title':    'Consultor de comunicação',
+      'about.card.guilde.desc':     'Apoio estratégico à comunicação da associação que representa a indústria dos videojogos do Quebeque, incluindo iniciativas como a Zone Indie Loto-Québec, as DemoNights e o MIGS.',
+      'about.card.gardiens.title':  'Diretor de comunicação',
+      'about.card.gardiens.desc':   'Direção da comunicação e estratégia digital para a organização sem fins lucrativos dedicada ao bem-estar dos jogadores, incluindo a produção de podcast e campanhas de sensibilização.',
+
+      // SERVICES
+      'services.tag':         'Pacotes',
+      'services.h2':          'Escolha o seu nível<br>de compromisso',
+      'services.desc':        'Três fórmulas concebidas para se adaptarem às suas necessidades e ao seu orçamento. Sem contrato obrigatório de um ano. Sem custos escondidos.',
+      'services.card1.badge': 'Pontual',
+      'services.card1.title': 'Consultoria Express',
+      'services.card1.unit':  ' / hora',
+      'services.card1.desc':  'Tem uma questão estratégica específica. Resolvemo-la juntos em 1 ou 2 horas.',
+      'services.card1.li1':   'Consultoria estratégica de 1h ou 2h',
+      'services.card1.li2':   'Auditoria da sua presença atual',
+      'services.card1.li3':   'Recomendações acionáveis imediatas',
+      'services.card1.li4':   'Ideal para um estúdio em início de percurso',
+      'services.card1.li5':   '1.ª hora de descoberta a 75 $',
+      'services.card2.badge': '⭐ Recomendado',
+      'services.card2.title': 'Pacote de Lançamento',
+      'services.card2.desc':  'O pacote completo para um lançamento bem-sucedido. 8 semanas de acompanhamento, do plano à cobertura de imprensa.',
+      'services.card2.li1':   'Plano de comunicação completo (8 semanas)',
+      'services.card2.li2':   'Kit de imprensa — comunicado + materiais',
+      'services.card2.li3':   'Envio para media segmentados',
+      'services.card2.li4':   'Estratégia de redes sociais + calendário editorial',
+      'services.card2.li5':   'Acompanhamento e gestão dos pedidos de imprensa',
+      'services.card2.li6':   'Relatório e balanço pós-lançamento',
+      'services.card2.li7':   '1 sessão de revisão incluída',
+      'services.card3.badge': 'Recorrente',
+      'services.card3.title': 'Avença Mensal',
+      'services.card3.unit':  ' / mês',
+      'services.card3.desc':  'O seu especialista de comunicação dedicado todos os meses — disponível, reativo e integrado no seu ritmo de desenvolvimento.',
+      'services.card3.li1':   '~2 dias / mês de disponibilidade dedicada',
+      'services.card3.li2':   'Gestão de redes sociais — 2 a 3 publicações / semana',
+      'services.card3.li3':   'Monitorização dos media de gaming do Quebeque',
+      'services.card3.li4':   '1 comunicado de imprensa por mês',
+      'services.card3.li5':   'Acesso prioritário em períodos de lançamento',
+      'services.card3.li6':   'Compromisso mínimo de 3 meses',
+      'services.note':        '// Os pacotes são pontos de partida — cada projeto é único. Contacte-me para uma proposta personalizada.',
+
+      // À LA CARTE
+      'carte.tag':        'Serviços',
+      'carte.h2':         'À la carte',
+      'carte.desc':       'Precisa de um serviço específico, sem um pacote completo? Escolha exatamente o que precisa.',
+      'carte.cat1.title': 'Relações com a imprensa',
+      'carte.cat1.row1':  'Redação de um comunicado de imprensa',
+      'carte.cat1.row2':  'Lista de media segmentada + envio (QC)',
+      'carte.cat1.row3':  'Acompanhamento e gestão de pedidos',
+      'carte.cat1.row4':  'Tradução FR ↔ EN',
+      'carte.cat2.title': 'Estratégia e planeamento',
+      'carte.cat2.row1':  'Auditoria de comunicação (ponto de situação)',
+      'carte.cat2.row2':  'Plano de comunicação de lançamento',
+      'carte.cat2.row3':  'Estratégia de redes sociais (documento)',
+      'carte.cat2.row4':  'Simulação de crítica profissional (mock review)',
+      'carte.cat3.title': 'Conteúdo e redes sociais',
+      'carte.cat3.row1':  'Calendário editorial mensal (30 ideias)',
+      'carte.cat3.row2':  'Redação + composição de publicações (×10)',
+      'carte.cat3.row3':  'Gestão completa das redes sociais (4 sem.)',
+      'carte.cat3.row4':  'Cobertura de evento (dia inteiro)',
+      'carte.note':       '// Todos os preços em CAD, antes de impostos. Ajustáveis consoante a dimensão do estúdio e a complexidade do projeto.',
+
+      // EXPÉRIENCE
+      'exp.tag':               'Percurso',
+      'exp.h2':                'O jogador certo<br>para a sua equipa',
+      'exp.desc':              'Evoluí nos dois mundos da indústria media-gaming: a grande difusão (Bell Média) e o terreno indie (La Guilde, Rogue Factor). Esta dualidade permite-me posicionar o seu estúdio junto do grande público e de audiências especializadas.',
+      'exp.industries.title':  'INDÚSTRIAS ABRANGIDAS',
+      'exp.tag1':  'Videojogos AA',
+      'exp.tag2':  'Estúdios independentes',
+      'exp.tag3':  'Media digitais',
+      'exp.tag4':  'Televisão',
+      'exp.tag5':  'Eventos',
+      'exp.tag6':  'Organização cultural sem fins lucrativos',
+      'exp.tl1.role':    'Argumentista, realizador, editor de vídeo',
+      'exp.tl1.company': 'Séries digitais originais na TOU.TV e na Ztélé — Temps Mort e Projet-M',
+      'exp.tl1.tag2':    'Temps Mort',
+      'exp.tl1.tag3':    'Projet-M',
+      'exp.tl2.role':    'Fundador e editor-chefe — Vidéoludique.ca',
+      'exp.tl2.company': 'Blogue independente dedicado à crítica e à atualidade dos videojogos',
+      'exp.tl2.tag1':    'Jornalismo',
+      'exp.tl2.tag2':    'Crítica de jogos',
+      'exp.tl2.tag3':    'Blogue',
+      'exp.tl3.role':    'Blogger de cultura pop, videojogos e tecnologia',
+      'exp.tl3.company': 'Radio-Canada, RDS, Ztélé, Balle Courbe…',
+      'exp.tl3.tag1':    'Crónicas',
+      'exp.tl3.tag2':    'Conteúdo',
+      'exp.tl3.tag3':    'Media',
+      'exp.tl5.role':    'Responsável de comunicação — Rogue Factor',
+      'exp.tl5.company': 'Lançamento AA de Hell is Us, relações com a imprensa internacional e gestão de comunidades.',
+      'exp.tl5.tag1':    'Rogue Factor',
+      'exp.tl5.tag2':    'Hell is Us',
+      'exp.tl5.tag3':    'Videojogos AA',
+      'exp.tl6.role':    'Consultor de comunicação — La Guilde du jeu vidéo du Québec &amp; XP Gaming',
+      'exp.tl6.company': 'Apoio estratégico à comunicação da associação que representa a indústria dos videojogos do Quebeque.',
+      'exp.tl6.tag1':    'La Guilde',
+      'exp.tl6.tag2':    'XP Gaming',
+      'exp.tl6.tag3':    'Relações públicas',
+      'exp.tl4.role':    'Editor-chefe — Bell Média / RDS Videojogos',
+      'exp.tl4.company': 'Fundador e responsável editorial da marca RDS Videojogos durante 5 anos.',
+      'exp.tl4.tag1':    'Bell Média',
+      'exp.tl4.tag3':    'Videojogos AA',
+      'exp.tl4.tag4':    'Influenciadores de gaming',
+
+      // CONTACT
+      'contact.tag': 'Contacto',
+      'contact.h2':  'O seu próximo lançamento<br>começa <em style="color:var(--teal); font-style:normal;">aqui</em>.',
+      'contact.sub': 'Uma primeira conversa sem compromisso para falar do seu projeto, do seu orçamento e ver se somos o par certo. Primeira hora de consultoria a 75 $.',
+      'contact.btn': 'Escreva-me agora',
+
+      // PORTFOLIO PAGE
+      'portfolio.tag':        'Portefólio',
+      'portfolio.h2':         'Projetos &amp; realizações',
+      'portfolio.desc':       'Uma seleção de mandatos de comunicação em videojogos, cinema, televisão e banda desenhada.',
+      'portfolio.filter.all': 'Todos',
+      'portfolio.empty':      'Ainda não há projetos nesta categoria.',
+
+      // CATEGORY LABELS
+      'cat.jeux-video':    'Videojogos',
+      'cat.cinema-tv':     'Cinema / TV',
+      'cat.bande-dessinee':'Banda desenhada',
+      'cat.balado':        'Podcast',
+
+      // PRESSE PAGE
+      'presse.tag':   'Imprensa',
+      'presse.h2':    'Na imprensa',
+      'presse.desc':  'Artigos, entrevistas e menções nos media — uma seleção de cobertura de imprensa em torno dos meus projetos e mandatos de comunicação.',
+      'presse.empty': 'Ainda não há artigos.',
+
+      // PROJECT PAGE
+      'project.meta.category':  'Categoria',
+      'project.meta.role':      'Função',
+      'project.meta.medium':    'Meio',
+      'project.meta.year':      'Ano',
+      'project.meta.link':      'Ver o projeto',
+      'project.video.label':    'Vídeo',
+      'project.gallery.label':  'Galeria',
+      'project.accolades.label':'Distinções',
+      'project.notfound.h2':    'Projeto não encontrado',
+      'project.notfound.p':     'Este projeto não existe ou foi eliminado.',
+      'project.back':           'Portefólio',
+
+      // META
+      'meta.title.index':    'Mario J. Ramos — Especialista em comunicação',
+      'meta.desc.index':     'Mario J. Ramos, especialista em comunicação — estratégia de lançamento, relações com a imprensa e comunicação para estúdios de videojogos, produções de cinema e banda desenhada.',
+      'meta.title.portfolio':'Mario J. Ramos — Portefólio',
+      'meta.desc.portfolio': 'Portefólio de Mario J. Ramos — projetos de comunicação para videojogos, cinema/TV e banda desenhada.',
+      'meta.title.presse':   'Mario J. Ramos — Na imprensa',
+      'meta.desc.presse':    'Revista de imprensa de Mario J. Ramos — artigos e menções nos media especializados em videojogos, cinema e banda desenhada.',
+
+      // DATE LOCALE
+      'date.locale': 'pt-PT'
     }
   };
 
@@ -450,19 +646,23 @@
     updateLangButton(lang);
   }
 
+  var LANGS = ['fr', 'en', 'pt'];
+
   function updateLangButton(lang) {
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
-      var frSpan = btn.querySelector('[data-lang="fr"]');
-      var enSpan = btn.querySelector('[data-lang="en"]');
-      if (frSpan) frSpan.classList.toggle('lang-active', lang === 'fr');
-      if (enSpan) enSpan.classList.toggle('lang-active', lang === 'en');
+      LANGS.forEach(function (code) {
+        var span = btn.querySelector('[data-lang="' + code + '"]');
+        if (span) span.classList.toggle('lang-active', lang === code);
+      });
     });
   }
 
   function initLangBtn() {
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        var next = getLang() === 'fr' ? 'en' : 'fr';
+        var idx = LANGS.indexOf(getLang());
+        if (idx === -1) idx = 0;
+        var next = LANGS[(idx + 1) % LANGS.length];
         setLang(next);
         applyTranslations(next);
         if (typeof global.onLangChange === 'function') {
