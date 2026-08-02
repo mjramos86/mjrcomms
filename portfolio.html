@@ -552,6 +552,17 @@ window.addEventListener('scroll', () => {
 (function () {
   function rel(path) { return path ? path.replace(/^\//, '') : path; }
 
+  var builtCards = [];
+
+  // Resolve a possibly-localized value ({fr,en,pt}) for the current language.
+  function loc(val) {
+    if (val && typeof val === 'object' && !Array.isArray(val)) {
+      var lang = window.I18n ? window.I18n.getLang() : 'fr';
+      return val[lang] || val.fr || val.en || '';
+    }
+    return val;
+  }
+
   function buildCard(project, categoryLabels) {
     const card = document.createElement('div');
     card.className = 'portfolio-card reveal';
@@ -584,11 +595,18 @@ window.addEventListener('scroll', () => {
 
     const role = document.createElement('div');
     role.className = 'pc-role';
-    role.textContent = project.role;
+    role.textContent = loc(project.role);
 
     const medium = document.createElement('div');
     medium.className = 'pc-medium';
-    medium.textContent = project.medium;
+    medium.textContent = loc(project.medium);
+
+    // Re-translate this card's localized text when the language changes.
+    card.__i18n = function () {
+      catLabel.textContent = (window.I18n ? window.I18n.t('cat.' + project.category) : null) || categoryLabels[project.category] || project.category;
+      role.textContent = loc(project.role);
+      medium.textContent = loc(project.medium);
+    };
 
     overlay.appendChild(catLabel);
     overlay.appendChild(title);
@@ -665,6 +683,7 @@ window.addEventListener('scroll', () => {
   }
 
   window.onLangChange = function () {
+    builtCards.forEach(function (c) { if (c.__i18n) c.__i18n(); });
     const container = document.getElementById('portfolio-filters');
     if (!container) return;
     container.querySelectorAll('.pf-btn[data-cat-id]').forEach(function (btn) {
@@ -688,6 +707,7 @@ window.addEventListener('scroll', () => {
       if (!grid) return;
 
       const cards = projects.map(function (p) { return buildCard(p, categoryLabels); });
+      builtCards = cards;
       cards.forEach(function (card) { grid.appendChild(card); observer.observe(card); });
 
       buildFilters(categories, cards);

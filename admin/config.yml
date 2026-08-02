@@ -25,8 +25,14 @@ collections:
               - { label: "Titre",  name: "title",  widget: "string", required: true }
               - { label: "Client / Studio", name: "client", widget: "string",
                   required: false, hint: "Ex : Rogue Factor, Ztélé, Glénat" }
-              - { label: "Rôle",   name: "role",   widget: "string", required: true,
-                  hint: "Ex : Responsable des communications" }
+              - label: "Rôle"
+                name: "role"
+                widget: "object"
+                hint: "Ex : Responsable des communications"
+                fields:
+                  - { label: "Français", name: "fr", widget: "string", required: true }
+                  - { label: "English",  name: "en", widget: "string", required: false }
+                  - { label: "Português", name: "pt", widget: "string", required: false }
               - label: "Catégorie"
                 name: "category"
                 widget: "select"
@@ -35,14 +41,27 @@ collections:
                   - { label: "Jeux vidéo",     value: "jeux-video" }
                   - { label: "Cinéma / TV",     value: "cinema-tv" }
                   - { label: "Bande dessinée",  value: "bande-dessinee" }
-              - { label: "Médium", name: "medium", widget: "string", required: false,
-                  hint: "Ex : Jeu vidéo AA, PlayStation 5 / PC" }
+              - label: "Médium"
+                name: "medium"
+                widget: "object"
+                required: false
+                hint: "Ex : Jeux vidéo, Cinéma / TV, Bande dessinée, Balado"
+                fields:
+                  - { label: "Français", name: "fr", widget: "string", required: false }
+                  - { label: "English",  name: "en", widget: "string", required: false }
+                  - { label: "Português", name: "pt", widget: "string", required: false }
               - { label: "Année",  name: "year",   widget: "number", value_type: "int",
                   min: 2000, max: 2099 }
               - { label: "Image de couverture", name: "cover", widget: "image",
                   required: false, hint: "Ratio recommandé 3:2 (ex : 900×600 px)" }
-              - { label: "Description", name: "description", widget: "markdown",
-                  required: false }
+              - label: "Description"
+                name: "description"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Français", name: "fr", widget: "markdown", required: false }
+                  - { label: "English",  name: "en", widget: "markdown", required: false }
+                  - { label: "Português", name: "pt", widget: "markdown", required: false }
               - { label: "Vidéo (URL embed)", name: "video", widget: "string",
                   required: false, hint: "URL YouTube ou Vimeo (ex : https://www.youtube.com/embed/xxx)" }
               - label: "Galerie d'images"
@@ -81,8 +100,15 @@ collections:
               - { label: "Description SEO (meta description)", name: "seo_description",
                   widget: "string", required: false,
                   hint: "Résumé court (max 160 caractères) affiché dans les résultats Google" }
-              - { label: "Extrait / Résumé", name: "description", widget: "markdown",
-                  required: false, hint: "Résumé de l'article ou extrait notable" }
+              - label: "Extrait / Résumé"
+                name: "description"
+                widget: "object"
+                required: false
+                hint: "Résumé de l'article ou extrait notable"
+                fields:
+                  - { label: "Français", name: "fr", widget: "markdown", required: false }
+                  - { label: "English",  name: "en", widget: "markdown", required: false }
+                  - { label: "Português", name: "pt", widget: "markdown", required: false }
               - { label: "Lien vers l'article original", name: "link", widget: "string",
                   required: false, hint: "URL complète de l'article en ligne" }
               - { label: "ID (slug)", name: "id", widget: "string",

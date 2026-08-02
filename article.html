@@ -20,6 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="i18n.js"></script>
 <style>
 /* ── RESET & BASE ──────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -115,6 +116,25 @@ nav {
   transition: all 0.2s;
 }
 .nav-cta:hover { background: var(--teal-dim); }
+/* ── LANG BUTTON ────────────────────────────────────────── */
+.lang-btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 5px 10px;
+  letter-spacing: 0.08em;
+  transition: border-color 0.2s;
+  white-space: nowrap;
+}
+.lang-btn:hover { border-color: var(--border-teal); }
+.lang-btn [data-lang] { color: var(--text-dim); transition: color 0.2s; }
+.lang-btn [data-lang].lang-active { color: var(--teal); }
+.lang-btn .lang-sep { color: var(--border); margin: 0 4px; }
 /* ── NAV BURGER / MOBILE MENU ───────────────────────────── */
 .nav-burger {
   display: none;
@@ -384,14 +404,17 @@ footer {
 <nav>
   <a class="nav-logo" href="./"><img src="MJR.png" alt="Logo MJR">Mario J<span>.</span> Ramos</a>
   <ul class="nav-links">
-    <li><a href="index.html#about">À propos</a></li>
-    <li><a href="index.html#services">Forfaits</a></li>
-    <li><a href="index.html#carte">À la carte</a></li>
-    <li><a href="index.html#experience">Parcours</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="presse.html" class="active">Dans la presse</a></li>
+    <li><a href="index.html#about" data-i18n="nav.about">À propos</a></li>
+    <li><a href="index.html#services" data-i18n="nav.services">Forfaits</a></li>
+    <li><a href="index.html#carte" data-i18n="nav.alacarte">À la carte</a></li>
+    <li><a href="index.html#experience" data-i18n="nav.parcours">Parcours</a></li>
+    <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+    <li><a href="presse.html" class="active" data-i18n="nav.presse">Dans la presse</a></li>
   </ul>
-  <a class="nav-cta" href="index.html#contact">Contactez-moi</a>
+  <a class="nav-cta" href="index.html#contact" data-i18n="nav.contact">Contactez-moi</a>
+  <button class="lang-btn" id="lang-btn" aria-label="Switch language / Changer de langue">
+    <span data-lang="fr">FR</span><span class="lang-sep">|</span><span data-lang="en">EN</span><span class="lang-sep">|</span><span data-lang="pt">PT</span>
+  </button>
   <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-mobile">
     <span></span><span></span><span></span>
   </button>
@@ -399,13 +422,13 @@ footer {
 
 <!-- NAV MOBILE -->
 <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Menu de navigation">
-  <a href="index.html#about">À propos</a>
-  <a href="index.html#services">Forfaits</a>
-  <a href="index.html#carte">À la carte</a>
-  <a href="index.html#experience">Parcours</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="presse.html" class="active">Dans la presse</a>
-  <a class="nav-mobile-cta" href="index.html#contact">Contactez-moi</a>
+  <a href="index.html#about" data-i18n="nav.about">À propos</a>
+  <a href="index.html#services" data-i18n="nav.services">Forfaits</a>
+  <a href="index.html#carte" data-i18n="nav.alacarte">À la carte</a>
+  <a href="index.html#experience" data-i18n="nav.parcours">Parcours</a>
+  <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+  <a href="presse.html" class="active" data-i18n="nav.presse">Dans la presse</a>
+  <a class="nav-mobile-cta" href="index.html#contact" data-i18n="nav.contact">Contactez-moi</a>
 </div>
 
 <!-- ARTICLE CONTENT (injected by JS) -->
@@ -413,7 +436,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
+  <div class="footer-left" data-i18n="footer.copy">© 2026 Mario Jorge Ramos — Tous droits réservés — Montréal, QC</div>
   <div class="footer-right">Mario J<span>.</span> Ramos — INSERT COIN TO <span>LAUNCH</span>_</div>
 </footer>
 
@@ -450,15 +473,26 @@ window.addEventListener('scroll', function () {
   var params = new URLSearchParams(window.location.search);
   var articleId = params.get('id');
 
+  function tr(key) { return window.I18n ? window.I18n.t(key) : key; }
+
+  // Resolve a possibly-localized value ({fr,en,pt}) for the current language.
+  function loc(val) {
+    if (val && typeof val === 'object' && !Array.isArray(val)) {
+      var lang = window.I18n ? window.I18n.getLang() : 'fr';
+      return val[lang] || val.fr || val.en || '';
+    }
+    return val;
+  }
+
   function renderNotFound() {
     var root = document.getElementById('article-root');
     root.innerHTML =
       '<div class="article-not-found">' +
-        '<h2>Article introuvable</h2>' +
-        '<p>Cet article n\'existe pas ou a été supprimé.</p>' +
-        '<a href="presse.html" class="article-back" style="display:inline-flex;margin:0 auto;">Retour à la presse</a>' +
+        '<h2>' + esc(tr('article.notfound.h2')) + '</h2>' +
+        '<p>' + esc(tr('article.notfound.p')) + '</p>' +
+        '<a href="presse.html" class="article-back" style="display:inline-flex;margin:0 auto;">' + esc(tr('article.back')) + '</a>' +
       '</div>';
-    document.title = 'Mario J. Ramos — Article introuvable';
+    document.title = 'Mario J. Ramos — ' + tr('article.notfound.h2');
   }
 
   function rel(path) { return path ? path.replace(/^\//, '') : path; }
@@ -472,7 +506,8 @@ window.addEventListener('scroll', function () {
     if (!dateStr) return '';
     var d = new Date(dateStr);
     if (isNaN(d.getTime())) return dateStr;
-    return d.toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' });
+    var locale = window.I18n ? window.I18n.t('date.locale') : 'fr-CA';
+    return d.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' });
   }
 
   function esc(str) {
@@ -482,8 +517,9 @@ window.addEventListener('scroll', function () {
   function renderArticle(article) {
     document.title = 'Mario J. Ramos — ' + article.title;
 
-    var seoDesc = article.seo_description || (article.description
-      ? article.description.replace(/<[^>]+>/g, '').slice(0, 160).trim()
+    var descText = loc(article.description);
+    var seoDesc = article.seo_description || (descText
+      ? descText.replace(/<[^>]+>/g, '').slice(0, 160).trim()
       : '');
     var coverSrc = rel(article.cover);
     var coverAbs = coverSrc ? 'https://mjramos86.github.io/mjrcomms/' + coverSrc.replace(/^\//, '') : '';
@@ -503,16 +539,16 @@ window.addEventListener('scroll', function () {
     // Meta sidebar
     var metaHTML = '';
     if (article.publication) {
-      metaHTML += '<div class="article-meta-item"><div class="article-meta-label">Publication</div><div class="article-meta-value">' + esc(article.publication) + '</div></div>';
+      metaHTML += '<div class="article-meta-item"><div class="article-meta-label">' + esc(tr('article.meta.publication')) + '</div><div class="article-meta-value">' + esc(article.publication) + '</div></div>';
     }
     if (article.author) {
-      metaHTML += '<div class="article-meta-item"><div class="article-meta-label">Auteur</div><div class="article-meta-value">' + esc(article.author) + '</div></div>';
+      metaHTML += '<div class="article-meta-item"><div class="article-meta-label">' + esc(tr('article.meta.author')) + '</div><div class="article-meta-value">' + esc(article.author) + '</div></div>';
     }
     if (article.date) {
-      metaHTML += '<div class="article-meta-item"><div class="article-meta-label">Date de parution</div><div class="article-meta-value">' + esc(formatDate(article.date)) + '</div></div>';
+      metaHTML += '<div class="article-meta-item"><div class="article-meta-label">' + esc(tr('article.meta.date')) + '</div><div class="article-meta-value">' + esc(formatDate(article.date)) + '</div></div>';
     }
     if (article.link) {
-      metaHTML += '<div class="article-meta-divider"></div><a href="' + esc(article.link) + '" target="_blank" rel="noopener" class="article-link-btn">Lire l\'article</a>';
+      metaHTML += '<div class="article-meta-divider"></div><a href="' + esc(article.link) + '" target="_blank" rel="noopener" class="article-link-btn">' + esc(tr('article.meta.readlink')) + '</a>';
     }
 
     var root = document.getElementById('article-root');
@@ -521,7 +557,7 @@ window.addEventListener('scroll', function () {
         '<div class="' + heroImgClass + '" role="img" aria-label="' + coverAlt + '"' + heroImgStyle + '></div>' +
         '<div class="article-hero-gradient"></div>' +
         '<div class="article-hero-content">' +
-          '<a href="presse.html" class="article-back">Dans la presse</a>' +
+          '<a href="presse.html" class="article-back">' + esc(tr('article.back')) + '</a>' +
           (article.publication ? '<div class="article-publication">' + esc(article.publication) + '</div>' : '') +
           '<h1 class="article-title">' + esc(article.title) + '</h1>' +
           (article.author ? '<div class="article-author">' + esc(article.author) + '</div>' : '') +
@@ -529,8 +565,8 @@ window.addEventListener('scroll', function () {
       '</div>' +
       '<div class="article-body">' +
         '<div class="article-content">' +
-          (article.description
-            ? '<div class="article-description">' + (typeof marked !== 'undefined' ? marked.parse(article.description) : article.description) + '</div>'
+          (descText
+            ? '<div class="article-description">' + (typeof marked !== 'undefined' ? marked.parse(descText) : descText) + '</div>'
             : '') +
         '</div>' +
         '<aside class="article-meta">' + metaHTML + '</aside>' +
@@ -555,6 +591,7 @@ window.addEventListener('scroll', function () {
       var article = articles.find(function (a) { return a.id === articleId; });
       if (!article) { renderNotFound(); return; }
       renderArticle(article);
+      window.onLangChange = function () { renderArticle(article); };
     })
     .catch(function () { renderNotFound(); });
 }());

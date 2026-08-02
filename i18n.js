@@ -186,6 +186,15 @@
       'project.notfound.p':     'Ce projet n\'existe pas ou a été supprimé.',
       'project.back':           'Portfolio',
 
+      // ARTICLE PAGE
+      'article.notfound.h2':    'Article introuvable',
+      'article.notfound.p':     'Cet article n\'existe pas ou a été supprimé.',
+      'article.back':           'Dans la presse',
+      'article.meta.publication':'Publication',
+      'article.meta.author':    'Auteur',
+      'article.meta.date':      'Date de parution',
+      'article.meta.readlink':  'Lire l\'article',
+
       // META
       'meta.title.index':    'Mario J. Ramos — Spécialiste des communications',
       'meta.desc.index':     'Mario J. Ramos, spécialiste des communications — stratégie de lancement, relations de presse et communications pour studios de jeux vidéo, productions cinéma et bande dessinée.',
@@ -382,6 +391,15 @@
       'project.notfound.p':     'This project does not exist or has been deleted.',
       'project.back':           'Portfolio',
 
+      // ARTICLE PAGE
+      'article.notfound.h2':    'Article not found',
+      'article.notfound.p':     'This article does not exist or has been deleted.',
+      'article.back':           'In the press',
+      'article.meta.publication':'Publication',
+      'article.meta.author':    'Author',
+      'article.meta.date':      'Publication date',
+      'article.meta.readlink':  'Read the article',
+
       // META
       'meta.title.index':    'Mario J. Ramos — Communications Specialist',
       'meta.desc.index':     'Mario J. Ramos, communications specialist — launch strategy, press relations and communications for video game studios, film productions and comics.',
@@ -577,6 +595,15 @@
       'project.notfound.h2':    'Projeto não encontrado',
       'project.notfound.p':     'Este projeto não existe ou foi eliminado.',
       'project.back':           'Portefólio',
+
+      // ARTICLE PAGE
+      'article.notfound.h2':    'Artigo não encontrado',
+      'article.notfound.p':     'Este artigo não existe ou foi eliminado.',
+      'article.back':           'Na imprensa',
+      'article.meta.publication':'Publicação',
+      'article.meta.author':    'Autor',
+      'article.meta.date':      'Data de publicação',
+      'article.meta.readlink':  'Ler o artigo',
 
       // META
       'meta.title.index':    'Mario J. Ramos — Especialista em comunicação',
