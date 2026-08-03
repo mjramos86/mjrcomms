@@ -43,15 +43,22 @@ content:
             type: string
           - name: role
             label: Rôle
-            type: string
-            required: true
+            type: object
+            fields:
+              - { name: fr, label: Français, type: string }
+              - { name: en, label: English, type: string }
+              - { name: pt, label: Português, type: string }
           - name: category
             label: Catégorie
             type: string
-            hint: "Utiliser l'ID d'une catégorie (ex : jeux-video, cinema-tv, bande-dessinee)"
+            hint: "Utiliser l'ID d'une catégorie (ex : jeux-video, cinema-tv, bande-dessinee, balado)"
           - name: medium
             label: Médium
-            type: string
+            type: object
+            fields:
+              - { name: fr, label: Français, type: string }
+              - { name: en, label: English, type: string }
+              - { name: pt, label: Português, type: string }
           - name: year
             label: Année
             type: number
@@ -60,15 +67,23 @@ content:
             type: image
           - name: cover_alt
             label: "Texte alternatif (alt) de la couverture"
-            type: string
-            hint: "Décrit l'image pour les moteurs de recherche et les lecteurs d'écran (ex : « Affiche officielle du jeu Projet-M »)"
+            type: object
+            hint: "Décrit l'image pour les moteurs de recherche et les lecteurs d'écran"
+            fields:
+              - { name: fr, label: Français, type: string }
+              - { name: en, label: English, type: string }
+              - { name: pt, label: Português, type: string }
           - name: seo_description
             label: "Description SEO (meta description)"
             type: string
             hint: "Résumé court (max 160 caractères) affiché dans les résultats Google et les aperçus de liens."
           - name: description
             label: Description
-            type: rich-text
+            type: object
+            fields:
+              - { name: fr, label: Français, type: rich-text }
+              - { name: en, label: English, type: rich-text }
+              - { name: pt, label: Português, type: rich-text }
           - name: video
             label: "Vidéo (URL YouTube ou Vimeo)"
             type: string
@@ -77,12 +92,15 @@ content:
             label: Accolades
             type: object
             list:
-              label: "{{fields.title}}"
+              label: "{{fields.title.fr}}"
             fields:
               - name: title
                 label: Titre de l'accolade
-                type: string
-                required: true
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: en, label: English, type: string }
+                  - { name: pt, label: Português, type: string }
               - name: event
                 label: "Événement / Festival"
                 type: string
@@ -93,19 +111,26 @@ content:
             label: Galerie d'images
             type: object
             list:
-              label: "{{fields.alt}}"
+              label: "{{fields.alt.fr}}"
             fields:
               - name: src
                 label: Image
                 type: image
               - name: alt
                 label: Texte alternatif (alt)
-                type: string
-                hint: "Décrit l'image (ex : « Capture d'écran du niveau 3 »)"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: en, label: English, type: string }
+                  - { name: pt, label: Português, type: string }
           - name: link
             label: Lien externe
             type: string
             hint: "URL officielle du projet (site du jeu, IMDb, etc.)"
+          - name: hidden
+            label: Masquer du portfolio
+            type: boolean
+            hint: "Activer pour retirer ce projet de la grille du portfolio (il reste accessible par lien direct)"
           - name: id
             label: "ID (slug)"
             type: string
@@ -152,8 +177,12 @@ content:
             hint: "Résumé court (max 160 caractères) affiché dans les résultats Google"
           - name: description
             label: Extrait / Résumé
-            type: rich-text
+            type: object
             hint: "Résumé de l'article ou extrait notable"
+            fields:
+              - { name: fr, label: Français, type: rich-text }
+              - { name: en, label: English, type: rich-text }
+              - { name: pt, label: Português, type: rich-text }
           - name: link
             label: Lien vers l'article original
             type: string
