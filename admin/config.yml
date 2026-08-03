@@ -28,9 +28,10 @@ collections:
               - label: "Rôle"
                 name: "role"
                 widget: "object"
+                required: false
                 hint: "Ex : Responsable des communications"
                 fields:
-                  - { label: "Français", name: "fr", widget: "string", required: true }
+                  - { label: "Français", name: "fr", widget: "string", required: false }
                   - { label: "English",  name: "en", widget: "string", required: false }
                   - { label: "Português", name: "pt", widget: "string", required: false }
               - label: "Catégorie"
@@ -41,6 +42,7 @@ collections:
                   - { label: "Jeux vidéo",     value: "jeux-video" }
                   - { label: "Cinéma / TV",     value: "cinema-tv" }
                   - { label: "Bande dessinée",  value: "bande-dessinee" }
+                  - { label: "Balado",          value: "balado" }
               - label: "Médium"
                 name: "medium"
                 widget: "object"
@@ -54,6 +56,17 @@ collections:
                   min: 2000, max: 2099 }
               - { label: "Image de couverture", name: "cover", widget: "image",
                   required: false, hint: "Ratio recommandé 3:2 (ex : 900×600 px)" }
+              - label: "Texte alternatif (alt) de la couverture"
+                name: "cover_alt"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Français", name: "fr", widget: "string", required: false }
+                  - { label: "English",  name: "en", widget: "string", required: false }
+                  - { label: "Português", name: "pt", widget: "string", required: false }
+              - { label: "Description SEO (meta description)", name: "seo_description",
+                  widget: "string", required: false,
+                  hint: "Résumé court (max 160 caractères) affiché dans les résultats Google" }
               - label: "Description"
                 name: "description"
                 widget: "object"
@@ -68,7 +81,35 @@ collections:
                 name: "gallery"
                 widget: "list"
                 required: false
-                field: { label: "Image", name: "image", widget: "image" }
+                label_singular: "Image"
+                fields:
+                  - { label: "Image", name: "src", widget: "image", required: false }
+                  - label: "Texte alternatif (alt)"
+                    name: "alt"
+                    widget: "object"
+                    required: false
+                    fields:
+                      - { label: "Français", name: "fr", widget: "string", required: false }
+                      - { label: "English",  name: "en", widget: "string", required: false }
+                      - { label: "Português", name: "pt", widget: "string", required: false }
+              - label: "Accolades / Distinctions"
+                name: "accolades"
+                widget: "list"
+                required: false
+                label_singular: "Distinction"
+                summary: "{{fields.title.fr}} — {{fields.event}} ({{fields.year}})"
+                fields:
+                  - label: "Titre"
+                    name: "title"
+                    widget: "object"
+                    required: false
+                    fields:
+                      - { label: "Français", name: "fr", widget: "string", required: false }
+                      - { label: "English",  name: "en", widget: "string", required: false }
+                      - { label: "Português", name: "pt", widget: "string", required: false }
+                  - { label: "Événement", name: "event", widget: "string", required: false }
+                  - { label: "Année", name: "year", widget: "number", value_type: "int",
+                      required: false, min: 1990, max: 2099 }
               - { label: "Lien externe", name: "link", widget: "string",
                   required: false, hint: "URL officielle du projet (site du jeu, IMDb, etc.)" }
               - { label: "Masquer du portfolio", name: "hidden", widget: "boolean",
