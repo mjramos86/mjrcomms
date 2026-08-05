@@ -6,13 +6,13 @@
       "role": {
         "fr": "Relations média",
         "en": "Media relations",
-        "pt": "Relaçoes com os medias"
+        "pt": "Relações com os media"
       },
-      "category": "Jeu vidéo",
+      "category": "jeux-video",
       "medium": {
-        "fr": "Jeu vidéo",
-        "en": "Jeu vidéo",
-        "pt": "Jeu vidéo"
+        "fr": "Jeux vidéo",
+        "en": "Video games",
+        "pt": "Videojogos"
       },
       "year": 2026,
       "cover": "images/portfolio/Voidling-Bound-Art-2.jpg",
@@ -23,7 +23,9 @@
       },
       "seo_description": "key art voidling bound studio hatchery games",
       "description": {
-        "fr": "Évolue, améliore et fais éclore de puissantes créatures appelées Voidlings dans ce jeu d’action sci-fi qui réinvente le jeu de collecte de monstres!\n\n- Relations médias locales\n\n**Contributions notables :**\n\n- Couverture médiatique d'envergure dans des médias généralistes canadiens, nationaux et régionaux, et nombreux médias spécialisés.\n\n"
+        "fr": "Évolue, améliore et fais éclore de puissantes créatures appelées Voidlings dans ce jeu d’action sci-fi qui réinvente le jeu de collecte de monstres!\n\n- Relations médias locales\n\n**Contributions notables :**\n\n- Couverture médiatique d'envergure dans des médias généralistes canadiens, nationaux et régionaux, et nombreux médias spécialisés.\n\n",
+        "en": "Evolve, upgrade and hatch powerful creatures called Voidlings in this sci-fi action game that reinvents the monster-collecting genre!\n\n- Local media relations\n\n**Notable contributions:**\n\n- Extensive media coverage in Canadian general-interest outlets, both national and regional, and numerous specialized media.\n\n",
+        "pt": "Evolui, melhora e faz eclodir poderosas criaturas chamadas Voidlings neste jogo de ação de ficção científica que reinventa o género de coleção de monstros!\n\n- Relações com os media locais\n\n**Contribuições notáveis:**\n\n- Ampla cobertura mediática em meios generalistas canadianos, nacionais e regionais, e em numerosos media especializados.\n\n"
       },
       "gallery": [
         {
@@ -60,7 +62,8 @@
           "src": "images/portfolio/Capture d’écran 2026-08-03 143654-2.png"
         }
       ],
-      "hidden": false
+      "hidden": false,
+      "id": "voidling-bound"
     },
     {
       "title": "Hell is Us",
@@ -85,9 +88,9 @@
       },
       "seo_description": "key art hell is us studio rogue factor publisher nacon",
       "description": {
-        "fr": "*Découvrez un jeu d'action-aventure à la 3ème personne mêlant l’intensité de violents combats au corps à corps et l'excitation de l'exploration. Parcourez un pays déchiré par la guerre civile pour trouver des réponses aux questions qui vous hantent et affrontez de mystérieuses créatures tout au long de votre périple.*  \n\n- Communications externes et internes du studio\n- Gestionnaire des réseaux sociaux\n- Développement de communauté\n- Création de contenu\n\n**Contributions notables :**\n\n- Couvertuble médiatique locale d'envergure dans les grands médias généralistes canadiens tels que Radio-Canada, LCN, Le Devoir, Bell Média, entre autres, et nombreux médias spécialisés.\n- Séries d'entrevues « Portrait de créateurs » avec des membres de l'équipe et autres contenus communautaires.\n\n![](<images/portfolio/Capture d’écran 2026-08-05 115502.png>)\n\n- Réalisation et montage d'une vidéo de press tour\n\n```\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/OFb1dLGmJK8?si=3o2zkMWHyR1jw8Ai\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n```\n\n- Montage vidéo making-of\n\n```\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/sXdGrWT_2Q0?si=RgE7i7Fgo7VDwvPd\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n```\n\n- Montage vidéo « Streamers react »\n\n```\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/zluAsOZj5KY?si=SRPrQXfO0tkFNpC_\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n```\n\n",
-        "en": "Discover a third-person action-adventure game blending the intensity of brutal melee combat with the thrill of exploration. Journey through a country torn apart by civil war to find answers to the questions that haunt you, and face mysterious creatures throughout your voyage.",
-        "pt": "Descubra um jogo de ação-aventura na terceira pessoa que combina a intensidade de violentos combates corpo a corpo com a emoção da exploração. Percorra um país dilacerado pela guerra civil para encontrar respostas às perguntas que o assombram e enfrente criaturas misteriosas ao longo da sua viagem."
+        "fr": "*Découvrez un jeu d'action-aventure à la 3ème personne mêlant l’intensité de violents combats au corps à corps et l'excitation de l'exploration. Parcourez un pays déchiré par la guerre civile pour trouver des réponses aux questions qui vous hantent et affrontez de mystérieuses créatures tout au long de votre périple.*  \n\n- Communications externes et internes du studio\n- Gestionnaire des réseaux sociaux\n- Développement de communauté\n- Création de contenu\n\n**Contributions notables :**\n\n- Couverture médiatique locale d'envergure dans les grands médias généralistes canadiens tels que Radio-Canada, LCN, Le Devoir, Bell Média, entre autres, et nombreux médias spécialisés.\n- Séries d'entrevues « Portrait de créateurs » avec des membres de l'équipe et autres contenus communautaires.\n\n![](<images/portfolio/Capture d’écran 2026-08-05 115502.png>)\n\n- Réalisation et montage d'une vidéo de press tour\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/OFb1dLGmJK8?si=3o2zkMWHyR1jw8Ai\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n\n- Montage vidéo making-of\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/sXdGrWT_2Q0?si=RgE7i7Fgo7VDwvPd\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n\n- Montage vidéo « Streamers react »\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/zluAsOZj5KY?si=SRPrQXfO0tkFNpC_\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n\n",
+        "en": "*Discover a third-person action-adventure game blending the intensity of brutal melee combat with the thrill of exploration. Journey through a country torn apart by civil war to find answers to the questions that haunt you, and face mysterious creatures throughout your voyage.*  \n\n- Studio external and internal communications\n- Social media management\n- Community development\n- Content creation\n\n**Notable contributions:**\n\n- Extensive local media coverage in major Canadian general-interest outlets such as Radio-Canada, LCN, Le Devoir, Bell Média, among others, and numerous specialized media.\n- “Creator Portrait” interview series with team members and other community content.\n\n![](<images/portfolio/Capture d’écran 2026-08-05 115502.png>)\n\n- Directed and edited a press tour video\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/OFb1dLGmJK8?si=3o2zkMWHyR1jw8Ai\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n\n- Making-of video editing\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/sXdGrWT_2Q0?si=RgE7i7Fgo7VDwvPd\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n\n- “Streamers react” video editing\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/zluAsOZj5KY?si=SRPrQXfO0tkFNpC_\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n\n",
+        "pt": "*Descubra um jogo de ação-aventura na terceira pessoa que combina a intensidade de violentos combates corpo a corpo com a emoção da exploração. Percorra um país dilacerado pela guerra civil para encontrar respostas às perguntas que o assombram e enfrente criaturas misteriosas ao longo da sua viagem.*  \n\n- Comunicação externa e interna do estúdio\n- Gestão das redes sociais\n- Desenvolvimento de comunidade\n- Criação de conteúdo\n\n**Contribuições notáveis:**\n\n- Ampla cobertura mediática local nos grandes meios generalistas canadianos como a Radio-Canada, a LCN, o Le Devoir, a Bell Média, entre outros, e em numerosos media especializados.\n- Série de entrevistas «Retrato de criadores» com membros da equipa e outros conteúdos comunitários.\n\n![](<images/portfolio/Capture d’écran 2026-08-05 115502.png>)\n\n- Realização e montagem de um vídeo de press tour\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/OFb1dLGmJK8?si=3o2zkMWHyR1jw8Ai\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n\n- Montagem de vídeo making-of\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/sXdGrWT_2Q0?si=RgE7i7Fgo7VDwvPd\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n\n- Montagem de vídeo «Streamers react»\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/zluAsOZj5KY?si=SRPrQXfO0tkFNpC_\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n\n"
       },
       "video": "https://www.youtube.com/watch?v=rjr4vDOiBqw",
       "gallery": [
@@ -182,9 +185,9 @@
       },
       "seo_description": "série web esports RDS vie de pro avec stéphanie harvey aka missharvey",
       "description": {
-        "fr": "Stéphanie «missharvey» Harvey rencontre des joueurs professionnels de jeux vidéo et autres intervenants du monde du sport électronique. Stéphanie mène une entrevue où on découvre le joueur, mais également l’être humain. On démystifie les sports électroniques, communément appelés les esports, et on apprend à connaître ces joueurs qui sont des vedettes internationales dans leur milieu, mais méconnues du grand public québécois.\n\n- Développement du concept\n- Producteur au contenu\n- Rélations avec les créateurs de contenu (invités de l'émission)\n\n",
-        "en": "Stéphanie \"missharvey\" Harvey meets professional video game players and other figures from the world of electronic sports. Stéphanie conducts interviews that reveal the player, but also the human being. We demystify electronic sports, commonly known as esports, and get to know these players who are international stars in their field yet largely unknown to the Quebec general public.",
-        "pt": "Stéphanie «missharvey» Harvey encontra-se com jogadores profissionais de videojogos e outras figuras do mundo dos desportos eletrónicos. Stéphanie conduz entrevistas que revelam o jogador, mas também o ser humano. Desmistificamos os desportos eletrónicos, vulgarmente conhecidos como esports, e ficamos a conhecer estes jogadores que são estrelas internacionais no seu meio, mas desconhecidos do grande público do Quebeque."
+        "fr": "Stéphanie «missharvey» Harvey rencontre des joueurs professionnels de jeux vidéo et autres intervenants du monde du sport électronique. Stéphanie mène une entrevue où on découvre le joueur, mais également l’être humain. On démystifie les sports électroniques, communément appelés les esports, et on apprend à connaître ces joueurs qui sont des vedettes internationales dans leur milieu, mais méconnues du grand public québécois.\n\n- Développement du concept\n- Producteur au contenu\n- Relations avec les créateurs de contenu (invités de l'émission)\n\n",
+        "en": "Stéphanie \"missharvey\" Harvey meets professional video game players and other figures from the world of electronic sports. Stéphanie conducts interviews that reveal the player, but also the human being. We demystify electronic sports, commonly known as esports, and get to know these players who are international stars in their field yet largely unknown to the Quebec general public.\n\n- Concept development\n- Content producer\n- Relations with content creators (show guests)\n\n",
+        "pt": "Stéphanie «missharvey» Harvey encontra-se com jogadores profissionais de videojogos e outras figuras do mundo dos desportos eletrónicos. Stéphanie conduz entrevistas que revelam o jogador, mas também o ser humano. Desmistificamos os desportos eletrónicos, vulgarmente conhecidos como esports, e ficamos a conhecer estes jogadores que são estrelas internacionais no seu meio, mas desconhecidos do grande público do Quebeque.\n\n- Desenvolvimento do conceito\n- Produtor de conteúdo\n- Relações com os criadores de conteúdo (convidados do programa)\n\n"
       },
       "video": "https://www.youtube.com/watch?v=Tdi3OB-1xPQ&list=PLZksgcDwQNGIEZuugdjOiejieICtBGpn7",
       "hidden": false,
@@ -214,8 +217,8 @@
       "seo_description": "balado du pain et des jeux, mais surtout des jeux avec pierre-luc racine",
       "description": {
         "fr": "Émission en baladodifussion animée par Pierre-Luc Racine qui invite des personnalités publiques à discuter de leur intérêt pour les jeux vidéo.  \n\n- Producteur au contenu\n- Mise en ligne\n- Stratégie réseaux sociaux\n\n",
-        "en": "A podcast hosted by Pierre-Luc Racine, inviting public figures to discuss their interest in video games.",
-        "pt": "Um podcast apresentado por Pierre-Luc Racine, que convida figuras públicas a falar do seu interesse pelos videojogos."
+        "en": "A podcast hosted by Pierre-Luc Racine, inviting public figures to discuss their interest in video games.  \n\n- Content producer\n- Publishing\n- Social media strategy\n\n",
+        "pt": "Um podcast apresentado por Pierre-Luc Racine, que convida figuras públicas a falar do seu interesse pelos videojogos.  \n\n- Produtor de conteúdo\n- Publicação\n- Estratégia de redes sociais\n\n"
       },
       "video": "https://www.youtube.com/watch?v=w1gpPK44fOw",
       "hidden": false,
@@ -245,8 +248,8 @@
       "seo_description": "balado gaming le terrain de jeux rds",
       "description": {
         "fr": "Émission en baladodifussion sur l'actualité jeux vidéo pour RDS / Bell Média, produite en 2019.\n\n- Producteur au contenu\n- Animateur\n- Stratégie réseaux sociaux\n- Mise en ligne\n\n",
-        "en": "A podcast on video game news for RDS / Bell Media, produced in 2019.",
-        "pt": "Podcast sobre a atualidade dos videojogos para a RDS / Bell Média, produzido em 2019."
+        "en": "A podcast on video game news for RDS / Bell Media, produced in 2019.\n\n- Content producer\n- Host\n- Social media strategy\n- Publishing\n\n",
+        "pt": "Podcast sobre a atualidade dos videojogos para a RDS / Bell Média, produzido em 2019.\n\n- Produtor de conteúdo\n- Apresentador\n- Estratégia de redes sociais\n- Publicação\n\n"
       },
       "video": "https://www.youtube.com/watch?v=cAdYDSJ_oSs",
       "hidden": false,
