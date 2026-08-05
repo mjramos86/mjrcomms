@@ -189,6 +189,30 @@
       "video": "https://www.youtube.com/watch?v=cAdYDSJ_oSs",
       "hidden": false,
       "id": "terrain-de-jeux-balado"
+    },
+    {
+      "title": "Voidling Bound",
+      "client": "Hatchery Games",
+      "role": {
+        "fr": "Relations média",
+        "en": "Media relations",
+        "pt": "Relaçoes com os medias"
+      },
+      "category": "Jeu vidéo",
+      "medium": {
+        "fr": "Jeu vidéo",
+        "en": "Jeu vidéo",
+        "pt": "Jeu vidéo"
+      },
+      "year": 2026,
+      "cover": "images/portfolio/Voidling-Bound-Art-2.jpg",
+      "cover_alt": {
+        "fr": "key art voidling bound",
+        "en": "key art voidling bound",
+        "pt": "key art voidling bound"
+      },
+      "seo_description": "key art voidling bound studio hatchery games",
+      "hidden": false
     }
   ]
 }
