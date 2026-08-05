@@ -98,138 +98,6 @@
       "id": "hell-is-us"
     },
     {
-      "title": "Projet-M",
-      "client": "Babel Films",
-      "role": {
-        "fr": "Co-créateur / Scénariste / Producteur / Monteur",
-        "en": "Co-creator / Screenwriter / Producer / Editor",
-        "pt": "Cocriador / Argumentista / Produtor / Montador"
-      },
-      "category": "cinema-tv",
-      "medium": {
-        "fr": "Cinéma / TV",
-        "en": "Cinema / TV",
-        "pt": "Cinema / TV"
-      },
-      "year": 2014,
-      "cover": "/images/portfolio/projetm_image.jpg",
-      "cover_alt": {
-        "fr": "affiche série numérique projet-m babel films",
-        "en": "projet-m digital series poster, Babel Films",
-        "pt": "cartaz da série digital projet-m, Babel Films"
-      },
-      "seo_description": "projet-m série numérique / film science-fiction québécoise",
-      "description": {
-        "fr": "Dans un futur proche où le climat change rapidement et dans lequel les ressources se font de plus en plus rares, l’Agence Spatiale du Québec recrute des astronautes pour la mission Projet-M. Le but est de prouver la faisabilité d’un voyage de longue durée vers Europe, une lune de Jupiter. Afin de reproduire les conditions, quatre personnes sont envoyées à bord d’une station spatiale pendant 1000 jours.\n\n",
-        "en": "In a near future where the climate is changing rapidly and resources are becoming increasingly scarce, the Quebec Space Agency recruits astronauts for the Projet-M mission. The goal is to prove the feasibility of a long-duration voyage to Europa, one of Jupiter's moons. To replicate the conditions, four people are sent aboard a space station for 1,000 days.\n\n",
-        "pt": "Num futuro próximo, em que o clima muda rapidamente e os recursos se tornam cada vez mais escassos, a Agência Espacial do Quebeque recruta astronautas para a missão Projet-M. O objetivo é provar a viabilidade de uma viagem de longa duração até Europa, uma das luas de Júpiter. Para reproduzir as condições, quatro pessoas são enviadas a bordo de uma estação espacial durante 1000 dias.\n\n"
-      },
-      "video": "https://www.youtube.com/watch?v=ujHSXALAV28",
-      "accolades": [
-        {
-          "title": {
-            "fr": "Meilleure série pour les nouveaux médias",
-            "en": "Best New Media Series",
-            "pt": "Melhor série para os novos media"
-          },
-          "event": "Prix Gémeaux",
-          "year": 2014
-        },
-        {
-          "title": {
-            "fr": "Meilleure série de science-fiction",
-            "en": "Best Science Fiction Series",
-            "pt": "Melhor série de ficção científica"
-          },
-          "event": "LA Webfest",
-          "year": 2014
-        },
-        {
-          "title": {
-            "fr": "Meilleur montage",
-            "en": "Best Editing",
-            "pt": "Melhor montagem"
-          },
-          "event": "Rio Webfest",
-          "year": 2015
-        },
-        {
-          "title": {
-            "fr": "Meilleur scénario, meilleur montage",
-            "en": "Best Screenplay, Best Editing",
-            "pt": "Melhor argumento, melhor montagem"
-          },
-          "event": "Hamilton Film Festival",
-          "year": 2015
-        }
-      ],
-      "hidden": true,
-      "id": "projet-m"
-    },
-    {
-      "title": "Temps Mort",
-      "client": "Babel Films",
-      "role": {
-        "fr": "Scénariste",
-        "en": "Screenwriter",
-        "pt": "Argumentista"
-      },
-      "category": "cinema-tv",
-      "medium": {
-        "fr": "Cinéma / TV",
-        "en": "Cinema / TV",
-        "pt": "Cinema / TV"
-      },
-      "year": 2012,
-      "cover": "images/portfolio/maxresdefault (3).jpg",
-      "description": {
-        "fr": "**Saison 2 et 3**  \nSérie numérique de science-fiction post-apocalyptique. Suite à un cataclysme d’origine inconnue, une communauté tente de survivre dans un un hiver est sans fin où toute technologie a cessé de fonctionner.",
-        "en": "**Season 2 and 3**  \nPost-apocalyptic science-fiction web series. Following a cataclysm of unknown origin, a community tries to survive in an endless winter where all technology has stopped working.",
-        "pt": "**Temporadas 2 e 3**  \nSérie digital de ficção científica pós-apocalíptica. Na sequência de um cataclismo de origem desconhecida, uma comunidade tenta sobreviver num inverno sem fim onde toda a tecnologia deixou de funcionar."
-      },
-      "video": "https://www.youtube.com/watch?v=yeX5mthw2ZY",
-      "accolades": [
-        {
-          "title": {
-            "fr": "Nomination meilleure série numérique",
-            "en": "Nomination — Best Digital Series",
-            "pt": "Nomeação — Melhor série digital"
-          },
-          "event": "International Digital Emmy Awards",
-          "year": 2013
-        },
-        {
-          "title": {
-            "fr": "Meilleure série numérique",
-            "en": "Best Digital Series",
-            "pt": "Melhor série digital"
-          },
-          "event": "Prix Gémeaux",
-          "year": 2012
-        },
-        {
-          "title": {
-            "fr": "Best Online Program",
-            "en": "Best Online Program",
-            "pt": "Melhor programa online"
-          },
-          "event": "Banff World Media Festival",
-          "year": 2011
-        },
-        {
-          "title": {
-            "fr": "Special presentation",
-            "en": "Special Presentation",
-            "pt": "Apresentação especial"
-          },
-          "event": "Fantasia International Film Festival",
-          "year": 2010
-        }
-      ],
-      "hidden": true,
-      "id": "temps-mort"
-    },
-    {
       "title": "Vie de Pro avec missharvey",
       "client": "RDS / Bell Média",
       "role": {
@@ -252,7 +120,7 @@
       },
       "seo_description": "série web esports RDS vie de pro avec stéphanie harvey aka missharvey",
       "description": {
-        "fr": "Stéphanie «missharvey» Harvey rencontre des joueurs professionnels de jeux vidéo et autres intervenants du monde du sport électronique. Stéphanie mène une entrevue où on découvre le joueur, mais également l’être humain. On démystifie les sports électroniques, communément appelés les esports, et on apprend à connaître ces joueurs qui sont des vedettes internationales dans leur milieu, mais méconnues du grand public québécois.",
+        "fr": "Stéphanie «missharvey» Harvey rencontre des joueurs professionnels de jeux vidéo et autres intervenants du monde du sport électronique. Stéphanie mène une entrevue où on découvre le joueur, mais également l’être humain. On démystifie les sports électroniques, communément appelés les esports, et on apprend à connaître ces joueurs qui sont des vedettes internationales dans leur milieu, mais méconnues du grand public québécois.\n\n- Développement du concept\n- Producteur au contenu\n- Rélations avec les créateurs de contenu (invités de l'émission)\n\n",
         "en": "Stéphanie \"missharvey\" Harvey meets professional video game players and other figures from the world of electronic sports. Stéphanie conducts interviews that reveal the player, but also the human being. We demystify electronic sports, commonly known as esports, and get to know these players who are international stars in their field yet largely unknown to the Quebec general public.",
         "pt": "Stéphanie «missharvey» Harvey encontra-se com jogadores profissionais de videojogos e outras figuras do mundo dos desportos eletrónicos. Stéphanie conduz entrevistas que revelam o jogador, mas também o ser humano. Desmistificamos os desportos eletrónicos, vulgarmente conhecidos como esports, e ficamos a conhecer estes jogadores que são estrelas internacionais no seu meio, mas desconhecidos do grande público do Quebeque."
       },
