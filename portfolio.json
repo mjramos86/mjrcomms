@@ -16,8 +16,14 @@
       },
       "year": 2025,
       "cover": "images/portfolio/hell-is-us-key-art-ice-blue-background.avif",
+      "cover_alt": {
+        "fr": "key art Hell is Us",
+        "en": "key art Hell is Us",
+        "pt": "key art Hell is Us"
+      },
+      "seo_description": "key art hell is us studio rogue factor publisher nacon",
       "description": {
-        "fr": "Découvrez un jeu d'action-aventure à la 3ème personne mêlant l’intensité de violents combats au corps à corps et l'excitation de l'exploration. Parcourez un pays déchiré par la guerre civile pour trouver des réponses aux questions qui vous hantent et affrontez de mystérieuses créatures tout au long de votre périple.",
+        "fr": "*Découvrez un jeu d'action-aventure à la 3ème personne mêlant l’intensité de violents combats au corps à corps et l'excitation de l'exploration. Parcourez un pays déchiré par la guerre civile pour trouver des réponses aux questions qui vous hantent et affrontez de mystérieuses créatures tout au long de votre périple.*  \n\n\n- Communications externes et internes du studio\n- Gestionnaire des réseaux sociaux\n- Développement de communauté\n- Création de contenu\n\n  \n**Contributions notables :**\n\n- Couvertuble médiatique locale d'envergure dans les grands médias généralistes canadiens tels que Radio-Canada, LCN, Le Devoir, Bell Média, entre autres, et nombreux médias spécialisés.\n- Séries d'entrevues « Portrait de créateurs » avec des membres de l'équipe et autres contenus communautaires.\n\n![](<images/portfolio/Capture d’écran 2026-08-05 115502.png>)\n\n- Réalisation et montage d'une vidéo de press tour\n\n```\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/OFb1dLGmJK8?si=3o2zkMWHyR1jw8Ai\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n```\n\n- Montage vidéo making-of\n\n```\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/sXdGrWT_2Q0?si=RgE7i7Fgo7VDwvPd\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n```\n\n- Montage vidéo « Streamers react »\n\n```\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/zluAsOZj5KY?si=SRPrQXfO0tkFNpC_\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n```\n\n",
         "en": "Discover a third-person action-adventure game blending the intensity of brutal melee combat with the thrill of exploration. Journey through a country torn apart by civil war to find answers to the questions that haunt you, and face mysterious creatures throughout your voyage.",
         "pt": "Descubra um jogo de ação-aventura na terceira pessoa que combina a intensidade de violentos combates corpo a corpo com a emoção da exploração. Percorra um país dilacerado pela guerra civil para encontrar respostas às perguntas que o assombram e enfrente criaturas misteriosas ao longo da sua viagem."
       },
@@ -88,6 +94,7 @@
           }
         }
       ],
+      "hidden": false,
       "id": "hell-is-us"
     },
     {
@@ -156,8 +163,8 @@
           "year": 2015
         }
       ],
-      "id": "projet-m",
-      "hidden": true
+      "hidden": true,
+      "id": "projet-m"
     },
     {
       "title": "Temps Mort",
@@ -219,8 +226,8 @@
           "year": 2010
         }
       ],
-      "id": "temps-mort",
-      "hidden": true
+      "hidden": true,
+      "id": "temps-mort"
     },
     {
       "title": "Vie de Pro avec missharvey",
@@ -250,6 +257,7 @@
         "pt": "Stéphanie «missharvey» Harvey encontra-se com jogadores profissionais de videojogos e outras figuras do mundo dos desportos eletrónicos. Stéphanie conduz entrevistas que revelam o jogador, mas também o ser humano. Desmistificamos os desportos eletrónicos, vulgarmente conhecidos como esports, e ficamos a conhecer estes jogadores que são estrelas internacionais no seu meio, mas desconhecidos do grande público do Quebeque."
       },
       "video": "https://www.youtube.com/watch?v=Tdi3OB-1xPQ&list=PLZksgcDwQNGIEZuugdjOiejieICtBGpn7",
+      "hidden": false,
       "id": "vie-de-pro-missharvey"
     },
     {
@@ -279,8 +287,8 @@
         "en": "Several decades after a new Great War that changed the face of the world, what remains of humanity is organizing itself. The hope of rebuilding this new world rests on a team of scientists on their way to Europa, a moon of Jupiter holding a secret that could reshape the history of the world and our origins...  \n\n**[Download the full comic here.](https://raw.githubusercontent.com/mjramos86/mjrcomms/main/projet-m-mission-europe-compressed.pdf)**",
         "pt": "Várias décadas após uma nova Grande Guerra que mudou a face do mundo, o que resta da humanidade organiza-se. A esperança de reconstruir este novo mundo assenta numa equipa de cientistas a caminho de Europa, uma lua de Júpiter que guarda um segredo capaz de reescrever a história do mundo e as nossas origens...  \n\n**[Descarregue a banda desenhada completa aqui.](https://raw.githubusercontent.com/mjramos86/mjrcomms/main/projet-m-mission-europe-compressed.pdf)**"
       },
-      "id": "mission-europe",
-      "hidden": true
+      "hidden": true,
+      "id": "mission-europe"
     },
     {
       "title": "22h20, Heure de l'Est",
@@ -339,8 +347,8 @@
           "year": 2013
         }
       ],
-      "id": "22h20-heure-de-lest",
-      "hidden": true
+      "hidden": true,
+      "id": "22h20-heure-de-lest"
     },
     {
       "title": "Le Jardin d'Évelyne",
@@ -370,8 +378,8 @@
         "pt": "A Evelyne começa o seu segundo turno no Jardim do Éden, um salão de massagens eróticas…"
       },
       "video": "https://vimeo.com/157237676",
-      "id": "jardin-evelyne",
-      "hidden": true
+      "hidden": true,
+      "id": "jardin-evelyne"
     },
     {
       "title": "Du pain et des jeux, mais surtout des jeux",
@@ -401,6 +409,7 @@
         "pt": "Um podcast apresentado por Pierre-Luc Racine, que convida figuras públicas a falar do seu interesse pelos videojogos."
       },
       "video": "https://www.youtube.com/watch?v=w1gpPK44fOw",
+      "hidden": false,
       "id": "du-pain-et-des-jeux"
     },
     {
@@ -440,8 +449,8 @@
           }
         }
       ],
-      "id": "annees-lumiere",
-      "hidden": true
+      "hidden": true,
+      "id": "annees-lumiere"
     },
     {
       "title": "The Solitaire Tower of Doom",
@@ -471,8 +480,8 @@
         "pt": "Um videojogo de Solitário com uma temática de terror e mecânicas de roguelike.  \n\n[Disponível gratuitamente em www.solitairedoom.com](https://solitairedoom.com/)"
       },
       "video": "https://www.youtube.com/watch?v=h81firMsGXU",
-      "id": "solitaire-doom",
-      "hidden": true
+      "hidden": true,
+      "id": "solitaire-doom"
     },
     {
       "title": "La Chasse Galerie : Le jeu Pico-8",
@@ -501,8 +510,8 @@
         "en": "A retro-flavoured video game made with the Pico-8 engine. The game's code was generated with the help of an AI tool.\n\n*A flying canoe cursed by the devil! Dodge the demons and the churches as you head back to camp, and gather syrup so you don't lose your soul!*\n\nInspired by the Quebec literary classic \"La chasse-galerie\" by Honoré Beaugrand.  \n\n[Available for free on Itch.io](https://emjayhar.itch.io/la-chasse-galerie-pico8)",
         "pt": "Videojogo com sabor retro criado com o motor Pico-8. O código do jogo foi gerado com a ajuda de uma ferramenta de IA.\n\n*Uma canoa voadora amaldiçoada pelo diabo! Desvia-te dos demónios e das igrejas enquanto voltas para o acampamento e apanha xarope para não perderes a alma!*\n\nInspirado no clássico da literatura quebequense «La chasse-galerie», de Honoré Beaugrand.  \n\n[Disponível gratuitamente no Itch.io](https://emjayhar.itch.io/la-chasse-galerie-pico8)"
       },
-      "id": "chasse-galerie-pico8",
-      "hidden": true
+      "hidden": true,
+      "id": "chasse-galerie-pico8"
     },
     {
       "title": "L'Insomnie",
@@ -532,8 +541,8 @@
         "pt": "Videoclipe da canção L'INSOMNIE de Marc Gravel."
       },
       "video": "https://vimeo.com/151341788",
-      "id": "insomnie",
-      "hidden": true
+      "hidden": true,
+      "id": "insomnie"
     },
     {
       "title": "Le Terrain de Jeux",
@@ -563,6 +572,7 @@
         "pt": "Podcast sobre a atualidade dos videojogos para a RDS / Bell Média, produzido em 2019."
       },
       "video": "https://www.youtube.com/watch?v=cAdYDSJ_oSs",
+      "hidden": false,
       "id": "terrain-de-jeux-balado"
     },
     {
@@ -593,8 +603,8 @@
         "pt": "Desmistificar a saúde mental e a sua relação com o digital com SonOffOdin e LaCoiffeuseGeek. O podcast oficial da Fondation des Gardiens virtuels."
       },
       "video": "https://www.youtube.com/watch?v=xOZnDeK2PYU",
-      "id": "equilibre-numerique",
-      "hidden": true
+      "hidden": true,
+      "id": "equilibre-numerique"
     },
     {
       "title": "Clair-Obscur",
@@ -624,8 +634,8 @@
         "pt": "Manuel, pai solteiro, acabou de deixar o seu país de origem, Portugal, para viver em Montreal, no Quebeque. Sozinho com o filho de 7 anos, enfrenta a difícil tarefa de se adaptar a uma nova vida. Não esperava ter de descobrir este novo mundo enquanto cego."
       },
       "video": "https://vimeo.com/18450926",
-      "id": "clair-obscur",
-      "hidden": true
+      "hidden": true,
+      "id": "clair-obscur"
     },
     {
       "title": "Deux chats blancs",
@@ -664,8 +674,8 @@
           }
         }
       ],
-      "id": "deux-chats-blancs",
-      "hidden": true
+      "hidden": true,
+      "id": "deux-chats-blancs"
     },
     {
       "title": "The Shape of Things to Come",
@@ -695,8 +705,8 @@
         "pt": "Há 400 000 anos, uma civilização interestelar em busca de vida inteligente descobre a Terra. Um grupo de cientistas é enviado para testar os seres humanos que vivem na Terra, a fim de determinar a que velocidade irão evoluir, sem interferir no seu desenvolvimento. Prometeu, um jovem soldado, e Atena, uma cientista astuta, fazem parte da equipa. Esta é a história do último dia da sua missão na Terra — um dia que se revela fatídico para a raça humana."
       },
       "video": "https://vimeo.com/18452020",
-      "id": "the-shape",
-      "hidden": true
+      "hidden": true,
+      "id": "the-shape"
     },
     {
       "title": "Animal",
@@ -736,8 +746,8 @@
           "year": 2012
         }
       ],
-      "id": "animal",
-      "hidden": true
+      "hidden": true,
+      "id": "animal"
     },
     {
       "title": "Référ-o-scope",
@@ -767,8 +777,8 @@
         "pt": "Para desmistificar a esquizofrenia e oferecer uma ferramenta de rastreio, a Société Québécoise de la Schizophrénie [SQS] apresenta uma websérie de ficção associada ao seu site refer-o-scope.com."
       },
       "video": "https://vimeo.com/62403172",
-      "id": "refer-o-scope",
-      "hidden": true
+      "hidden": true,
+      "id": "refer-o-scope"
     }
   ]
 }
