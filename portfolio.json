@@ -1,6 +1,68 @@
 {
   "items": [
     {
+      "title": "Voidling Bound",
+      "client": "Hatchery Games",
+      "role": {
+        "fr": "Relations média",
+        "en": "Media relations",
+        "pt": "Relaçoes com os medias"
+      },
+      "category": "Jeu vidéo",
+      "medium": {
+        "fr": "Jeu vidéo",
+        "en": "Jeu vidéo",
+        "pt": "Jeu vidéo"
+      },
+      "year": 2026,
+      "cover": "images/portfolio/Voidling-Bound-Art-2.jpg",
+      "cover_alt": {
+        "fr": "key art voidling bound",
+        "en": "key art voidling bound",
+        "pt": "key art voidling bound"
+      },
+      "seo_description": "key art voidling bound studio hatchery games",
+      "description": {
+        "fr": "Évolue, améliore et fais éclore de puissantes créatures appelées Voidlings dans ce jeu d’action sci-fi qui réinvente le jeu de collecte de monstres!\n\n- Relations médias locales\n\n**Contributions notables :**\n\n- Couverture médiatique d'envergure dans des médias généralistes canadiens, nationaux et régionaux, et nombreux médias spécialisés.\n\n"
+      },
+      "gallery": [
+        {
+          "src": "images/portfolio/722705007_10175021416335088_1147874681312115008_n.jpg"
+        },
+        {
+          "src": "images/portfolio/723705852_10175021379520088_5443336494506021320_n.jpg"
+        },
+        {
+          "src": "images/portfolio/722770023_10175021416805088_2299899542788083290_n.jpg"
+        },
+        {
+          "src": "images/portfolio/722560445_10175021416955088_4235006681315560504_n.jpg"
+        },
+        {
+          "src": "images/portfolio/722296584_10175021416585088_4526780125055207519_n.jpg"
+        },
+        {
+          "src": "images/portfolio/721995522_10175021417075088_2663967371876674965_n.jpg"
+        },
+        {
+          "src": "images/portfolio/721041240_10175021416435088_616184164611426706_n.jpg"
+        },
+        {
+          "src": "images/portfolio/721041239_10175021416780088_4805470195947078473_n.jpg"
+        },
+        {
+          "src": "images/portfolio/720751164_10175021417045088_8006761919467748296_n.jpg"
+        },
+        {
+          "src": "images/portfolio/720448995_10175021416925088_950825170246646365_n.jpg"
+        },
+        {
+          "src": "images/portfolio/Capture d’écran 2026-08-03 143654-2.png"
+        }
+      ],
+      "hidden": false
+    },
+    {
       "title": "Hell is Us",
       "client": "Rogue Factor",
       "role": {
@@ -189,68 +251,6 @@
       "video": "https://www.youtube.com/watch?v=cAdYDSJ_oSs",
       "hidden": false,
       "id": "terrain-de-jeux-balado"
-    },
-    {
-      "title": "Voidling Bound",
-      "client": "Hatchery Games",
-      "role": {
-        "fr": "Relations média",
-        "en": "Media relations",
-        "pt": "Relaçoes com os medias"
-      },
-      "category": "Jeu vidéo",
-      "medium": {
-        "fr": "Jeu vidéo",
-        "en": "Jeu vidéo",
-        "pt": "Jeu vidéo"
-      },
-      "year": 2026,
-      "cover": "images/portfolio/Voidling-Bound-Art-2.jpg",
-      "cover_alt": {
-        "fr": "key art voidling bound",
-        "en": "key art voidling bound",
-        "pt": "key art voidling bound"
-      },
-      "seo_description": "key art voidling bound studio hatchery games",
-      "description": {
-        "fr": "Évolue, améliore et fais éclore de puissantes créatures appelées Voidlings dans ce jeu d’action sci-fi qui réinvente le jeu de collecte de monstres!\n\n- Relations médias locales\n\n**Contributions notables :**\n\n- Couverture médiatique d'envergure dans des médias généralistes canadiens, nationaux et régionaux, et nombreux médias spécialisés.\n\n"
-      },
-      "gallery": [
-        {
-          "src": "images/portfolio/722705007_10175021416335088_1147874681312115008_n.jpg"
-        },
-        {
-          "src": "images/portfolio/723705852_10175021379520088_5443336494506021320_n.jpg"
-        },
-        {
-          "src": "images/portfolio/722770023_10175021416805088_2299899542788083290_n.jpg"
-        },
-        {
-          "src": "images/portfolio/722560445_10175021416955088_4235006681315560504_n.jpg"
-        },
-        {
-          "src": "images/portfolio/722296584_10175021416585088_4526780125055207519_n.jpg"
-        },
-        {
-          "src": "images/portfolio/721995522_10175021417075088_2663967371876674965_n.jpg"
-        },
-        {
-          "src": "images/portfolio/721041240_10175021416435088_616184164611426706_n.jpg"
-        },
-        {
-          "src": "images/portfolio/721041239_10175021416780088_4805470195947078473_n.jpg"
-        },
-        {
-          "src": "images/portfolio/720751164_10175021417045088_8006761919467748296_n.jpg"
-        },
-        {
-          "src": "images/portfolio/720448995_10175021416925088_950825170246646365_n.jpg"
-        },
-        {
-          "src": "images/portfolio/Capture d’écran 2026-08-03 143654-2.png"
-        }
-      ],
-      "hidden": false
     }
   ]
 }
