@@ -71,6 +71,7 @@ collections:
                 name: "description"
                 widget: "object"
                 required: false
+                hint: "Pour insérer une vidéo dans le texte, écrire {{youtube:ID_OU_URL}} (ou {{vimeo:ID_OU_URL}}) sur sa propre ligne. Ex : {{youtube:dQw4w9WgXcQ}}"
                 fields:
                   - { label: "Français", name: "fr", widget: "markdown", required: false }
                   - { label: "English",  name: "en", widget: "markdown", required: false }

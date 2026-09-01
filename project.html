@@ -596,6 +596,7 @@ window.addEventListener('scroll', function () {
   // Strip HTML + Markdown down to plain text (for structured-data descriptions).
   function plain(s) {
     return String(s || '')
+      .replace(/\{\{\s*(?:youtube|vimeo|video)\s*:[^}]+?\}\}/gi, '')
       .replace(/<[^>]+>/g, '')
       .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
       .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
@@ -630,11 +631,38 @@ window.addEventListener('scroll', function () {
 
   function toEmbedUrl(url) {
     if (!url) return null;
-    var yt = url.match(/(?:youtube\.com\/watch\?(?:.*&)?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+    var yt = url.match(/(?:youtube\.com\/watch\?(?:.*&)?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/);
     if (yt) return 'https://www.youtube.com/embed/' + yt[1];
     var vimeo = url.match(/vimeo\.com\/(\d+)/);
     if (vimeo) return 'https://player.vimeo.com/video/' + vimeo[1];
     return url;
+  }
+
+  // Shortcodes let editors embed a video inside the description body without
+  // pasting raw <iframe> HTML (which the CMS rich-text editor strips on save).
+  // Supported: {{youtube:ID}}, {{youtube:URL}}, {{vimeo:ID}}, {{vimeo:URL}}, {{video:URL}}
+  var VIDEO_SHORTCODE_RE = /\{\{\s*(youtube|vimeo|video)\s*:\s*([^}]+?)\s*\}\}/gi;
+
+  function shortcodeToEmbed(kind, value) {
+    kind = kind.toLowerCase();
+    if (kind === 'youtube' && /^[a-zA-Z0-9_-]{11}$/.test(value)) {
+      return 'https://www.youtube.com/embed/' + value;
+    }
+    if (kind === 'vimeo' && /^\d+$/.test(value)) {
+      return 'https://player.vimeo.com/video/' + value;
+    }
+    return toEmbedUrl(value);
+  }
+
+  function expandVideoShortcodes(md) {
+    if (!md) return md;
+    return md.replace(VIDEO_SHORTCODE_RE, function (match, kind, raw) {
+      var embed = shortcodeToEmbed(kind, raw.trim());
+      if (!embed) return match;
+      // Surround with blank lines so marked treats it as a raw HTML block.
+      return '\n\n<iframe src="' + esc(embed) +
+        '" title="Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>\n\n';
+    });
   }
 
   function setMeta(name, val) {
@@ -647,7 +675,7 @@ window.addEventListener('scroll', function () {
 
     var descText = loc(project.description);
     var seoDesc = project.seo_description || (descText
-      ? descText.replace(/<[^>]+>/g, '').slice(0, 160).trim()
+      ? descText.replace(VIDEO_SHORTCODE_RE, '').replace(/<[^>]+>/g, '').slice(0, 160).trim()
       : '');
     var coverSrc = rel(project.cover);
     var coverAbs = coverSrc ? 'https://mariojramos.com/' + coverSrc.replace(/^\//, '') : '';
@@ -739,7 +767,7 @@ window.addEventListener('scroll', function () {
       '<div class="project-body">' +
         '<div class="project-content">' +
           (descText
-            ? '<div class="project-description">' + (typeof marked !== 'undefined' ? marked.parse(descText) : descText) + '</div>'
+            ? '<div class="project-description">' + (typeof marked !== 'undefined' ? marked.parse(expandVideoShortcodes(descText)) : descText) + '</div>'
             : '') +
           videoHTML +
           accoladesHTML +
