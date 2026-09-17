@@ -413,15 +413,131 @@ nav {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 0.75rem;
 }
+.project-gallery-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  cursor: zoom-in;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.project-gallery-item:hover,
+.project-gallery-item:focus-visible { border-color: var(--border-teal); }
+.project-gallery-item:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
 .project-gallery-img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   width: 100%;
-  border: 1px solid var(--border);
   display: block;
-  transition: border-color 0.2s;
+  transition: transform 0.4s ease;
 }
-.project-gallery-img:hover { border-color: var(--border-teal); }
+.project-gallery-item:hover .project-gallery-img { transform: scale(1.04); }
+.project-gallery-zoom {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8,12,20,0.75);
+  border: 1px solid var(--border-teal);
+  color: var(--teal);
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.project-gallery-item:hover .project-gallery-zoom,
+.project-gallery-item:focus-visible .project-gallery-zoom { opacity: 1; }
+.project-gallery-zoom svg { width: 14px; height: 14px; }
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4,7,12,0.94);
+  backdrop-filter: blur(6px);
+  padding: 4rem 4.5rem;
+}
+.lightbox.open { display: flex; }
+.lightbox-figure {
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+.lightbox-img {
+  max-width: 100%;
+  max-height: calc(100vh - 10rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--border-teal);
+  display: block;
+}
+.lightbox-caption {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 60ch;
+}
+.lightbox-counter {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--teal);
+}
+.lightbox-btn {
+  position: absolute;
+  background: rgba(8,12,20,0.8);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.lightbox-btn:hover,
+.lightbox-btn:focus-visible {
+  border-color: var(--border-teal);
+  color: var(--teal);
+  background: var(--bg2);
+}
+.lightbox-btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.lightbox-btn svg { width: 18px; height: 18px; }
+.lightbox-close { top: 1.25rem; right: 1.25rem; }
+.lightbox-prev { left: 1.25rem; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 1.25rem; top: 50%; transform: translateY(-50%); }
+.lightbox.single .lightbox-prev,
+.lightbox.single .lightbox-next,
+.lightbox.single .lightbox-counter { display: none; }
+body.lightbox-open { overflow: hidden; }
+
+@media (max-width: 640px) {
+  .lightbox { padding: 4rem 1rem 5.5rem; }
+  .lightbox-img { max-height: calc(100vh - 12rem); }
+  .lightbox-prev { left: 1rem; top: auto; bottom: 1rem; transform: none; }
+  .lightbox-next { right: 1rem; top: auto; bottom: 1rem; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-gallery-item:hover .project-gallery-img { transform: none; }
+}
 
 /* Accolades */
 .project-accolades { margin-top: 3rem; }
@@ -540,6 +656,24 @@ footer {
 
 <!-- PROJECT CONTENT (injected by JS) -->
 <div id="project-root"></div>
+
+<!-- LIGHTBOX (gallery full-resolution viewer) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="">
+  <button class="lightbox-btn lightbox-close" id="lightbox-close" type="button" aria-label="">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="lightbox-btn lightbox-prev" id="lightbox-prev" type="button" aria-label="">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+  </button>
+  <button class="lightbox-btn lightbox-next" id="lightbox-next" type="button" aria-label="">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+    <div class="lightbox-counter" id="lightbox-counter"></div>
+  </figure>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -740,11 +874,26 @@ window.addEventListener('scroll', function () {
     }
 
     var galleryHTML = '';
+    galleryItems = [];
     if (project.gallery && project.gallery.length) {
-      var imgs = project.gallery.map(function (item) {
-        var src = (typeof item === 'string') ? item : item.src;
-        var alt = (typeof item === 'string') ? '' : (loc(item.alt) || '');
-        return '<img class="project-gallery-img" src="' + esc(rel(src)) + '" alt="' + esc(alt) + '" loading="lazy">';
+      galleryItems = project.gallery.map(function (item) {
+        return {
+          src: rel((typeof item === 'string') ? item : item.src),
+          alt: (typeof item === 'string') ? '' : (loc(item.alt) || '')
+        };
+      }).filter(function (item) { return !!item.src; });
+
+      var zoomLabel = tr('project.gallery.zoom');
+      var imgs = galleryItems.map(function (item, i) {
+        return '<button type="button" class="project-gallery-item" data-gallery-index="' + i + '" ' +
+            'aria-label="' + esc(item.alt || zoomLabel) + '">' +
+          '<img class="project-gallery-img" src="' + esc(item.src) + '" alt="' + esc(item.alt) + '" loading="lazy">' +
+          '<span class="project-gallery-zoom" aria-hidden="true">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+              '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/>' +
+            '</svg>' +
+          '</span>' +
+        '</button>';
       }).join('');
       galleryHTML = '<div class="project-gallery">' +
         '<div class="project-gallery-label">' + esc(tr('project.gallery.label')) + '</div>' +
@@ -808,6 +957,105 @@ window.addEventListener('scroll', function () {
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
+  // ── GALLERY LIGHTBOX ─────────────────────────────────────
+  // Gallery tiles are cropped 16:9 thumbnails; clicking one opens the source
+  // file at full resolution here. Items are kept in module scope so the
+  // lightbox survives the re-render that a language switch triggers.
+  var galleryItems = [];
+  var lightboxIndex = 0;
+  var lastFocused = null;
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+  var lbCaption = document.getElementById('lightbox-caption');
+  var lbCounter = document.getElementById('lightbox-counter');
+  var lbClose = document.getElementById('lightbox-close');
+  var lbPrev = document.getElementById('lightbox-prev');
+  var lbNext = document.getElementById('lightbox-next');
+
+  function lightboxOpen() { return !!lb && lb.classList.contains('open'); }
+
+  function syncLightboxLabels() {
+    if (!lb) return;
+    lb.setAttribute('aria-label', tr('project.gallery.label'));
+    lbClose.setAttribute('aria-label', tr('project.lightbox.close'));
+    lbPrev.setAttribute('aria-label', tr('project.lightbox.prev'));
+    lbNext.setAttribute('aria-label', tr('project.lightbox.next'));
+  }
+
+  function preload(index) {
+    var item = galleryItems[index];
+    if (item) { var im = new Image(); im.src = item.src; }
+  }
+
+  function showLightbox(index) {
+    if (!lb || !galleryItems.length) return;
+    var count = galleryItems.length;
+    lightboxIndex = ((index % count) + count) % count;
+    var item = galleryItems[lightboxIndex];
+    lbImg.src = item.src;
+    lbImg.alt = item.alt;
+    lbCaption.textContent = item.alt;
+    lbCaption.style.display = item.alt ? '' : 'none';
+    lbCounter.textContent = (lightboxIndex + 1) + ' / ' + count;
+    lb.classList.toggle('single', count < 2);
+    preload(lightboxIndex + 1);
+    preload(lightboxIndex - 1);
+  }
+
+  function openLightbox(index) {
+    if (!lb || !galleryItems.length) return;
+    lastFocused = document.activeElement;
+    syncLightboxLabels();
+    showLightbox(index);
+    lb.classList.add('open');
+    document.body.classList.add('lightbox-open');
+    lbClose.focus();
+  }
+
+  function closeLightbox() {
+    if (!lightboxOpen()) return;
+    lb.classList.remove('open');
+    document.body.classList.remove('lightbox-open');
+    lbImg.src = '';
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+    lastFocused = null;
+  }
+
+  if (lb) {
+    document.getElementById('project-root').addEventListener('click', function (e) {
+      var tile = e.target.closest ? e.target.closest('.project-gallery-item') : null;
+      if (!tile) return;
+      openLightbox(parseInt(tile.getAttribute('data-gallery-index'), 10) || 0);
+    });
+
+    lbClose.addEventListener('click', closeLightbox);
+    lbPrev.addEventListener('click', function () { showLightbox(lightboxIndex - 1); });
+    lbNext.addEventListener('click', function () { showLightbox(lightboxIndex + 1); });
+
+    // Clicking the backdrop (anywhere but the image itself) dismisses.
+    lb.addEventListener('click', function (e) {
+      if (e.target === lbImg || (e.target.closest && e.target.closest('.lightbox-btn'))) return;
+      closeLightbox();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (!lightboxOpen()) return;
+      if (e.key === 'Escape') { e.preventDefault(); closeLightbox(); }
+      else if (e.key === 'ArrowLeft' && galleryItems.length > 1) { e.preventDefault(); showLightbox(lightboxIndex - 1); }
+      else if (e.key === 'ArrowRight' && galleryItems.length > 1) { e.preventDefault(); showLightbox(lightboxIndex + 1); }
+      else if (e.key === 'Tab') {
+        // Keep focus inside the dialog while it is open.
+        var focusables = [lbClose, lbPrev, lbNext].filter(function (el) { return el.offsetParent !== null; });
+        if (!focusables.length) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        else if (focusables.indexOf(document.activeElement) === -1) { e.preventDefault(); first.focus(); }
+      }
+    });
+  }
+
   if (!projectId) { renderNotFound(); return; }
 
   Promise.all([
@@ -824,6 +1072,7 @@ window.addEventListener('scroll', function () {
     renderProject(project, categoryLabels);
 
     window.onLangChange = function () {
+      closeLightbox();
       renderProject(project, categoryLabels);
     };
   }).catch(function () { renderNotFound(); });
