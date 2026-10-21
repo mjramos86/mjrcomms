@@ -1,6 +1,46 @@
 {
   "items": [
     {
+      "title": "Aftergods",
+      "client": "Takeoff CREATIVE / Norsfell",
+      "role": {
+        "fr": "Relations de Presse Québec",
+        "en": "Quebec Press Relations",
+        "pt": "Relações públicas"
+      },
+      "category": "jeux-video",
+      "medium": {
+        "fr": "Jeux vidéo",
+        "en": "Video Games",
+        "pt": "Videojogos"
+      },
+      "year": 2026,
+      "cover": "images/portfolio/Aftergods_2026_10-08-26_012.jpg",
+      "cover_alt": {
+        "fr": "keyart aftergods",
+        "en": "keyart aftergods",
+        "pt": "keyart aftergods"
+      },
+      "seo_description": "keyart aftergods",
+      "description": {
+        "fr": "keyart aftergods",
+        "en": "keyart aftergods",
+        "pt": "keyart aftergods"
+      },
+      "gallery": [
+        {
+          "src": "images/portfolio/1792177016212.jpg"
+        },
+        {
+          "src": "images/portfolio/1792177016520.jpg"
+        },
+        {
+          "src": "images/portfolio/1792177016449.jpg"
+        }
+      ],
+      "hidden": false
+    },
+    {
       "title": "Voidling Bound",
       "client": "Hatchery Games",
       "role": {
@@ -254,46 +294,6 @@
       "video": "https://www.youtube.com/watch?v=cAdYDSJ_oSs",
       "hidden": false,
       "id": "terrain-de-jeux-balado"
-    },
-    {
-      "title": "Aftergods",
-      "client": "Takeoff CREATIVE / Norsfell",
-      "role": {
-        "fr": "Relations de Presse Québec",
-        "en": "Quebec Press Relations",
-        "pt": "Relações públicas"
-      },
-      "category": "jeux-video",
-      "medium": {
-        "fr": "Jeux vidéo",
-        "en": "Video Games",
-        "pt": "Videojogos"
-      },
-      "year": 2026,
-      "cover": "images/portfolio/Aftergods_2026_10-08-26_012.jpg",
-      "cover_alt": {
-        "fr": "keyart aftergods",
-        "en": "keyart aftergods",
-        "pt": "keyart aftergods"
-      },
-      "seo_description": "keyart aftergods",
-      "description": {
-        "fr": "keyart aftergods",
-        "en": "keyart aftergods",
-        "pt": "keyart aftergods"
-      },
-      "gallery": [
-        {
-          "src": "images/portfolio/1792177016212.jpg"
-        },
-        {
-          "src": "images/portfolio/1792177016520.jpg"
-        },
-        {
-          "src": "images/portfolio/1792177016449.jpg"
-        }
-      ],
-      "hidden": false
     }
   ]
 }
