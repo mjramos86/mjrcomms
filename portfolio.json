@@ -17,25 +17,40 @@
       "year": 2026,
       "cover": "images/portfolio/Aftergods_2026_10-08-26_012.jpg",
       "cover_alt": {
-        "fr": "keyart aftergods",
-        "en": "keyart aftergods",
-        "pt": "keyart aftergods"
+        "fr": "Key art d'Aftergods : trois divinités dressées sur des ruines devant une foule de fidèles, sous une pluie de météores.",
+        "en": "Aftergods key art: three deities standing on ruins before a crowd of worshippers, under a rain of meteors.",
+        "pt": "Key art de Aftergods: três divindades sobre ruínas diante de uma multidão de fiéis, sob uma chuva de meteoros."
       },
       "seo_description": "",
       "description": {
-        "fr": "Relations de presse québécoise pour le dévoilement du jeu vidéo Aftergods de Norsfell lors du Triple-i Initiative 2026.",
+        "fr": "Relations de presse québécoises pour le dévoilement du jeu vidéo Aftergods de Norsfell lors du Triple-i Initiative 2026.",
         "en": "Quebec press relations for the reveal of Norsfell's video game Aftergods at the Triple-i Initiative 2026.",
         "pt": "Relações com a imprensa do Quebeque para a revelação do videojogo Aftergods da Norsfell no Triple-i Initiative 2026."
       },
       "gallery": [
         {
-          "src": "images/portfolio/1792177016212.jpg"
+          "src": "images/portfolio/1792177016212.jpg",
+          "alt": {
+            "fr": "Publication des Canadian Game Awards soulignant le dévoilement d'Aftergods par Norsfell",
+            "en": "Canadian Game Awards post highlighting Norsfell's reveal of Aftergods",
+            "pt": "Publicação dos Canadian Game Awards a destacar a revelação de Aftergods pela Norsfell"
+          }
         },
         {
-          "src": "images/portfolio/1792177016520.jpg"
+          "src": "images/portfolio/1792177016520.jpg",
+          "alt": {
+            "fr": "Couverture de MSN présentant Aftergods, jeu d'action et de survie en vue de dessus",
+            "en": "MSN coverage introducing Aftergods, a top-down action-survival game",
+            "pt": "Cobertura da MSN a apresentar Aftergods, jogo de ação e sobrevivência com vista de cima"
+          }
         },
         {
-          "src": "images/portfolio/1792177016449.jpg"
+          "src": "images/portfolio/1792177016449.jpg",
+          "alt": {
+            "fr": "Geeks and Com' : « Norsfell dévoile Aftergods, son projet le plus ambitieux à ce jour »",
+            "en": "Geeks and Com': “Norsfell unveils Aftergods, its most ambitious project to date”",
+            "pt": "Geeks and Com': «Norsfell revela Aftergods, o seu projeto mais ambicioso até à data»"
+          }
         }
       ],
       "hidden": false,
