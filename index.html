@@ -479,6 +479,14 @@ h2 {
 .bracket::before { top: -6px; left: -10px; border-width: 2px 0 0 2px; }
 .bracket::after  { bottom: -6px; right: -10px; border-width: 0 2px 2px 0; }
 
+/* ── EXPERIENCE ────────────────────────────────────────── */
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
 /* ── ABOUT ─────────────────────────────────────────────── */
 #about { background: var(--bg2); }
 .about-grid {
@@ -870,6 +878,7 @@ footer {
   section { padding: 4rem 1.25rem; }
   #hero { padding: 7rem 1.25rem 4rem; }
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .exp-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-stats { gap: 1.5rem; }
   footer { flex-direction: column; align-items: flex-start; }
 }
@@ -1097,7 +1106,7 @@ footer {
 <!-- EXPÉRIENCE -->
 <section id="experience">
   <div class="grid-bg"></div>
-  <div class="max-w" style="display:grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items:start;">
+  <div class="max-w exp-grid">
     <div>
       <div class="section-tag reveal" data-i18n="exp.tag">Parcours</div>
       <h2 class="reveal" data-i18n-html="exp.h2">Le bon joueur<br>pour votre équipe</h2>
