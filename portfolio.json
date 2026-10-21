@@ -73,9 +73,9 @@
       "year": 2026,
       "cover": "images/portfolio/Voidling-Bound-Art-2.jpg",
       "cover_alt": {
-        "fr": "key art voidling bound",
-        "en": "key art voidling bound",
-        "pt": "key art voidling bound"
+        "fr": "Key art de Voidling Bound : des créatures extraterrestres violettes surgissent au-dessus d'un personnage en combinaison spatiale à visière verte.",
+        "en": "Voidling Bound key art: purple alien creatures loom over a figure in a space suit with a green visor.",
+        "pt": "Key art de Voidling Bound: criaturas alienígenas roxas pairam sobre uma figura num fato espacial com viseira verde."
       },
       "seo_description": "key art voidling bound studio hatchery games",
       "description": {
@@ -85,37 +85,92 @@
       },
       "gallery": [
         {
-          "src": "images/portfolio/722705007_10175021416335088_1147874681312115008_n.jpg"
+          "src": "images/portfolio/722705007_10175021416335088_1147874681312115008_n.jpg",
+          "alt": {
+            "fr": "Noovo Info : un studio de Québec veut faire sa marque avec Voidling Bound",
+            "en": "Noovo Info: a Québec City studio sets out to make its mark with Voidling Bound",
+            "pt": "Noovo Info: um estúdio da cidade de Quebeque quer deixar a sua marca com Voidling Bound"
+          }
         },
         {
-          "src": "images/portfolio/723705852_10175021379520088_5443336494506021320_n.jpg"
+          "src": "images/portfolio/723705852_10175021379520088_5443336494506021320_n.jpg",
+          "alt": {
+            "fr": "Génération Jeu : un studio de Québec autopublie son premier titre",
+            "en": "Génération Jeu: a Québec City studio self-publishes its first title",
+            "pt": "Génération Jeu: um estúdio da cidade de Quebeque autopublica o seu primeiro título"
+          }
         },
         {
-          "src": "images/portfolio/722770023_10175021416805088_2299899542788083290_n.jpg"
+          "src": "images/portfolio/722770023_10175021416805088_2299899542788083290_n.jpg",
+          "alt": {
+            "fr": "Le Bêta-Testeur : test de Voidling Bound, signé par des vétérans de Skylanders",
+            "en": "Le Bêta-Testeur: review of Voidling Bound, made by Skylanders veterans",
+            "pt": "Le Bêta-Testeur: análise de Voidling Bound, feito por veteranos de Skylanders"
+          }
         },
         {
-          "src": "images/portfolio/722560445_10175021416955088_4235006681315560504_n.jpg"
+          "src": "images/portfolio/722560445_10175021416955088_4235006681315560504_n.jpg",
+          "alt": {
+            "fr": "G Pour Geek : critique de Voidling Bound",
+            "en": "G Pour Geek: Voidling Bound review",
+            "pt": "G Pour Geek: análise de Voidling Bound"
+          }
         },
         {
-          "src": "images/portfolio/722296584_10175021416585088_4526780125055207519_n.jpg"
+          "src": "images/portfolio/722296584_10175021416585088_4526780125055207519_n.jpg",
+          "alt": {
+            "fr": "Le Journal de Québec : Voidling Bound disponible sur Windows",
+            "en": "Le Journal de Québec: Voidling Bound out on Windows",
+            "pt": "Le Journal de Québec: Voidling Bound disponível em Windows"
+          }
         },
         {
-          "src": "images/portfolio/721995522_10175021417075088_2663967371876674965_n.jpg"
+          "src": "images/portfolio/721995522_10175021417075088_2663967371876674965_n.jpg",
+          "alt": {
+            "fr": "Entrevue vidéo de Luduc avec Philippe Pelletier Baribault de Hatchery Games",
+            "en": "Luduc video interview with Philippe Pelletier Baribault of Hatchery Games",
+            "pt": "Entrevista em vídeo da Luduc com Philippe Pelletier Baribault da Hatchery Games"
+          }
         },
         {
-          "src": "images/portfolio/721041240_10175021416435088_616184164611426706_n.jpg"
+          "src": "images/portfolio/721041240_10175021416435088_616184164611426706_n.jpg",
+          "alt": {
+            "fr": "Mon Saint-Roch : Hatchery Games lance son premier jeu depuis le quartier Saint-Roch",
+            "en": "Mon Saint-Roch: Hatchery Games launches its first game from the Saint-Roch district",
+            "pt": "Mon Saint-Roch: a Hatchery Games lança o seu primeiro jogo a partir do bairro Saint-Roch"
+          }
         },
         {
-          "src": "images/portfolio/721041239_10175021416780088_4805470195947078473_n.jpg"
+          "src": "images/portfolio/721041239_10175021416780088_4805470195947078473_n.jpg",
+          "alt": {
+            "fr": "Le Nouvelliste : ils quittent les gros studios pour créer leur propre jeu vidéo",
+            "en": "Le Nouvelliste: they left the big studios to build their own video game",
+            "pt": "Le Nouvelliste: deixaram os grandes estúdios para criar o seu próprio videojogo"
+          }
         },
         {
-          "src": "images/portfolio/720751164_10175021417045088_8006761919467748296_n.jpg"
+          "src": "images/portfolio/720751164_10175021417045088_8006761919467748296_n.jpg",
+          "alt": {
+            "fr": "Le Salon de Gaming de Monsieur S : test de Voidling Bound sur PC",
+            "en": "Le Salon de Gaming de Monsieur S: Voidling Bound reviewed on PC",
+            "pt": "Le Salon de Gaming de Monsieur S: análise de Voidling Bound em PC"
+          }
         },
         {
-          "src": "images/portfolio/720448995_10175021416925088_950825170246646365_n.jpg"
+          "src": "images/portfolio/720448995_10175021416925088_950825170246646365_n.jpg",
+          "alt": {
+            "fr": "2pjeuxvideo.com : critique de Voidling Bound testée sur PC",
+            "en": "2pjeuxvideo.com: Voidling Bound review, tested on PC",
+            "pt": "2pjeuxvideo.com: análise de Voidling Bound, testado em PC"
+          }
         },
         {
-          "src": "images/portfolio/Capture d’écran 2026-08-03 143654-2.png"
+          "src": "images/portfolio/Capture d’écran 2026-08-03 143654-2.png",
+          "alt": {
+            "fr": "Reportage de Radio-Canada : le studio Hatchery Games de Québec lance Voidling Bound",
+            "en": "Radio-Canada report: Québec City studio Hatchery Games launches Voidling Bound",
+            "pt": "Reportagem da Radio-Canada: o estúdio Hatchery Games da cidade de Quebeque lança Voidling Bound"
+          }
         }
       ],
       "hidden": false,
@@ -138,9 +193,9 @@
       "year": 2025,
       "cover": "images/portfolio/hell-is-us-key-art-ice-blue-background.avif",
       "cover_alt": {
-        "fr": "key art Hell is Us",
-        "en": "key art Hell is Us",
-        "pt": "key art Hell is Us"
+        "fr": "Key art de Hell is Us : un personnage encapuchonné, lame bleutée à la main, devant un portail ovale glacé.",
+        "en": "Hell is Us key art: a hooded figure holding a glowing blue blade before an icy oval portal.",
+        "pt": "Key art de Hell is Us: uma figura encapuzada com uma lâmina azulada diante de um portal oval gelado."
       },
       "seo_description": "key art hell is us studio rogue factor publisher nacon",
       "description": {
@@ -153,65 +208,65 @@
         {
           "src": "images/portfolio/hell is us salut bonjour.jpg",
           "alt": {
-            "fr": "hell is us à Salut Bonjour",
-            "en": "hell is us on Salut Bonjour",
-            "pt": "hell is us no Salut Bonjour"
+            "fr": "Hell is Us à Salut Bonjour",
+            "en": "Hell is Us on Salut Bonjour",
+            "pt": "Hell is Us no Salut Bonjour"
           }
         },
         {
           "src": "images/portfolio/hell is us LCN téléjournal.jpg",
           "alt": {
-            "fr": "hell is us à LCN téléjournal",
-            "en": "hell is us on the LCN newscast",
-            "pt": "hell is us no telejornal da LCN"
+            "fr": "Hell is Us au téléjournal de LCN",
+            "en": "Hell is Us on the LCN newscast",
+            "pt": "Hell is Us no telejornal da LCN"
           }
         },
         {
           "src": "images/portfolio/hell is us le devoir.jpg",
           "alt": {
-            "fr": "hell is us dans le journal le devoir",
-            "en": "hell is us in the newspaper Le Devoir",
-            "pt": "hell is us no jornal Le Devoir"
+            "fr": "Hell is Us dans Le Devoir",
+            "en": "Hell is Us in Le Devoir",
+            "pt": "Hell is Us no jornal Le Devoir"
           }
         },
         {
           "src": "images/portfolio/hell is us c'est encore mieux.jpg",
           "alt": {
-            "fr": "hell is us à c'est encore mieux l'après-midi",
-            "en": "hell is us on C'est encore mieux l'après-midi",
-            "pt": "hell is us no programa C'est encore mieux l'après-midi"
+            "fr": "Hell is Us à C'est encore mieux l'après-midi",
+            "en": "Hell is Us on C'est encore mieux l'après-midi",
+            "pt": "Hell is Us no programa C'est encore mieux l'après-midi"
           }
         },
         {
           "src": "images/portfolio/hell is us radio energie phil branch.jpg",
           "alt": {
-            "fr": "hell is us à la radio de bell média énergie avec phil branch",
-            "en": "hell is us on Bell Media's Énergie radio with Phil Branch",
-            "pt": "hell is us na rádio Énergie da Bell Média com Phil Branch"
+            "fr": "Hell is Us à la radio Énergie de Bell Média avec Phil Branch",
+            "en": "Hell is Us on Bell Media's Énergie radio with Phil Branch",
+            "pt": "Hell is Us na rádio Énergie da Bell Média com Phil Branch"
           }
         },
         {
           "src": "images/portfolio/hell is us zone economie.jpg",
           "alt": {
-            "fr": "hell is us à zone économie à radio-canada",
-            "en": "hell is us on Zone économie on Radio-Canada",
-            "pt": "hell is us na Zone économie da Radio-Canada"
+            "fr": "Hell is Us à Zone économie, à Radio-Canada",
+            "en": "Hell is Us on Zone économie, on Radio-Canada",
+            "pt": "Hell is Us na Zone économie, da Radio-Canada"
           }
         },
         {
           "src": "images/portfolio/hell is us journal de montreal.jpg",
           "alt": {
-            "fr": "hell is us dans le journal de montréal",
-            "en": "hell is us in the Journal de Montréal",
-            "pt": "hell is us no Journal de Montréal"
+            "fr": "Hell is Us dans Le Journal de Montréal",
+            "en": "Hell is Us in Le Journal de Montréal",
+            "pt": "Hell is Us no Journal de Montréal"
           }
         },
         {
           "src": "images/portfolio/hell is us tva nouvelles.jpg",
           "alt": {
-            "fr": "hell is us à tva nouvelles",
-            "en": "hell is us on TVA Nouvelles",
-            "pt": "hell is us na TVA Nouvelles"
+            "fr": "Hell is Us à TVA Nouvelles",
+            "en": "Hell is Us on TVA Nouvelles",
+            "pt": "Hell is Us na TVA Nouvelles"
           }
         }
       ],
@@ -235,9 +290,9 @@
       "year": 2020,
       "cover": "images/portfolio/vie-de-pro.png",
       "cover_alt": {
-        "fr": "affiche série web vie de pro avec missharvey / stéphanie harvey / rds jeux vidéo / esports",
-        "en": "Vie de Pro web series poster with missharvey / Stéphanie Harvey / RDS Gaming / esports",
-        "pt": "cartaz da websérie Vie de Pro com missharvey / Stéphanie Harvey / RDS Videojogos / esports"
+        "fr": "Affiche de la série web Vie de Pro avec Stéphanie « missharvey » Harvey, produite par RDS Jeux vidéo.",
+        "en": "Poster for the web series Vie de Pro with Stéphanie “missharvey” Harvey, produced by RDS Gaming.",
+        "pt": "Cartaz da websérie Vie de Pro com Stéphanie «missharvey» Harvey, produzida pela RDS Videojogos."
       },
       "seo_description": "série web esports RDS vie de pro avec stéphanie harvey aka missharvey",
       "description": {
@@ -266,9 +321,9 @@
       "year": 2021,
       "cover": "images/portfolio/Capture d’écran 2026-04-04 190009.png",
       "cover_alt": {
-        "fr": "affiche et logo balado du pain et des jeux, mais surtout des jeux",
-        "en": "poster and logo of the podcast Du pain et des jeux, mais surtout des jeux",
-        "pt": "cartaz e logótipo do podcast Du pain et des jeux, mais surtout des jeux"
+        "fr": "Affiche et logo du balado Du pain et des jeux, mais surtout des jeux.",
+        "en": "Poster and logo of the podcast Du pain et des jeux, mais surtout des jeux.",
+        "pt": "Cartaz e logótipo do podcast Du pain et des jeux, mais surtout des jeux."
       },
       "seo_description": "balado du pain et des jeux, mais surtout des jeux avec pierre-luc racine",
       "description": {
@@ -297,9 +352,9 @@
       "year": 2019,
       "cover": "images/portfolio/Capture d’écran 2026-04-04 185231.png",
       "cover_alt": {
-        "fr": "logo balado le terrain de jeux rds",
-        "en": "logo of the RDS podcast Le Terrain de Jeux",
-        "pt": "logótipo do podcast Le Terrain de Jeux da RDS"
+        "fr": "Logo du balado Le Terrain de Jeux, produit par RDS.",
+        "en": "Logo of Le Terrain de Jeux, a podcast produced by RDS.",
+        "pt": "Logótipo de Le Terrain de Jeux, podcast produzido pela RDS."
       },
       "seo_description": "balado gaming le terrain de jeux rds",
       "description": {

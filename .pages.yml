@@ -171,8 +171,12 @@ content:
             hint: "Ratio recommandé 16:9 (ex : 1280×720 px)"
           - name: cover_alt
             label: "Texte alternatif (alt) de la couverture"
-            type: string
+            type: object
             hint: "Décrit l'image pour les moteurs de recherche et les lecteurs d'écran"
+            fields:
+              - { name: fr, label: Français, type: string }
+              - { name: en, label: English, type: string }
+              - { name: pt, label: Português, type: string }
           - name: seo_description
             label: "Description SEO (meta description)"
             type: string

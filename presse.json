@@ -6,7 +6,11 @@
       "author": "Gérald Fillion",
       "date": "2025-11-28",
       "cover": "images/portfolio/Capture d’écran 2026-04-05 114312.png",
-      "cover_alt": "capture d'écran Mario J. Ramos avec Gérald Fillion qui présente des jeux vidéo locaux à RDI Zone Économie",
+      "cover_alt": {
+        "fr": "Mario J. Ramos présente des jeux vidéo québécois avec Gérald Fillion à Zone économie (RDI)",
+        "en": "Mario J. Ramos presenting Québec-made video games with Gérald Fillion on Zone économie (RDI)",
+        "pt": "Mario J. Ramos a apresentar videojogos do Quebeque com Gérald Fillion na Zone économie (RDI)"
+      },
       "seo_description": "Mario J. Ramos avec Gérald Fillion qui présente des jeux vidéo locaux à RDI Zone Économie",
       "description": {
         "fr": "```\nJ'ai été invité en tant que chroniqueur à un épisode spéciale des fêtes « 100% locales » de Zone Économie à RDI (Radio-Canada).\n\nExtrait:\n\n<iframe src=\"https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F819933364348925%2F&show_text=false&width=560&t=0\" width=\"560\" height=\"314\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\" allowFullScreen=\"true\"></iframe>\n```\n\n",
@@ -21,7 +25,11 @@
       "publication": "Canadian Game Awards",
       "date": "2026-04-04",
       "cover": "images/portfolio/Capture d’écran 2026-04-04 174504.png",
-      "cover_alt": "membres du jury canadian game awards",
+      "cover_alt": {
+        "fr": "Les membres du jury des Canadian Game Awards",
+        "en": "The Canadian Game Awards jury members",
+        "pt": "Os membros do júri dos Canadian Game Awards"
+      },
       "seo_description": "membres du jury canadian game awards 2026",
       "description": {
         "fr": "J'ai été invité à faire partie du jury des Canadian Game Awards en 2023, 2025 et 2026.",
@@ -37,7 +45,11 @@
       "author": "Francis Gosselin",
       "date": "2024-12-16",
       "cover": "images/portfolio/Capture d’écran 2026-04-04 184214.png",
-      "cover_alt": "capture d'écran entrevue francis gosselin et mario j. ramos",
+      "cover_alt": {
+        "fr": "Francis Gosselin et Mario J. Ramos en entrevue à QUB radio",
+        "en": "Francis Gosselin and Mario J. Ramos in an interview on QUB radio",
+        "pt": "Francis Gosselin e Mario J. Ramos em entrevista na QUB radio"
+      },
       "seo_description": "entrevue avec Mario J. Ramos  Les jeux vidéos doivent être considérés comme produits culturels",
       "description": {
         "fr": "J'ai été invité à l'émission de Francis Gosselin à QUB Radio pour discuter de ma lettre ouverte aux médias à propos de la place du jeu vidéo dans les médias traditionnels en tant que produit culturel plutôt que techno.",
@@ -52,7 +64,11 @@
       "publication": "Prix Numix",
       "date": "2024-05-01",
       "cover": "images/portfolio/Capture d’écran 2026-04-04 130607.png",
-      "cover_alt": "mario j. ramos membre du jury jeu indépendant prix numix 2024",
+      "cover_alt": {
+        "fr": "Mario J. Ramos, membre du jury Jeu indépendant des Prix Numix 2024",
+        "en": "Mario J. Ramos, Independent Game jury member at the 2024 Prix Numix",
+        "pt": "Mario J. Ramos, membro do júri Jogo Independente dos Prix Numix 2024"
+      },
       "seo_description": "mario j. ramos membre du jury jeu indépendant prix numix 2024",
       "description": {
         "fr": "J'ai été invité à faire partie du jury pour la catégorie « Jeu indépendant » des Prix Numix 2024",
@@ -68,7 +84,11 @@
       "author": "Mario J. Ramos",
       "date": "2024-03-03",
       "cover": "images/portfolio/Capture d’écran 2026-04-04 131940.png",
-      "cover_alt": "article rétrospective rds jeux vidéo sur le site videoludique.ca",
+      "cover_alt": {
+        "fr": "Article rétrospective sur RDS Jeux vidéo publié sur vidéoludique.ca",
+        "en": "Retrospective article on RDS Gaming published on vidéoludique.ca",
+        "pt": "Artigo retrospetivo sobre a RDS Videojogos publicado em vidéoludique.ca"
+      },
       "seo_description": "article rétrospective rds jeux vidéo sur le site videoludique.ca",
       "description": {
         "fr": "Rétrospective écrite par moi-même sur la marque RDS Jeux vidéo que j'ai dirigiée de 2018 à 2023.",
@@ -84,7 +104,11 @@
       "author": "Fred Gémus",
       "date": "2024-03-17",
       "cover": "images/portfolio/maxresdefault (5).jpg",
-      "cover_alt": "thumbnail du podcast entre deux parties #5 avec Mario J. Ramos",
+      "cover_alt": {
+        "fr": "Vignette de l'épisode 5 du balado Entre deux parties avec Mario J. Ramos",
+        "en": "Thumbnail for episode 5 of the podcast Entre deux parties with Mario J. Ramos",
+        "pt": "Miniatura do episódio 5 do podcast Entre deux parties com Mario J. Ramos"
+      },
       "seo_description": "Entrevue Mario J. Ramos au podcast Entre deux parties de Fred Gémus",
       "description": {
         "fr": "J'ai été invité à parler de mon parcours et projets au podcast Entre deux parties de Fred Gémus",
@@ -100,7 +124,11 @@
       "author": "Eduardo Sajgalik",
       "date": "2019-09-30",
       "cover": "images/portfolio/Capture d’écran 2026-04-04 184640.png",
-      "cover_alt": "capture d'écran vidéo entrevue mario j. ramos arena super cup",
+      "cover_alt": {
+        "fr": "Mario J. Ramos en entrevue vidéo à l'Arena Super Cup",
+        "en": "Mario J. Ramos in a video interview at the Arena Super Cup",
+        "pt": "Mario J. Ramos em entrevista vídeo na Arena Super Cup"
+      },
       "seo_description": "ntrevue mario j. ramos arena super cup",
       "description": {
         "fr": "Entrevue à propos de mon travail chez RDS Jeux vidéo dans le cadre de la diffusion de l'Arena Super Cup, un tournoi sur Magic The Gathering Arena",
