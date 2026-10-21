@@ -135,7 +135,8 @@ content:
           - name: id
             label: "ID (slug)"
             type: string
-            hint: "Identifiant unique sans espaces (ex: projet-m)"
+            required: true
+            hint: "Identifiant unique sans espaces (ex: projet-m). Sert d'adresse à la page du projet — sans lui, la vignette n'est pas cliquable."
 
   - name: presse
     label: Dans la presse

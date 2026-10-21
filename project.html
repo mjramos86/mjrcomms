@@ -716,6 +716,19 @@ window.addEventListener('scroll', function () {
 
   function tr(key) { return window.I18n ? window.I18n.t(key) : key; }
 
+  // "id" is what links a card to its project page, but it is an optional CMS
+  // field and easy to leave blank, which used to render a card unclickable.
+  // Fall back to a slug derived from the title; an explicit id always wins,
+  // so existing project URLs are unchanged.
+  function slugify(s) {
+    return String(s == null ? '' : s)
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+  function idOf(p) { return (p && p.id) || slugify(p && p.title); }
+
   // Resolve a possibly-localized value ({fr,en,pt}) for the current language.
   function loc(val) {
     if (val && typeof val === 'object' && !Array.isArray(val)) {
@@ -1066,7 +1079,7 @@ window.addEventListener('scroll', function () {
     (results[0].items || []).forEach(function (c) { categoryLabels[c.id] = c.label; });
 
     var projects = results[1].items || results[1];
-    var project = projects.find(function (p) { return p.id === projectId; });
+    var project = projects.find(function (p) { return idOf(p) === projectId; });
 
     if (!project) { renderNotFound(); return; }
     renderProject(project, categoryLabels);

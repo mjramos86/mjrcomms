@@ -520,6 +520,19 @@ window.addEventListener('scroll', () => {
 (function () {
   function rel(path) { return path ? path.replace(/^\//, '') : path; }
 
+  // "id" is what links a card to its project page, but it is an optional CMS
+  // field and easy to leave blank, which used to render a card unclickable.
+  // Fall back to a slug derived from the title; an explicit id always wins,
+  // so existing project URLs are unchanged.
+  function slugify(s) {
+    return String(s == null ? '' : s)
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+  function idOf(p) { return (p && p.id) || slugify(p && p.title); }
+
   var builtCards = [];
   var loadedProjects = [];
 
@@ -540,7 +553,7 @@ window.addEventListener('scroll', () => {
       return {
         '@type': 'ListItem',
         'position': i + 1,
-        'url': 'https://mariojramos.com/project.html?id=' + encodeURIComponent(p.id),
+        'url': 'https://mariojramos.com/project.html?id=' + encodeURIComponent(idOf(p)),
         'name': p.title
       };
     });
@@ -622,10 +635,11 @@ window.addEventListener('scroll', () => {
     card.appendChild(overlay);
     card.appendChild(strip);
 
-    if (project.id) {
+    var pid = idOf(project);
+    if (pid) {
       card.style.cursor = 'pointer';
       card.addEventListener('click', function () {
-        window.location.href = 'project.html?id=' + encodeURIComponent(project.id);
+        window.location.href = 'project.html?id=' + encodeURIComponent(pid);
       });
     }
 
